@@ -1,0 +1,92 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+.section-title {
+  margin: 0 0 10px;
+
+  font: normal 17px $montserrat-semi-bold;
+  letter-spacing: 2.5px;
+  line-height: 22.67px;
+  color: $brand-color;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin: 0 0 40px;
+  
+  font: normal 52px $montserrat-medium;
+  letter-spacing: -1px;
+  line-height: 65.26px;
+  color: $black;
+  text-align: center;
+}
+
+.scroll-next-section {
+  position: absolute;
+  top: initial;
+  right: 90px;
+  bottom: 80px;
+  left: initial;
+  z-index: 10;
+
+  .scroll-trigger {
+    position: relative;
+
+    padding-left: 20px;
+
+    font: normal 10px $montserrat-semi-bold;
+    color: $white;
+    letter-spacing: 3px;
+    line-height: 30px;
+
+    @include on-event() {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 0;
+      
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      border-bottom: 2px solid $brand-color;
+      border-right: 2px solid $brand-color;
+
+      pointer-events: none;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      bottom: 0;
+      left: initial;
+
+      display: block;
+      width: 2px;
+      height: 100px;
+
+      background-color: $brand-color;
+
+      pointer-events: none;
+    }
+  }
+}

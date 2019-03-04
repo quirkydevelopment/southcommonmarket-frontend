@@ -1,0 +1,300 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.home {
+  .section-hero {
+    height: 100vh;
+    min-height: 785px;
+
+    background: url('../assets/images/bg-hero-home.jpg') no-repeat center;
+    background-size: cover;
+
+    .container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+
+      color: $white;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+    }
+
+    .hero-title {
+      margin: 0;
+      
+      font: normal 50px $montserrat-medium;
+      line-height: 66.65px;
+    }
+
+    .hero-subtitle {
+      max-width: 450px;
+      margin: 20px 0 0 70px;
+
+      font: normal 16.5px $montserrat-regular;
+      letter-spacing: 3px;
+      line-height: 24px;
+
+      opacity: 0.8;
+    }
+
+    .holder-image {
+      position: absolute;
+      top: 0;
+      right: 100px;
+      bottom: 0;
+      left: initial;
+      z-index: 1;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;  
+    }
+
+    .hero-image {
+      width: calc(100% - 680px);
+      min-width: 660px;
+      max-width: 100%;
+    }
+
+    .holder-button {
+      display: flex;
+      margin: 90px 0 0 70px;
+    }
+
+    .btn:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  .section-market {
+    padding: 160px 0 140px;
+
+    background-color: $brand-color;
+
+    .holder-image {
+      position: relative;
+
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+
+      &:after {
+        content: '';
+
+        position: absolute;
+        top: initial;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 550px;
+        height: 1px;
+        margin: auto;
+
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+    .image {
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: 697px;
+    }
+
+    .description {
+      max-width: 970px;
+      margin-right: auto;
+      margin-left: auto;
+
+      font: normal 24px $lora-regular;
+      line-height: 42px;
+      color: $black-pearl;
+
+      b {
+        font-family: $lora-bold;
+      }
+    }
+
+    .holder-numbers {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      margin: 80px auto auto;
+      max-width: 1060px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 25%;
+      padding: 0 20px;
+
+      &:not(:last-child) {
+        border-right: 2px solid $white-opacity;
+      }
+    }
+
+    .number {
+      margin: 0;
+
+      font: normal 64px $montserrat-semi-bold;
+      line-height: 64px;
+      color: $white;
+    }
+
+    .text-label {
+      margin: 18px 0 15px;
+
+      font: normal 18px $montserrat-semi-bold;
+      line-height: 24px;
+      color: $black;
+    }
+  }
+
+  .section-awesome-vendors {
+    padding: 160px 0 100px;
+
+    .holder-swiper {
+      position: relative;
+
+      display: flex;
+    }
+
+    .slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide-image {
+      max-width: 100%;
+    }
+
+    .swiper-prev {
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: -100px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-next {
+      position: absolute;
+      top: 0;
+      right: -100px;
+      bottom: 0;
+      left: initial;
+      
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-nav-image {
+      max-width: 40px;
+    }
+  }
+
+  .section-what-we-do {
+    .item-holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .item-topic {
+      text-align: center;
+    }
+  }
+
+  .section-column-half {
+    background: url('../assets/images/bg-column-half.jpg') no-repeat center;
+
+    .holder-half {
+      background-color: $brand-color;
+    }
+  }
+
+  .section-gallery {
+    .item {
+      padding: 0 5px;
+      margin-bottom: 10px;
+
+      .item-image {
+        height: 380px; 
+      
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &:nth-child(1) {
+        .item-image {
+          background-image: url('../assets/images/image-gallery1.jpg');
+        }
+      }
+
+      &:nth-child(2) {
+        .item-image {
+          background-image: url('../assets/images/image-gallery2.jpg');
+        }
+      }
+
+      &:nth-child(3) {
+        .item-image {
+          background-image: url('../assets/images/image-gallery3.jpg');
+        }
+      }
+
+      &:nth-child(4) {
+        .item-image {
+          background-image: url('../assets/images/image-gallery4.jpg');
+        }
+      }
+
+      &:nth-child(5) {
+        .item-image {
+          background-image: url('../assets/images/image-gallery5.jpg');
+        }
+      }
+
+      &:nth-child(6) {
+        .item-image {
+          background-image: url('../assets/images/image-gallery6.jpg');
+        }
+      }
+    }
+  }
+
+  .section-testimonials {
+    background-color: $mercury;
+
+    .holder-swiper {
+      text-align: center;
+    }
+
+    .slide-author-image {
+      max-width: 84px;
+
+      border-radius: 50%;
+    }
+  }
+
+  .section-contact {
+    background: url('../assets/images/bg-contact.jpg') no-repeat center;
+    background-size: cover;
+  }
+}
