@@ -9,6 +9,12 @@
   text-decoration: none;
 
   transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+  @include on-event() {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+  }
 }
 
 .btn-white {
@@ -26,6 +32,15 @@
   background-color: $white;
   border: 2px solid $white;
   border-radius: 0;
+
+  @include respond-to(lg-up) {
+    @include on-event() {
+      color: $white;
+      text-decoration: none;
+
+      background-color: transparent;
+    }
+  }
 }
 
 .btn-white-outline {
@@ -50,6 +65,32 @@
       text-decoration: none;
 
       background-color: $white;
+    }
+  }
+}
+
+.btn-white-rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 42px;
+
+  font: normal 17px $lora-bold;
+  line-height: 42px;
+  color: $text-color;
+
+  background-color: $white;
+  border: 1px solid $white;
+  border-radius: 50px;
+
+  @include respond-to(lg-up) {
+    @include on-event() {
+      color: $white;
+      text-decoration: none;
+
+      background-color: transparent;
+      box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
     }
   }
 }

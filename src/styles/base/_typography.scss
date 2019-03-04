@@ -29,6 +29,13 @@ body {
   text-align: center;
 }
 
+.section-description {
+  margin: 0 0 25px;
+  
+  font: normal 17px $lora-regular;
+  line-height: 30px;
+}
+
 .scroll-next-section {
   position: absolute;
   top: initial;

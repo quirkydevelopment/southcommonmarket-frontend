@@ -98,7 +98,7 @@
         height: 1px;
         margin: auto;
 
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: $white-opacity;
       }
     }
 
@@ -208,27 +208,111 @@
   }
 
   .section-what-we-do {
-    .item-holder {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+    .holder-items {
+      position: relative;
+  
+      padding-top: 60px;
+      margin-top: 40px;
+
+      &:before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: initial;
+        left: 0;
+
+        width: 550px;
+        height: 1px;
+        margin: auto;
+
+        background-color: $black-opacity;
+      }
     }
 
-    .item-topic {
-      text-align: center;
+    .item {
+      &:nth-child(odd) {
+        padding-right: 50px;
+      }
+
+      &:nth-child(even) {
+        padding-left: 50px;
+      }
+
+      .item-holder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+      }
+
+      .item-title {
+        margin: 0 0 18px;
+
+        font: normal 30px $montserrat-medium;
+        line-height: 39px;
+      }
+
+      .item-iframe {
+        width: 100%;
+        padding: 5px;
+
+        border: 3px solid $brand-color;
+      }
+
+      .item-topic {
+        margin: 45px 0 15px;
+
+        font: normal 16px $montserrat-medium;
+        line-height: 21px;
+        text-align: center;
+      }
+
+      .item-description {
+        margin: 0;
+
+        font: normal 17px $lora-regular;
+        line-height: 30px;
+        text-align: center;
+      }
     }
   }
 
-  .section-column-half {
-    background: url('../assets/images/bg-column-half.jpg') no-repeat center;
+  .section-shop-with-us {
+    .wrapper-text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 600px;
 
-    .holder-half {
       background-color: $brand-color;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 550px;
+      margin-left: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+
+      font-size: 36px;
+      line-height: 45px;
+      text-align: left;
+    }
+
+    .wrapper-image {
+      background: url('../assets/images/bg-column-half.jpg') no-repeat center;
+      background-size: cover;
     }
   }
 
   .section-gallery {
+    padding: 120px 0;
+    
     .item {
       padding: 0 5px;
       margin-bottom: 10px;
@@ -280,6 +364,8 @@
   }
 
   .section-testimonials {
+    padding: 160px 0;
+    
     background-color: $mercury;
 
     .holder-swiper {
