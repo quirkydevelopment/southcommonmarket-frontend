@@ -1,0 +1,22 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+  color: $brand-color;
+
+  background-color: $black;
+
+  .holder-copyright {
+    display: flex;
+    justify-content: center;
+
+    .description {
+      &:last-child {
+        margin-left: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "modules": false,
+  "plugins": {
+    "cssnano": {},
+    "postcss-preset-env": {},
+    "autoprefixer": {
+      "browsers": [
+        "Firefox >= 52",
+        "Chrome >= 55",
+        "ie >= 8",
+        "last 4 versions",
+        "Safari >= 9"
+      ],
+      "flexbox": "no-2009"
+    }
+  }
+}
