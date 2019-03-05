@@ -94,3 +94,31 @@
     }
   }
 }
+
+.btn-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 54px;
+
+  font: normal 12px $montserrat-medium;
+  letter-spacing: 3px;
+  // line-height: 50px;
+  color: $white;
+  text-transform: uppercase;
+
+  background-color: $chateau-green;
+  border: 2px solid $chateau-green;
+  border-radius: 0;
+
+  @include respond-to(lg-up) {
+    @include on-event() {
+      color: $white;
+      text-decoration: none;
+
+      background-color: $apple;
+      border-color: $apple;
+    }
+  }
+}
