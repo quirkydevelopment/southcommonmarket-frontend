@@ -1,4 +1,4 @@
-# Parcel Template
+# South Common Market - Frontend
 
 #### Steps
 * Install `npm` or `yarn` as package manager
