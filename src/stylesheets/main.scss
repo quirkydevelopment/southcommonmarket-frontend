@@ -9,8 +9,9 @@
 /* Vendors */
  @import 
     'vendors/bootstrap',
-    'vendors/font-awesome',
-    'vendors/swiper';
+    'vendors/slick';
+    // 'vendors/font-awesome',
+    // 'vendors/swiper';
 
 /* Base stuff */
 @import
@@ -26,7 +27,8 @@
 
 /* Components */
 @import
-    'components/buttons';
+    'components/buttons',
+    'components/floating-social-media';
 
 /* Page-specific styles */
 @import

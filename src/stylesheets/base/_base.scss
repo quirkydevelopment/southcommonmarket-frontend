@@ -45,51 +45,7 @@ input[type="text"] {
   }
 }
 
-//styles for navbar-toggler
-// .navbar-toggler {
-//   padding: 10px 0;
-
-//   border: 0;
-//   border-radius: 0;
-
-//   .icon-bar {
-//     display: block;
-//     height: 4px;
-//     width: 29px;
-
-//     background: #000;
-
-//     @include transition(0.5s cubic-bezier(0.65, 0.05, 0.36, 1));
-
-//     @include boxshadow(none);
-
-//     &+.icon-bar {
-//       margin-top: 4px;
-//     }
-//   }
-
-//   &[aria-expanded="true"] {
-//     .icon-bar {
-//       &:first-child {
-//         @include transform(rotate(225deg) translate(-6px, -5px));
-//       }
-
-//       &:nth-child(2) {
-//         opacity: 0;
-//       }
-
-//       &:last-child {
-//         @include transform(rotate(-225deg) translate(-6px, 6px));
-//       }
-//     }
-//   }
-
-//   @include on-event() {
-//     outline: 0;
-//   }
-// }
-
-
+// styles for navbar toggler
 .navbar-toggler-custom {
   position: relative;
 
@@ -154,5 +110,44 @@ input[type="text"] {
 
   @include respond-to(md-down) {
     display: flex;
+  }
+}
+
+// styles for scroll top
+.scroll-top-trigger {
+  position: fixed;
+  top: initial;
+  right: 20px;
+  bottom: 20px;
+  left: initial;
+  z-index: 100;
+  
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 16px;
+  color: $mid-grey;
+  
+  background-color: $black;
+
+  transition: none;
+
+  @include on-event() {
+    color: $white;
+    text-decoration: none;
+
+    .scroll-top-icon {
+      top: -3px;
+    }
+  }
+
+  .scroll-top-icon {
+    position: relative;
+    top: 0;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
 }
