@@ -6,6 +6,8 @@
 
 .home {
   .section-hero {
+    position: relative;
+    
     height: 100vh;
     min-height: 785px;
 
@@ -38,7 +40,7 @@
       max-width: 450px;
       margin: 20px 0 0 70px;
 
-      font: normal 16.5px $montserrat-regular;
+      font: normal 16.5px $montserrat-medium;
       letter-spacing: 3px;
       line-height: 24px;
 
@@ -622,8 +624,81 @@
       }
 
       .hero-image {
-        width: calc(100% - 500px);
+        width: calc(100% - 570px);
         min-width: 450px;
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    .section-hero {
+      .wrapper {
+        max-width: 100%;
+      }
+
+      .hero-title {
+        font-size: 46px;
+        line-height: 61px;
+        text-align: center;
+      }
+
+      .holder-image {
+        display: none;
+      }
+
+      .hero-subtitle {
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: center;
+      }
+
+      .holder-button {
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .section-hero {
+      .hero-title {
+        font-size: 34px;
+        line-height: 40px;
+      }
+
+      .hero-subtitle {
+        max-width: 230px;
+
+        font-size: 15px;
+        line-height: 18.75px;
+      }
+
+      .holder-button {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        max-width: 400px;
+      }
+
+      .btn {
+        width: 100%;
+
+        &:first-child {
+          margin-right: auto;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .section-hero {
+      .btn {
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
