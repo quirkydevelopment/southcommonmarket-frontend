@@ -8,22 +8,44 @@
   .navbar {
     padding: 10px 25px;
     margin-top: 17px;
+
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
 
   .container-fluid {
     position: relative;
     
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .navbar-brand {
+    position: relative;
   }
 
   .logo-main {
     width: 130px;
     height: auto;
+
+    opacity: 1;
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .logo-main-scrolled {
+    position: absolute;
+    top: -500px;
+    right: initial;
+    bottom: initial;
+    left: 0;
+
+    width: 120px;
+    
+    opacity: 0;
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
 
   .navbar {
     .navbar-menu {
-      margin-top: 20px;
+      margin-top: -70px;
     }
   
     .nav-link {
@@ -109,15 +131,31 @@
 
   @include respond-to(lg-down) {
     .navbar {
+      .navbar-menu {
+        margin-top: -50px;
+      }
+      
       .nav-link {
         margin: 0 10px;
 
-        letter-spacing: -.2px;
+        letter-spacing: 0;
       }
+    }
+
+    .logo-main {
+      width: 100px;
+    }
+
+    .logo-main-scrolled {
+      width: 100px;
     }
   }
 
   @include respond-to(md-down) {
+    .logo-main {
+      width: 100px;
+    }
+
     .navbar-menu {
       position: fixed;
       top: 0;
@@ -140,6 +178,8 @@
     }
 
     .navbar {
+      margin-top: 10px;
+      
       .navbar-menu {
         margin-top: 0;
       }
@@ -158,10 +198,43 @@
       }
     }
 
+    .navbar-toggler-custom {
+      margin-top: 15px;
+    }
+
     .navbar-menu-header,
     .navbar-menu-info,
     .navbar-menu-social {
       display: flex;
     }
+  }
+}
+
+// styles for header when scrolled / not on top
+.header-scrolled {
+  .navbar {
+    margin-top: 0;
+
+    background-color: $brand-color;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+
+    .navbar-menu {
+      margin-top: 0;
+    }
+  }
+
+  .logo-main {
+    position: absolute;
+
+    height: 0;
+
+    opacity: 0;
+  }
+
+  .logo-main-scrolled {
+    position: relative;
+    top: initial;
+
+    opacity: 1;
   }
 }

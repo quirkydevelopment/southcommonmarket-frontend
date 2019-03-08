@@ -17,6 +17,14 @@
   color: $brand-color;
   text-align: center;
   text-transform: uppercase;
+
+  @include respond-to(md-down) {
+    font-size: 16px;
+  }
+
+  @include respond-to(sm-down) {
+
+  }
 }
 
 .section-heading {
@@ -27,6 +35,15 @@
   line-height: 65.26px;
   color: $black;
   text-align: center;
+
+  @include respond-to(md-down) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @include respond-to(sm-down) {
+
+  }
 }
 
 .section-description {
@@ -34,4 +51,12 @@
   
   font: normal 17px $lora-regular;
   line-height: 30px;
+
+  @include respond-to(md-down) {
+    font-size: 16px;
+  }
+
+  @include respond-to(sm-down) {
+
+  }
 }
