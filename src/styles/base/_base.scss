@@ -7,7 +7,7 @@
 /**
  * Basic styles for links
  */
-a {
+ a {
   color: $brand-color;
   text-decoration: none;
 
@@ -45,51 +45,7 @@ input[type="text"] {
   }
 }
 
-//styles for navbar-toggler
-// .navbar-toggler {
-//   padding: 10px 0;
-
-//   border: 0;
-//   border-radius: 0;
-
-//   .icon-bar {
-//     display: block;
-//     height: 4px;
-//     width: 29px;
-
-//     background: #000;
-
-//     @include transition(0.5s cubic-bezier(0.65, 0.05, 0.36, 1));
-
-//     @include boxshadow(none);
-
-//     &+.icon-bar {
-//       margin-top: 4px;
-//     }
-//   }
-
-//   &[aria-expanded="true"] {
-//     .icon-bar {
-//       &:first-child {
-//         @include transform(rotate(225deg) translate(-6px, -5px));
-//       }
-
-//       &:nth-child(2) {
-//         opacity: 0;
-//       }
-
-//       &:last-child {
-//         @include transform(rotate(-225deg) translate(-6px, 6px));
-//       }
-//     }
-//   }
-
-//   @include on-event() {
-//     outline: 0;
-//   }
-// }
-
-
+// styles for navbar toggler
 .navbar-toggler-custom {
   position: relative;
 
@@ -99,6 +55,8 @@ input[type="text"] {
 
   border: 0;
   border-radius: 0;
+
+  cursor: pointer;
 
   &:before {
     content: 'MENU';
@@ -154,5 +112,117 @@ input[type="text"] {
 
   @include respond-to(md-down) {
     display: flex;
+  }
+}
+
+// styles for scroll to next section
+.scroll-next-section {
+  position: absolute;
+  top: initial;
+  right: 90px;
+  bottom: 80px;
+  left: initial;
+  z-index: 10;
+
+  .scroll-trigger {
+    position: relative;
+
+    padding-left: 20px;
+
+    font: normal 10px $montserrat-semi-bold;
+    color: $white;
+    letter-spacing: 3px;
+    line-height: 30px;
+
+    @include on-event() {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 0;
+      
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      border-bottom: 2px solid $brand-color;
+      border-right: 2px solid $brand-color;
+
+      pointer-events: none;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      bottom: 0;
+      left: initial;
+
+      display: block;
+      width: 2px;
+      height: 100px;
+
+      background-color: $brand-color;
+
+      pointer-events: none;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    right: 65px;
+    bottom: 50px;
+  }
+}
+
+// styles for scroll top
+.scroll-top-trigger {
+  position: fixed;
+  top: initial;
+  right: 20px;
+  bottom: 20px;
+  left: initial;
+  z-index: 100;
+  
+  display: flex;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 16px;
+  color: $mid-grey;
+  
+  background-color: $black;
+
+  transition: none;
+
+  @include on-event() {
+    color: $white;
+    text-decoration: none;
+
+    .scroll-top-icon {
+      top: -3px;
+    }
+  }
+
+  .scroll-top-icon {
+    position: relative;
+    top: 0;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  @include respond-to(sm-down) {
+    right: 15px;
+    bottom: 15px;
   }
 }

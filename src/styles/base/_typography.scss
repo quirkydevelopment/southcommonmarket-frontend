@@ -3,7 +3,7 @@
 /**
  * Basic typography style for copy text
  */
-body {
+ body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
@@ -17,6 +17,16 @@ body {
   color: $brand-color;
   text-align: center;
   text-transform: uppercase;
+
+  @include respond-to(md-down) {
+    font-size: 16px;
+  }
+
+  @include respond-to(sm-down) {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
 }
 
 .section-heading {
@@ -27,6 +37,20 @@ body {
   line-height: 65.26px;
   color: $black;
   text-align: center;
+
+  @include respond-to(md-down) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @include respond-to(sm-down) {
+    font-size: 28px;
+    line-height: 34px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .section-description {
@@ -34,66 +58,12 @@ body {
   
   font: normal 17px $lora-regular;
   line-height: 30px;
-}
 
-.scroll-next-section {
-  position: absolute;
-  top: initial;
-  right: 90px;
-  bottom: 80px;
-  left: initial;
-  z-index: 10;
+  @include respond-to(md-down) {
+    font-size: 16px;
+  }
 
-  .scroll-trigger {
-    position: relative;
+  @include respond-to(sm-down) {
 
-    padding-left: 20px;
-
-    font: normal 10px $montserrat-semi-bold;
-    color: $white;
-    letter-spacing: 3px;
-    line-height: 30px;
-
-    @include on-event() {
-      text-decoration: none;
-    }
-
-    &:before {
-      content: '';
-
-      position: absolute;
-      top: 0;
-      right: initial;
-      bottom: 0;
-      left: 0;
-      
-      display: block;
-      width: 8px;
-      height: 8px;
-
-      border-bottom: 2px solid $brand-color;
-      border-right: 2px solid $brand-color;
-
-      pointer-events: none;
-      transform: rotate(45deg);
-    }
-
-    &:after {
-      content: '';
-
-      position: absolute;
-      top: 3px;
-      right: -20px;
-      bottom: 0;
-      left: initial;
-
-      display: block;
-      width: 2px;
-      height: 100px;
-
-      background-color: $brand-color;
-
-      pointer-events: none;
-    }
   }
 }

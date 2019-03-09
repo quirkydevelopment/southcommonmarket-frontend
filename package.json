@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "concurrently -k \"yarn watch\" \"node browsersync.js\"",
-    "start": "parcel src/*.html --public-url ./",
+    "start": "parcel src/*.html",
     "watch": "parcel watch src/*.html --public-url ./",
     "prebuild": "rm -rf dist",
     "build": "parcel build src/*.html --public-url ./"
