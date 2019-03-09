@@ -8,5 +8,9 @@ const browserSync = require('browser-sync');
  */
 browserSync({
   server: "dist",
-  files: ["dist/*.html", "dist/*.css", "dist/*.js"]
+  files: [
+    "dist/*.html", 
+    "dist/*.css", 
+    "dist/*.js"
+  ]
 });

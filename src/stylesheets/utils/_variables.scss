@@ -1,0 +1,65 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$font-opensans: 'Open Sans';
+
+// custom fonts
+$lora-bold: 'Lora Bold';
+$lora-regular: 'Lora Regular';
+$montserrat-black: 'Montserrat Black';
+$montserrat-bold: 'Montserrat Bold';
+$montserrat-light: 'Montserrat Light';
+$montserrat-medium: 'Montserrat Medium';
+$montserrat-regular: 'Montserrat Regular';
+$montserrat-semi-bold: 'Montserrat Semi Bold';
+$nexa-bold: 'Nexa Bold';
+
+/// @type List
+$text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #39b54a !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #EDEDED !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #444 !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;
+
+// custom colors
+$white: #fff;
+$white-opacity: rgba(255, 255, 255, 0.25);
+$black: #000;
+$black-opacity: rgba(0, 0, 0, 0.2);
+$mercury: #e6e6e6;
+$cod-gray: #0C0C0C;
+$black-pearl: #010507;
+$emperor: #555555;
+$boulder: #757575;
+$chateau-green: #39b54a;
+$apple: #33A242;

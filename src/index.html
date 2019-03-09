@@ -13,7 +13,8 @@
 
   <link rel="icon" href="./assets/images/favicon.ico">
   
-  <script src="./styles/entrypoints/styles-index.js"></script>
+  <link src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"></link>
+  <script src="stylesheets/pages/imports/home.js"></script>
 
   <!--[if lte IE 9]>
     <style>.navbar-header,.navbar-nav>li{float:left}.container,.container-fluid{width:970px;max-width:none!important;margin:0 auto}.section,footer{min-width:970px}body>div[style="min-height: 768px;"]{display:none}.navbar-collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;visibility:visible!important;border-top:0}.navbar-toggle{display:none}.navbar-nav{float:left;margin:0}.navbar-nav>li>a{padding:15px}.hidden-xs{display:block!important}.visible-xs{display:none!important}#browser-notification{background-color:red;color:#fff;margin-bottom:0}#browser-notification a{color:#fff;text-decoration:underline}</style>
@@ -104,12 +105,27 @@
           <img src="./assets/images/hero-image.png" class="hero-image" alt="Hero Image" />
         </div>
       </div>
-      <div class="social-media">
-        <!-- <ul class="list-unstyled">
+      <div class="floating-social-media">
+        <ul class="list-unstyled">
           <li class="social-media-item">
-            <a href="#" class="social-media-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-media-link">
+              <span class="social-media-text">Facebook</span>
+              <i class="fab fa-facebook-f"></i>
+            </a>
           </li>
-        </ul> -->
+          <li class="social-media-item">
+            <a href="#" class="social-media-link">
+              <span class="social-media-text">Youtube</span>
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="social-media-item">
+            <a href="#" class="social-media-link">
+              <span class="social-media-text">Instagram</span>
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="scroll-next-section">
         <a href="#" class="scroll-trigger js-scroll-trigger">SCROLL DOWN</a>
@@ -229,7 +245,7 @@
               <a href="/shop" class="btn btn-white-rounded">Click and Pick</a>
             </div>
           </div>
-          <div class="col-md-6 d-none d-md-flex wrapper-image"></div>
+          <div class="col-md-6 social-media-text d-md-flex wrapper-image"></div>
         </div>
       </div>
     </section>
@@ -261,7 +277,7 @@
       </div>
     </section>
 
-    <section class="section-testimonials">
+    <section class="section-testimonials d-none">
       <div class="container">
         <h4 class="section-title">Our Clients</h4>
         <h2 class="section-heading">South Common Market has been <br />honored to partner up with these <br />clients</h2>
@@ -321,49 +337,50 @@
     </section>
 
     <section class="section-contact">
+      <div class="overlay"></div>
       <div class="container">
         <h4 class="section-title">Contact Us</h4>
-        <h2 class="section-heading">Fill out these forms and we will be in touch soon.</h2>
+        <h2 class="section-heading">Fill out these forms and we will be <br />in touch soon.</h2>
         <div class="holder-form">
           <form class="contact-form" action="">
             <h3 class="form-heading">Send Us A Message</h3>
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="Your Name" required />
+              <input class="form-control form-input" type="text" placeholder="Your Name" required />
             </div>
             <div class="form-group">
-              <input class="form-control" type="email" placeholder="Your Email" required />
+              <input class="form-control form-input" type="email" placeholder="Your Email" required />
             </div>
             <div class="form-group">
-              <input class="form-control" type="text" placeholder="Subject" required />
+              <input class="form-control form-input" type="text" placeholder="Subject" required />
             </div>
             <div class="form-group">
-              <textarea class="form-control" type="text" placeholder="Your Name" required></textarea>
+              <textarea class="form-control form-input form-textarea" type="text" placeholder="Your Message" required></textarea>
             </div>
             <button class="btn btn-green" type="submit">Submit</button>
           </form>
           <div class="contact-info">
             <h3 class="form-heading">Contact Info</h3>
-            <div class="contact-info-item">
+            <div class="info-item">
               <h4 class="info-title">Where to Find Us</h4>
               <p class="info-description">The S.E corner of 19th ave and Parsons Rd Edmonton, AB, Canada</p>
             </div>
-            <div class="contact-info-item">
+            <div class="info-item">
               <h4 class="info-title">Email Us At</h4>
               <p class="info-description">info@southcommonmarket.ca</p>
             </div>
-            <div class="contact-info-item">
+            <div class="info-item">
               <h4 class="info-title">Call Us At</h4>
               <p class="info-description">+1 780-686-5882</p>
             </div>
-            <ul class="social-media m-0">
+            <ul class="list-unstyled social-media">
               <li class="social-media-item">
-                <a href="#" class="social-media-link">facebook</a>
+                <a href="#" class="social-media-link" title="Facebook"><i class="fab fa-facebook-f social-media-icon"></i></a>
               </li>
               <li class="social-media-item">
-                <a href="#" class="social-media-link">youtube</a>
+                <a href="#" class="social-media-link" title="Youtube"><i class="fab fa-youtube social-media-icon"></i></a>
               </li>
               <li class="social-media-item">
-                <a href="#" class="social-media-link">instagram</a>
+                <a href="#" class="social-media-link" title="Instagram"><i class="fab fa-instagram social-media-icon"></i></a>
               </li>
             </ul>
           </div>
@@ -375,37 +392,37 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 half-info">
           <div class="holder-image">
             <img class="footer-logo" src="./assets/images/logo-footer.png" alt="" />
           </div>
           <p class="description">South Common Farmers Market is the market with heart. Located in the Alberta Research Park at 1903 Parsons Road, behind South Common Cineplex Theatres. Open every Saturday from 10 am - 4 pm, and Sunday from 10am-4pm. Farm fresh meat, veggies, fruit, corn and more. There are over 1500 parking stalls around the market, no two mile walks!! Beautifully trees and surrounding green spaces, its worth to come just for the food, friendly atmosphere and free parking!</p>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 half-subscribe">
           <h4 class="footer-title">Get Notified</h4>
           <p class="description">We'll gladly send you an email to your inbox about any special sales or events. We also promise not to share it with anyone.</p>
           <form class="footer-form" action="">
             <div class="form-group">
               <span class="footer-icon"><img class="footer-icon-image" src="./assets/images/icon-email.png" alt="" /></span>
-              <input class="form-control" type="email">
-              <button class="btn-btn-green" type="submit">Subscribe</button>
+              <input class="form-control" type="email" placeholder="Email Address">
+              <button class="btn btn-green" type="submit">Subscribe</button>
             </div>
           </form>
         </div>
         <div class="col-12">
           <div class="holder-copyright">
             <p class="description">&copy; Copyright South Common Market 2018</p>
-            <p class="description">Created by <a href="#">South Common Market</a></p>
+            <p class="description">Created by <a href="#" class="copyright-link">South Common Market</a></p>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <a class="scroll-top-trigger" href="#"><i class="fas fa-arrow-up scroll-top-icon"></i></a>
   
-  <script src="./scripts/vendors/dependencies.js"></script>
-  <script src="./scripts/core/base.js"></script>
-  <script src="./scripts/modules/theme-module.js"></script>
-  <script src="./scripts/bootstrapper.js"></script>
+  <script src="javascripts/custom/home.js"></script>
+
   <!--[if lte IE 9]>
     <script>$(function(){$(".collapse").attr("class","");for(var l=1;l<=12;l++)$(".col-sm-"+l).addClass("col-xs-"+l),$(".col-md-"+l).addClass("col-xs-"+l),$(".col-lg-"+l).addClass("col-xs-"+l)});</script>
   <![endif]-->

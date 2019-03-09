@@ -1,24 +1,11 @@
-# Generic Parcel Template
-* Uses Sass and the 7-1 Pattern by Hugo Giraudel.
-* Uses the JavaScript Revealing Module Pattern.
-* Disables responsiveness on IE9 and below.
-* Shows unobtrusive bar to the visitors who is visiting your website with an IE <= 9 browser.
-* Prevents auto zoom on iOS when entering an input field.
-* Disables auto-formatting of possible phone numbers in a webpage in Safari on iOS.
-* Removes webkit input fields outline glow on focus.
-* Added breakpoint mixins for more granular control.
-* Added keyframes, animation, transition and transform mixins to boil down to just a few lines of code.
-* Uses Parcel to bundle, minify, and optimize HTML, CSS and JS.
+# South Common Market - Frontend
 
-# Prerequisites
-* yarn package manager
+#### Steps
+* Install `npm` or `yarn` as package manager
+* Install all packges needed using `npm install` or `yarn install`
+* Script to run
+  * `yarn dev` or `npm run dev` - To watch all *.pug/ *.html files and run the browsersync to serve you a localhost.
+  * `yarn build` or `npm run build` - To build all the files you needed and give it the dist folder to you.
 
-# Getting Started
-* `yarn install` - install dependencies with 
-* `yarn dev` - run development localhost server
-* `yarn build` - build prod files
-* `yarn deploy` - deploy to gh-pages
+> Note: This template is using `pug (.pug)` for html. If you want to use normal html you can just use `.html` extension by changing all `.pug` extension in the `package.json` file.
 
-# Changelog
-* 1.0.0
-  * initial commit
