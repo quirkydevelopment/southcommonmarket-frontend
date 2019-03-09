@@ -56,6 +56,8 @@ input[type="text"] {
   border: 0;
   border-radius: 0;
 
+  cursor: pointer;
+
   &:before {
     content: 'MENU';
 
@@ -110,6 +112,74 @@ input[type="text"] {
 
   @include respond-to(md-down) {
     display: flex;
+  }
+}
+
+// styles for scroll to next section
+.scroll-next-section {
+  position: absolute;
+  top: initial;
+  right: 90px;
+  bottom: 80px;
+  left: initial;
+  z-index: 10;
+
+  .scroll-trigger {
+    position: relative;
+
+    padding-left: 20px;
+
+    font: normal 10px $montserrat-semi-bold;
+    color: $white;
+    letter-spacing: 3px;
+    line-height: 30px;
+
+    @include on-event() {
+      text-decoration: none;
+    }
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 0;
+      
+      display: block;
+      width: 8px;
+      height: 8px;
+
+      border-bottom: 2px solid $brand-color;
+      border-right: 2px solid $brand-color;
+
+      pointer-events: none;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      bottom: 0;
+      left: initial;
+
+      display: block;
+      width: 2px;
+      height: 100px;
+
+      background-color: $brand-color;
+
+      pointer-events: none;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    right: 65px;
+    bottom: 60px;
   }
 }
 

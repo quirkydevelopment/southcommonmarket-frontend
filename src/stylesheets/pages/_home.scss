@@ -6,6 +6,8 @@
 
 .home {
   .section-hero {
+    position: relative;
+    
     height: 100vh;
     min-height: 785px;
 
@@ -38,7 +40,7 @@
       max-width: 450px;
       margin: 20px 0 0 70px;
 
-      font: normal 16.5px $montserrat-regular;
+      font: normal 16.5px $montserrat-medium;
       letter-spacing: 3px;
       line-height: 24px;
 
@@ -128,6 +130,7 @@
       display: flex;
       justify-content: space-between;
       align-content: center;
+      flex-wrap: wrap;
       margin: 80px auto auto;
       max-width: 1060px;
     }
@@ -252,7 +255,7 @@
       .item-title {
         margin: 0 0 18px;
 
-        font: normal 30px $montserrat-medium;
+        font: normal 30px $montserrat-regular;
         line-height: 39px;
       }
 
@@ -266,7 +269,7 @@
       .item-topic {
         margin: 45px 0 15px;
 
-        font: normal 16px $montserrat-medium;
+        font: normal 16px $montserrat-regular;
         line-height: 21px;
         text-align: center;
       }
@@ -274,7 +277,7 @@
       .item-description {
         margin: 0;
 
-        font: normal 17px $lora-regular;
+        font: normal 15px $lora-regular;
         line-height: 30px;
         text-align: center;
       }
@@ -282,18 +285,19 @@
   }
 
   .section-shop-with-us {
+    background-color: $brand-color;
+
     .wrapper-text {
       display: flex;
       justify-content: center;
       flex-direction: column;
       height: 600px;
-
-      background-color: $brand-color;
     }
 
     .wrapper {
       width: 100%;
       max-width: 550px;
+      padding: 0 20px;
       margin-left: auto;
     }
 
@@ -622,8 +626,200 @@
       }
 
       .hero-image {
-        width: calc(100% - 500px);
+        width: calc(100% - 570px);
         min-width: 450px;
+      }
+    }
+
+    .section-market {
+      .vendors {
+        width: 20%;
+      }
+
+      .customers {
+        width: 30%;
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    .section-hero {
+      .wrapper {
+        max-width: 100%;
+      }
+
+      .hero-title {
+        font-size: 46px;
+        line-height: 61px;
+        text-align: center;
+      }
+
+      .holder-image {
+        display: none;
+      }
+
+      .hero-subtitle {
+        margin-right: auto;
+        margin-left: auto;
+
+        text-align: center;
+      }
+
+      .holder-button {
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    .section-market {
+      padding: 100px 0;
+
+      .image {
+        max-width: 500px;
+      }
+
+      .description {
+        font-size: 22px;
+      }
+
+      .item {
+        width: 50%;
+
+        &.stalls {
+          border-right: none;
+        }
+      }
+
+      .vendors,
+      .stalls {
+        margin-bottom: 40px;
+      }
+    }
+
+    .section-what-we-do {
+      .item {
+        &:nth-child(odd) {
+          padding-right: 20px;
+        }
+
+        &:nth-child(even) {
+          padding-left: 20px;
+        }
+
+        .item-title {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .item-iframe {
+          height: 240px;
+        }
+      }
+    }
+
+    .section-shop-with-us {
+      .container-fluid {
+        max-width: 720px;
+      }
+
+      .wrapper {
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .wrapper-text {
+        height: 450px;
+      }
+
+      .section-heading {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+      }
+
+      .section-description {
+        text-align: center;
+      }
+
+      .btn-white-rounded {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    .section-gallery {
+      padding: 100px 0;
+
+      .item .item-image {
+        height: 320px;
+      }
+    }
+
+    .section-contact {
+      padding: 100px 0;
+
+      .holder-form {
+        flex-direction: column;
+
+        .contact-form {
+          width: 100%;
+        }
+
+        .contact-info {
+          width: 100%;
+          max-width: 450px;
+
+          background-color: transparent;
+        }
+      }
+
+      .btn-green {
+        @include on-event() {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .section-hero {
+      .hero-title {
+        font-size: 34px;
+        line-height: 40px;
+      }
+
+      .hero-subtitle {
+        max-width: 230px;
+
+        font-size: 15px;
+        line-height: 18.75px;
+      }
+
+      .holder-button {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        max-width: 400px;
+      }
+
+      .btn {
+        width: 100%;
+
+        &:first-child {
+          margin-right: auto;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .section-hero {
+      .btn {
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }

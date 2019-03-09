@@ -59,10 +59,14 @@
   border: 2px solid $white;
   border-radius: 0;
 
+  @include on-event() {
+    color: $white;
+    text-decoration: none;
+  }
+
   @include respond-to(lg-up) {
     @include on-event() {
       color: $black;
-      text-decoration: none;
 
       background-color: $white;
     }
