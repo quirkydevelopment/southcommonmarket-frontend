@@ -199,13 +199,28 @@
     }
 
     .navbar-toggler-custom {
-      margin-top: 15px;
+      margin-top: -20px;
     }
 
     .navbar-menu-header,
     .navbar-menu-info,
     .navbar-menu-social {
       display: flex;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .navbar {
+      padding: 5px 15px;
+      margin-top: 5px;
+    }
+
+    .logo-main {
+      width: 80px;
+    }
+
+    .navbar-toggler-custom {
+      margin-top: -50px;
     }
   }
 }
@@ -236,5 +251,11 @@
     top: initial;
 
     opacity: 1;
+  }
+  
+  @include respond-to(md-down) {
+    .navbar-toggler-custom {
+      margin-top: 0;
+    }
   }
 }

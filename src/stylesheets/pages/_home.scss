@@ -9,7 +9,8 @@
     position: relative;
     
     height: 100vh;
-    min-height: 785px;
+    // min-height: 785px;
+    min-height: 550px;
 
     background: url('../assets/images/bg-hero-home.jpg') no-repeat center;
     background-size: cover;
@@ -632,6 +633,10 @@
     }
 
     .section-market {
+      .image {
+        max-width: 500px;
+      }
+
       .vendors {
         width: 20%;
       }
@@ -784,6 +789,8 @@
 
   @include respond-to(sm-down) {
     .section-hero {
+      min-height: 600px;
+
       .hero-title {
         font-size: 34px;
         line-height: 40px;
@@ -812,6 +819,138 @@
         }
       }
     }
+
+    .section-market {
+      .holder-image {
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+
+        &:after {
+          width: 100%;
+          min-width: 250px;
+          max-width: 70%;
+        }
+      } 
+
+      .image {
+        max-width: 80%;
+      }
+
+      .description {
+        font-size: 17px;
+        line-height: 28px;
+      }
+
+      .holder-numbers {
+        margin-top: 60px;
+      }
+
+      .text-label {
+        margin: 5px 0;
+
+        font-size: 16px;
+      }
+    }
+
+    .section-what-we-do {
+      .section-heading {
+        margin-bottom: 20px;
+      }
+      
+      .holder-items {
+        padding: 40px 0;
+        margin-top: 0;
+
+        &:before {
+          width: 100%;
+          min-width: 250px;
+          max-width: 70%;
+        }
+      }
+      
+      .item {
+        .item-title {
+          font: normal 20px $montserrat-medium;
+          line-height: 20px;
+        }
+
+        .item-topic {
+          margin-top: 35px;
+
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        .item-description {
+          padding: 0 20px;
+
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    .section-shop-with-us {
+      .section-heading {
+        font-size: 28px;
+        line-height: 34px;
+
+        br {
+          display: block;
+        }
+      }
+    }
+
+    .section-gallery {
+      .item {
+        padding: 0 15px;
+        
+        .item-image {
+          height: 250px;
+        }
+      }
+    }
+
+    .section-contact {
+      .form-heading {
+        font-size: 16px;
+
+        text-align: center;
+      }
+
+      .form-input {
+        height: 50px;
+
+        font-size: 14px;
+      }
+
+      .form-textarea {
+        min-height: 200px;
+      }
+
+      .holder-form {
+        .contact-form {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+
+        .contact-info {
+          max-width: 100%;
+        }
+      }
+
+      .info-item {
+        text-align: center;
+
+        .info-title {
+          font-size: 15px;
+        }
+      }
+
+      .social-media {
+        justify-content: center;
+      }
+    }
   }
 
   @include respond-to(xs) {
@@ -820,6 +959,43 @@
         width: calc(100% - 30px);
         margin-left: auto;
         margin-right: auto;
+      }
+    }
+
+    .section-market {
+      padding-bottom: 70px;
+
+      .holder-numbers {
+        margin-top: 30px;
+
+        .item {
+          width: 100%;
+          max-width: 230px;
+          padding: 30px 15px;
+          margin: 0 auto;
+
+          &:not(:last-child) {
+            border-right: 0;
+            border-bottom: 2px solid $white-opacity;
+          }
+        }
+      }
+    }
+
+    .section-contact {      
+      padding-bottom: 0;
+
+      .holder-form {
+        margin-right: -15px;
+        margin-left: -15px;
+
+        .contact-form {
+          padding: 60px 30px 40px;
+        }
+
+        .contact-info {
+          padding: 20px 30px 100px;
+        }
       }
     }
   }

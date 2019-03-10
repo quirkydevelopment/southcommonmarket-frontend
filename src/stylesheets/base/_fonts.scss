@@ -5,6 +5,7 @@
 // -----------------------------------------------------------------------------
 
 @include font-face($font-opensans, $base-url + 'fonts/', 'opensans-regular', 'opensans-regular');
+@include font-face($bebas-regular, $base-url + 'fonts/', 'bebas-regular', 'bebas-regular');
 @include font-face($lora-bold, $base-url + 'fonts/', 'lora-bold', 'lora-bold');
 @include font-face($lora-regular, $base-url + 'fonts/', 'lora-regular', 'lora-regular');
 @include font-face($montserrat-black, $base-url + 'fonts/', 'montserrat-black', 'montserrat-black');

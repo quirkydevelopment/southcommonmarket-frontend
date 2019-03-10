@@ -179,7 +179,7 @@ input[type="text"] {
 
   @include respond-to(sm-down) {
     right: 65px;
-    bottom: 60px;
+    bottom: 50px;
   }
 }
 
@@ -219,5 +219,10 @@ input[type="text"] {
     top: 0;
 
     transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  @include respond-to(sm-down) {
+    right: 15px;
+    bottom: 15px;
   }
 }
