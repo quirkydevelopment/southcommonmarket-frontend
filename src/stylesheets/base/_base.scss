@@ -199,16 +199,26 @@ input[type="text"] {
   align-items: center;
   
   font-size: 16px;
-  color: $mid-grey;
+  color: $white;
   
   background-color: $black;
 
-  transition: none;
+  opacity: 0;
+  // transition: none;
+  transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   @include on-event() {
     color: $white;
     text-decoration: none;
+  }
 
+  &:hover {
     .scroll-top-icon {
       top: -3px;
     }

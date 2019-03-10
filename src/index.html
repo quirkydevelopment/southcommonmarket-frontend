@@ -32,63 +32,65 @@
     </div>
   <![endif]-->
   
-  <header class="header header-scrolled">
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img class="logo-main" src="./assets/images/logo.png" alt="" />
-          <img class="logo-main-scrolled" src="./assets/images/logo-scm-white.png" alt="" />
-        </a>
-        <span class="navbar-toggler-custom">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </span>
-        <div class="navbar-menu">
-          <div class="navbar-menu-header">
-            <h3 class="navbar-heading">Navigation</h3>
-            <span class="navbar-toggler-close">
-              <i class="fas fa-times"></i>
-            </span>
+  <header>
+    <div class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img class="logo-main" src="./assets/images/logo.png" alt="" />
+            <img class="logo-main-scrolled" src="./assets/images/logo-scm-white.png" alt="" />
+          </a>
+          <span class="navbar-toggler-custom js-navbar-open">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </span>
+          <div class="navbar-menu">
+            <div class="navbar-menu-header">
+              <h3 class="navbar-heading">Navigation</h3>
+              <span class="navbar-toggler-close js-navbar-close">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link about" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link our-vendors" href="#">Our Vendors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link services" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link gallery" href="/gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link be-a-vendor" href="#clients">Be a Vendor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link contact-us" href="/contact-us">Contact Us</a>
+              </li>
+            </ul>
+            <p class="navbar-menu-info">WELCOME we are the "market with heart", where people matter. Our local living and local giving support a variety of unique vendors, food and artisans.</p>
+            <ul class="list-unstyled navbar-menu-social">
+              <li>
+                <a href="https://www.facebook.com/southcommonmarket/?ref=br_rs"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://youtu.be/SXUna76Cl_A"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/explore/locations/265082540/south-common-market-edmonton/"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
           </div>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link home" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link about" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link our-vendors" href="#">Our Vendors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link services" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link gallery" href="/gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link be-a-vendor" href="#clients">Be a Vendor</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link contact-us" href="/contact-us">Contact Us</a>
-            </li>
-          </ul>
-          <p class="navbar-menu-info">WELCOME we are the "market with heart", where people matter. Our local living and local giving support a variety of unique vendors, food and artisans.</p>
-          <ul class="list-unstyled navbar-menu-social">
-            <li>
-              <a href="https://www.facebook.com/southcommonmarket/?ref=br_rs"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="https://youtu.be/SXUna76Cl_A"><i class="fa fa-youtube"></i></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/explore/locations/265082540/south-common-market-edmonton/"><i class="fa fa-instagram"></i></a>
-            </li>
-          </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <main class="home">
@@ -129,11 +131,11 @@
         </ul>
       </div>
       <div class="scroll-next-section">
-        <a href="#" class="scroll-trigger js-scroll-trigger">SCROLL DOWN</a>
+        <a href="#section-next" class="scroll-trigger js-scroll-next">SCROLL DOWN</a>
       </div>
     </section>
 
-    <section class="section-market">
+    <section id="section-next" class="section-market">
       <div class="container">
         <div class="holder-image">
           <img class="image" src="./assets/images/logo-brown.png" alt="South Common Market" />
@@ -167,28 +169,36 @@
       </div>
     </section>
 
-    <section class="section-awesome-vendors d-none">
-      <div class="container">
+    <section class="section-awesome-vendors">
+      <div class="container-fluid">
         <h4 class="section-title">Our Awesome Vendors</h4>
         <h2 class="section-heading">Delight your senses and satisfy <br />every craving while discovering new flavours</h2>
-        <div class="holder-swiper">
-          <div class="slide">
-            <img class="slide-image" src="./assets/images/image-swiper1.png" alt="slide image" />
+        <div class="slick">
+          <div class="slick-container">
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper1.png" alt="slide image" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper2.png" alt="slide image" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper3.png" alt="slide image" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper4.png" alt="slide image" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper5.png" alt="slide image" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper3.png" alt="slide image" />
+            </div>
+            <div class="slide">
+              <img class="slide-image" src="./assets/images/image-swiper4.png" alt="slide image" />
+            </div>
           </div>
-          <div class="slide">
-            <img class="slide-image" src="./assets/images/image-swiper2.png" alt="slide image" />
-          </div>
-          <div class="slide">
-            <img class="slide-image" src="./assets/images/image-swiper3.png" alt="slide image" />
-          </div>
-          <div class="slide">
-            <img class="slide-image" src="./assets/images/image-swiper4.png" alt="slide image" />
-          </div>
-          <div class="slide">
-            <img class="slide-image" src="./assets/images/image-swiper5.png" alt="slide image" />
-          </div>
-          <div class="swiper-nav swiper-prev"><img class="swiper-nav-image" src="./assets/images/icon-arrow-prev.png" alt="" /></div>
-          <div class="swiper-nav swiper-next"><img class="swiper-nav-image" src="./assets/images/icon-arrow-next.png" alt="" /></div>
+          <div class="slick-nav slick-prev"><img class="slick-nav-image slick-image-prev" src="./assets/images/icon-arrow-prev.png" alt="Previous" /></div>
+          <div class="slick-nav slick-next"><img class="slick-nav-image slick-image-next" src="./assets/images/icon-arrow-next.png" alt="Next" /></div>
         </div>
       </div>
     </section>
@@ -278,61 +288,65 @@
       </div>
     </section>
 
-    <section class="section-testimonials d-none">
-      <div class="container">
+    <section class="section-testimonials">
+      <div class="container-fluid">
         <h4 class="section-title">Our Clients</h4>
         <h2 class="section-heading">South Common Market has been <br />honored to partner up with these <br />clients</h2>
-        <div class="holder-swiper">
-          <div class="slide">
-            <h3 class="slide-quote">Vendors are very nice with great product, great food, prices are reasonable. Manager is the best. The popcorn is to die for... Best market I been to...</h3>
-            <div class="slide-author">
-              <div class="holder-image">
-                <img class="slide-author-image" src="./assets/images/image-author1.jpg" alt="" />
+        <div class="slick">
+          <div class="slick-container">
+            <div class="slide">
+              <h3 class="slide-quote">Vendors are very nice with great product, great food, prices are reasonable. Manager is the best. The popcorn is to die for... Best market I been to...</h3>
+              <div class="slide-author">
+                <div class="holder-image">
+                  <img class="slide-author-image" src="./assets/images/image-author1.jpg" alt="" />
+                </div>
+                <h4 class="slide-name">Gidget Mckay</h4>
+                <h5 class="slide-company">Manages Mama G's Jam</h5>
               </div>
-              <h4 class="slide-name">Gidget Mckay</h4>
-              <h5 class="slide-company">Manages Mama G's Jam</h5>
+            </div>
+            <div class="slide">
+              <h3 class="slide-quote">We love this market and we're very impressed with the carnival last weekend! It was superb! It was so clean and well organized and had so many rides! Great job! Hopefully you can do it again next year.</h3>
+              <div class="slide-author">
+                <div class="holder-image">
+                  <img class="slide-author-image" src="./assets/images/image-author2.jpg" alt="" />
+                </div>
+                <h4 class="slide-name">Michelle Neveu</h4>
+                <h5 class="slide-company">Alberta, Canada</h5>
+              </div>
+            </div>
+            <div class="slide">
+              <h3 class="slide-quote">We are closing in on the second season my team has taken part in this market - and we will DEFINITELY be back next year. The price can't be beat, and it is so much fun (of course there are hiccups here and there, it's all part of life and business!!).. Arlene and Brian do run a great market, and I have met some really wonderful people. I would recommend this market as a vendor AND as a patron (which I also have been :D ) </h3>
+              <div class="slide-author">
+                <div class="holder-image">
+                  <img class="slide-author-image" src="./assets/images/image-author3.jpg" alt="" />
+                </div>
+                <h4 class="slide-name">Mandi Holden</h4>
+                <h5 class="slide-company">Alberta, Canada</h5>
+              </div>
+            </div>
+            <div class="slide">
+              <h3 class="slide-quote">Best farmer market ever, love to go there every Saturday and Sunday</h3>
+              <div class="slide-author">
+                <div class="holder-image">
+                  <img class="slide-author-image" src="./assets/images/image-author4.jpg" alt="" />
+                </div>
+                <h4 class="slide-name">Rina Yudovich Variat</h4>
+                <h5 class="slide-company">Manages COLBO Construction Ltd., Alberta, Canada</h5>
+              </div>
+            </div>
+            <div class="slide">
+              <h3 class="slide-quote">Great market! There is a very good selection of vendors and lots of free parking!</h3>
+              <div class="slide-author">
+                <div class="holder-image">
+                  <img class="slide-author-image" src="./assets/images/image-author5.jpg" alt="" />
+                </div>
+                <h4 class="slide-name">Candace Hiebert</h4>
+                <h5 class="slide-company">Leader at Gold Canyon Alberta, Canada</h5>
+              </div>
             </div>
           </div>
-          <div class="slide" style="display: none;">
-            <h3 class="slide-quote">We love this market and we're very impressed with the carnival last weekend! It was superb! It was so clean and well organized and had so many rides! Great job! Hopefully you can do it again next year.</h3>
-            <div class="slide-author">
-              <div class="holder-image">
-                <img class="slide-author-image" src="./assets/images/image-author2.jpg" alt="" />
-              </div>
-              <h4 class="slide-name">Michelle Neveu</h4>
-              <h5 class="slide-company">Alberta, Canada</h5>
-            </div>
-          </div>
-          <div class="slide" style="display: none;">
-            <h3 class="slide-quote">We are closing in on the second season my team has taken part in this market - and we will DEFINITELY be back next year. The price can't be beat, and it is so much fun (of course there are hiccups here and there, it's all part of life and business!!).. Arlene and Brian do run a great market, and I have met some really wonderful people. I would recommend this market as a vendor AND as a patron (which I also have been :D ) </h3>
-            <div class="slide-author">
-              <div class="holder-image">
-                <img class="slide-author-image" src="./assets/images/image-author3.jpg" alt="" />
-              </div>
-              <h4 class="slide-name">Mandi Holden</h4>
-              <h5 class="slide-company">Alberta, Canada</h5>
-            </div>
-          </div>
-          <div class="slide" style="display: none;">
-            <h3 class="slide-quote">Best farmer market ever, love to go there every Saturday and Sunday</h3>
-            <div class="slide-author">
-              <div class="holder-image">
-                <img class="slide-author-image" src="./assets/images/image-author4.jpg" alt="" />
-              </div>
-              <h4 class="slide-name">Rina Yudovich Variat</h4>
-              <h5 class="slide-company">Manages COLBO Construction Ltd., Alberta, Canada</h5>
-            </div>
-          </div>
-          <div class="slide" style="display: none;">
-            <h3 class="slide-quote">Great market! There is a very good selection of vendors and lots of free parking!</h3>
-            <div class="slide-author">
-              <div class="holder-image">
-                <img class="slide-author-image" src="./assets/images/image-author5.jpg" alt="" />
-              </div>
-              <h4 class="slide-name">Candace Hiebert</h4>
-              <h5 class="slide-company">Leader at Gold Canyon Alberta, Canada</h5>
-            </div>
-          </div>
+          <div class="slick-nav slick-prev"><img class="slick-nav-image slick-image-prev" src="./assets/images/icon-arrow-left.png" alt="Previous" /></div>
+          <div class="slick-nav slick-next"><img class="slick-nav-image slick-image-next" src="./assets/images/icon-arrow-right.png" alt="Next" /></div>
         </div>
       </div>
     </section>
@@ -420,7 +434,7 @@
     </div>
   </footer>
 
-  <a class="scroll-top-trigger" href="#"><i class="fas fa-arrow-up scroll-top-icon"></i></a>
+  <a class="scroll-top-trigger js-scroll-top" href="#"><i class="fas fa-arrow-up scroll-top-icon"></i></a>
   
   <script src="javascripts/vendors.js"></script>
   <script src="javascripts/custom/home.js"></script>

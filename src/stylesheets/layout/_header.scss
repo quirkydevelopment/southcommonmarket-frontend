@@ -116,6 +116,40 @@
     }
   }
 
+  .navbar-toggler-close {
+    position: relative;
+
+    color: $dark-grey;
+    
+    cursor: pointer;
+
+    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: -2px;
+      right: -9px;
+      bottom: initial;
+      left: initial;
+
+      width: 32px;
+      height: 32px;
+      margin: auto;
+
+      background-color: $black;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    .fas {
+      position: relative;
+    }
+  }
+
   .navbar-menu-info {
     display: none;
     margin: 40px 0 20px;
@@ -127,6 +161,18 @@
 
   .navbar-menu-social {
     display: none;
+
+    a {
+      margin-right: 15px;
+      
+      color: $white-opacity;
+
+      transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+      &:hover {
+        color: $white;
+      }
+    }
   }
 
   @include respond-to(lg-down) {

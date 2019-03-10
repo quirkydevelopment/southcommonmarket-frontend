@@ -2926,6 +2926,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+header@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/header/-/header-0.1.1.tgz#f365a5a66018058f7f9e374a1e8153360c9386b9"
+  integrity sha1-82WlpmAYBY9/njdKHoFTNgyThrk=
+
 hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"

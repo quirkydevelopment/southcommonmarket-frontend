@@ -11,6 +11,7 @@
     height: 100vh;
     // min-height: 785px;
     min-height: 550px;
+    overflow: hidden;
 
     background: url('../assets/images/bg-hero-home.jpg') no-repeat center;
     background-size: cover;
@@ -169,10 +170,17 @@
   .section-awesome-vendors {
     padding: 160px 0 100px;
 
-    .holder-swiper {
+    .slick {
       position: relative;
 
       display: flex;
+      flex-direction: column;
+      padding: 0 150px;
+
+      .slick-track {
+        display: flex;
+        align-items: center;
+      }
     }
 
     .slide {
@@ -182,33 +190,40 @@
     }
 
     .slide-image {
-      max-width: 100%;
+      max-width: 80%;
+      margin: auto;
     }
 
-    .swiper-prev {
+    .slick-nav {
       position: absolute;
       top: 0;
+      bottom: 0;
+
+      display: flex;
+      align-items: center;
+      width: 45px;
+      height: auto;
+
+      transform: none;
+      cursor: pointer;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .slick-prev {
       right: initial;
-      bottom: 0;
-      left: -100px;
-
-      display: flex;
-      align-items: center;
+      left: 70px;
     }
 
-    .swiper-next {
-      position: absolute;
-      top: 0;
-      right: -100px;
-      bottom: 0;
+    .slick-next {
+      right: 70px;
       left: initial;
-      
-      display: flex;
-      align-items: center;
     }
 
-    .swiper-nav-image {
-      max-width: 40px;
+    .slick-nav-image {
+      width: 100%;
     }
   }
 
@@ -394,10 +409,10 @@
       background-color: $brand-color;
     }
 
-    .holder-swiper {
+    .slick {
       position: relative;
   
-      padding-top: 70px;
+      padding: 70px 100px 0;
       margin-top: 60px;
 
       text-align: center;
@@ -417,10 +432,14 @@
 
         background-color: $black-opacity;
       }
+
+      .slick-track {
+        display: flex;
+      }
     }
 
     .slide-quote {
-      max-width: 900px;
+      // max-width: 900px;
       margin: 0 auto 60px;
 
       font: normal 30px $lora-regular;
@@ -429,7 +448,10 @@
     }
 
     .holder-image {
-      margin: 0 auto 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 12px;      
     }
 
     .slide-author-image {
@@ -452,6 +474,40 @@
       font: normal 14px $montserrat-regular;
       line-height: 24.71px;
       color: $boulder;
+    }
+
+    .slick-nav {
+      position: absolute;
+      top: 150px;
+      bottom: initial;
+
+      display: flex;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+
+      transform: none;
+      cursor: pointer;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .slick-prev {
+      right: initial;
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
+      left: initial;
+    }
+
+    .slick-nav-image {
+      display: block;
+      width: 22px;
+      margin: auto;
     }
   }
 
@@ -645,6 +701,35 @@
         width: 30%;
       }
     }
+
+    .section-awesome-vendors {
+      .slick {
+        padding: 0 100px;
+      }
+
+      .slide-image {
+        max-height: 170px;
+      }
+
+      .slick-nav {
+        width: 40px;
+      }
+
+      .slick-prev {
+        left: 40px;
+      }
+
+      .slick-next {
+        right: 40px;
+      }
+    }
+
+    .section-testimonials {
+      .slide-quote {
+        font-size: 28px;
+        line-height: 52px;
+      }
+    }
   }
 
   @include respond-to(md-down) {
@@ -699,6 +784,24 @@
       .vendors,
       .stalls {
         margin-bottom: 40px;
+      }
+    }
+
+    .section-awesome-vendors {
+      .slide-image {
+        max-height: 130px;
+      }
+
+      .slick-nav {
+        width: 35px;
+      }
+
+      .slick-prev {
+        left: 30px;
+      }
+
+      .slick-next {
+        right: 30px;
       }
     }
 
@@ -761,8 +864,21 @@
       }
     }
 
+    .section-testimonials {
+      &:before {
+        bottom: -80px;
+
+        height: 160px;
+      }
+
+      .slide-quote {
+        font-size: 24px;
+        line-height: 44px;
+      }
+    }
+
     .section-contact {
-      padding: 100px 0;
+      padding: 120px 0 100px;
 
       .holder-form {
         flex-direction: column;
@@ -852,6 +968,28 @@
       }
     }
 
+    .section-awesome-vendors {
+      .slick {
+        padding: 0 80px;
+      }
+
+      .slide-image {
+        max-width: 90%;
+      }
+
+      .slick-nav {
+        width: 30px;
+      }
+
+      .slick-prev {
+        left: 25px;
+      }
+
+      .slick-next {
+        right: 25px;
+      }
+    }
+
     .section-what-we-do {
       .section-heading {
         margin-bottom: 20px;
@@ -907,6 +1045,83 @@
         
         .item-image {
           height: 250px;
+        }
+      }
+    }
+
+    .section-testimonials {
+      .slick {  
+        padding: 60px 25px 0;
+        margin-top: 60px;
+
+        &:after {
+          width: 100%;
+          min-width: 250px;
+          max-width: 70%;
+        }
+      }
+
+      .slide-quote {
+        font-size: 18px;
+        line-height: 34px;
+      }
+
+      .slick-nav {
+        display: none;
+      }
+
+      .slick-dots {
+        position: relative;
+        bottom: -20px;
+
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style: none;
+        }
+
+        .slick-active {
+          button:after {
+            background-color: $brand-color;
+          }
+        }
+
+        button {
+          position: relative;
+
+          margin: 0 8px;
+
+          font-size: 0;
+        
+          background: transparent;
+          border: none;
+          
+          list-style: none; 
+          outline: none; 
+
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            content: '';
+            
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 10px;
+            height: 10px;
+            margin: auto;
+            
+            background-color: $mid-grey;
+            border-radius: 50%;
+          }
         }
       }
     }
