@@ -7,29 +7,30 @@
   'utils/mixins';
 
 /* Vendors */
- @import 
-    'vendors/bootstrap',
-    'vendors/slick';
-    // 'vendors/font-awesome',
-    // 'vendors/swiper';
+@import 
+  'vendors/bootstrap',
+  'vendors/slick';
+  // 'vendors/font-awesome',
+  // 'vendors/swiper';
 
 /* Base stuff */
 @import
-    'base/base',
-    'base/fonts',
-    'base/typography',
-    'base/helpers';
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
 /* Layout-related sections */
 @import
-    'layout/header',
-    'layout/footer';
+  'layout/header',
+  'layout/footer';
 
 /* Components */
 @import
-    'components/buttons',
-    'components/floating-social-media';
+  'components/buttons',
+  'components/floating-social-media';
 
 /* Page-specific styles */
 @import
-  'pages/home';
+  'pages/home',
+  'pages/admin';

@@ -1,0 +1,14 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the dashboard pages.
+// -----------------------------------------------------------------------------
+
+.dashboard {
+  display: flex;
+  padding-top: 90px;
+
+  .dashboard-tabs {
+    flex-direction: column;
+  }
+}
