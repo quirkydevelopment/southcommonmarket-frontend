@@ -23,7 +23,9 @@
 /* Layout-related sections */
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/dashboard-tab',
+  'layout/dashboard-content';
 
 /* Components */
 @import
@@ -33,4 +35,4 @@
 /* Page-specific styles */
 @import
   'pages/home',
-  'pages/admin';
+  'pages/dashboard';

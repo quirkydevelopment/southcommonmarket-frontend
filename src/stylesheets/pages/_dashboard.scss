@@ -5,10 +5,10 @@
 // -----------------------------------------------------------------------------
 
 .dashboard {
-  display: flex;
-  padding-top: 90px;
+  position: relative;
 
-  .dashboard-tabs {
-    flex-direction: column;
-  }
+  display: flex;
+  padding-top: 80px;
+
+  background-color: $willow-brook;
 }
