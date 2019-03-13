@@ -5,6 +5,8 @@
 // ---------------------------------------------------------------------------------------
 
 .dashboard-content {
+  width: calc(100% - 20px);
+
   margin-top: 20px;
-  margin-left: 300px;
+  padding-left: 300px;
 }
