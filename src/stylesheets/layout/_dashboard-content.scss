@@ -8,5 +8,132 @@
   width: calc(100% - 20px);
 
   margin-top: 20px;
-  padding-left: 300px;
+  padding-left: 280px;
+
+  font-size: 14px;
+  color: $emperor;
+
+  .tab-content {
+    position: relative;
+
+    height: calc(100vh - 80px - 20px - 100px);
+    padding: 30px 20px;
+
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px $black-opacity40;
+  }
+  
+  .search {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    bottom: initial;
+    left: initial;
+
+    &-holder {
+      position: relative;
+
+      width: 300px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 12px;
+
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      font-size: 18px;
+      color: $hippie-green;
+    }
+
+    &-input {
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 12px 4px 37px;
+      display: flex;
+      align-items: center;
+      height: 40px;
+
+      font-size: 14px;
+      // color: $black-pearl;
+
+      border: 2px solid $olivine;
+      border-radius: 3px;
+
+      transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+      @include placeholder() {
+        color: $olivine;
+      }
+
+      &:focus {
+        box-shadow: 0 2px 20px $black-opacity20;
+      }
+    }
+  }
+
+  .tab-header {
+    .tab-title {
+      font-size: 28px;
+      color: $hippie-green;
+      text-transform: uppercase;
+    }
+  }
+
+  .tab-body {
+    padding-top: 20px;
+  }
+
+  .table-custom {
+    width: 100%;
+
+    .table-heading {
+      padding: 0 5px;
+
+      font-size: 15px;
+      color: $hippie-green;
+    }
+
+    .filter-item {
+      position: relative;
+
+      cursor: pointer;
+
+      &:not(:first-child) {
+        padding-right: 10px;
+
+        // &:before {
+        //   content: "\f0d8";
+
+        //   position: absolute;
+        //   top: -3px;
+        //   right: 3px;
+        //   bottom: initial;
+        //   left: initial;
+
+        //   font-family: 'Font Awesome\ 5 Free';
+        //   color: $hippie-green;
+        // }
+
+        // &:after {
+        //   content: "\f0d7";
+
+        //   position: absolute;
+        //   top: initial;
+        //   right: 3px;
+        //   bottom: -3px;
+        //   left: initial;
+
+        //   font-family: 'Font Awesome\ 5 Free';
+        //   color: $hippie-green;
+        // }
+      }
+    }
+  }
 }

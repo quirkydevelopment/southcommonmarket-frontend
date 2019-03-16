@@ -1,0 +1,48 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form component.
+// -----------------------------------------------------------------------------
+
+input[type=email]:active, 
+input[type=email]:focus, 
+input[type=email]:hover, 
+input[type=password]:active, 
+input[type=password]:focus, 
+input[type=password]:hover, 
+input[type=text]:active, 
+input[type=text]:focus, 
+input[type=text]:hover,
+button,
+button:active,
+button:focus,
+button:hover {
+  appearance: none;
+}
+
+.table-custom {
+  .btn-table {
+    padding: 8px 15px;
+
+    color: $white;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    box-shadow: none !important;
+
+    outline: none;
+
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  .btn-info {
+    background-color: $picton-blue;
+    border-color: $picton-blue;
+
+    @include on-event() {
+      background-color: $curious-blue;
+      border-color: $curious-blue;
+    }
+  }
+}

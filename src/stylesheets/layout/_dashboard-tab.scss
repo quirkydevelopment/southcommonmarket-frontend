@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   height: calc(100vh - 80px);
   padding: 10px 0;
   overflow-y: auto;
@@ -24,10 +24,31 @@
 
   .tab-item {
     display: flex;
-    margin-top: 20px;
+    margin-top: 15px;
 
     &:last-child {
-      margin-bottom: 70px;
+      margin-bottom: 40px;
+    }
+
+    &.active {
+      .tab-link {
+        color: $yellow;
+
+        .tab-icon {
+          path,
+          rect,
+          polygon,
+          circle,
+          text {
+            fill: $yellow;
+            stroke: $yellow;
+          }
+
+          circle ~ circle {
+            fill: $brand-color;
+          }
+        } 
+      }
     }
   }
 
@@ -40,7 +61,7 @@
     
     color: $white;
 
-    transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
 
     .tab-icon {
       display: flex;
@@ -51,24 +72,56 @@
 
       background: url('../assets/images/icon-leaf.png') no-repeat center;
       background-size: contain;
+      
+      path,
+      rect,
+      polygon,
+      circle,
+      text {
+        fill: $white;
+        color: $white;
+        stroke: $white;
 
-      path {
-        transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+
+      circle ~ circle {
+        fill: $brand-color;
+      }
+
+      svg {
+        position: relative;
+        bottom: -3px;
+
+        width: 28px;
+        height: 28px;
       }
     }
 
     .tab-text {
-      margin-left: 10px;
+      margin-left: 8px;
       
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @include on-event() {
-      color: yellow;
+      color: $emperor;
       text-decoration: none;
 
-      .tab-icon path {
-        fill: yellow;
+      .tab-icon {
+        path,
+        rect,
+        polygon,
+        circle,
+        text {
+          fill: $emperor;
+          color: $emperor;
+          stroke: $emperor;
+        }
+
+        circle ~ circle {
+          fill: $brand-color;
+        }
       }
     }
   }
