@@ -83,7 +83,7 @@
             <span class="tab-text">Dashboard</span>
           </a>
         </li>
-        <li class="tab-item active">
+        <li class="tab-item">
           <a href="#request" class="tab-link" data-toggle="tab">
             <div class="tab-icon">
               <svg class="svg-request" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
@@ -198,7 +198,7 @@
             <span class="tab-text">Site Map</span>
           </a>
         </li>
-        <li class="tab-item">
+        <li class="tab-item active">
           <a href="#categories" class="tab-link" data-toggle="tab">
             <div class="tab-icon">
               <svg class="svg-categories" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 433.5 433.5"xml:space="preserve">
@@ -237,7 +237,7 @@
             <span class="tab-text">Vendor FAQ</span>
           </a>
         </li>
-        <a href="#" class="sidebar-toggler js-sidebar-toggler"></a>
+        <!-- <a href="#" class="sidebar-toggler js-sidebar-toggler"><i class="fas fa-chevron-circle-left"></i></a> -->
       </ul>
     </div>
 
@@ -253,7 +253,7 @@
           <h3>Dashboard</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div id="request" class="tab-pane in active show">
+        <div id="request" class="tab-pane">
           <div class="tab-header">
             <h3 class="tab-title">Vendor Request</h3>
           </div>
@@ -265,6 +265,7 @@
                   <th class="table-heading filter-item">Company Name</th>
                   <th class="table-heading filter-item">Full Name</th>
                   <th class="table-heading filter-item">Email</th>
+                  <th class="table-heading text-center" colspan="4">Actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -273,54 +274,301 @@
                   <td>Zan's Body Works</td> 
                   <td>Suzy Price</td>
                   <td>zansbodyworks@gmail.com</td>
-                  <td><button class="btn-table btn-info"><img class="icon-btn" src="./assets/images/icon-info.svg" alt="" />View Info</button></td>
-                  <td><button class="btn-table btn-accept"><img class="icon-btn" src="./assets/images/icon-accept.svg" alt="" />Accept</button></td>
-                  <td><button class="btn-table btn-decline"><img class="icon-btn" src="./assets/images/icon-decline.svg" alt="" />Decline</button></td>
-                  <td><button class="btn-table btn-pending"><img class="icon-btn" src="./assets/images/icon-pending.svg" alt="" />Pending</button></td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-accept">Accept</button></td>
+                  <td><button class="btn-icon btn-decline">Decline</button></td>
+                  <td><button class="btn-icon btn-pending">Pending</button></td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>Suezahpalooza</td> 
                   <td>Jewelry Sue Bakus</td>
                   <td>sjohnson527@gmail.com</td>
-                  <td><button class="btn-table btn-info"><img class="icon-btn" src="./assets/images/icon-info.svg" alt="" />View Info</button></td>
-                  <td><button class="btn-table btn-accept"><img class="icon-btn" src="./assets/images/icon-accept.svg" alt="" />Accept</button></td>
-                  <td><button class="btn-table btn-decline"><img class="icon-btn" src="./assets/images/icon-decline.svg" alt="" />Decline</button></td>
-                  <td><button class="btn-table btn-pending"><img class="icon-btn" src="./assets/images/icon-pending.svg" alt="" />Pending</button></td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-accept">Accept</button></td>
+                  <td><button class="btn-icon btn-decline">Decline</button></td>
+                  <td><button class="btn-icon btn-pending">Pending</button></td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>The Cookie Bar</td> 
                   <td>Jeannie Marchant</td>
                   <td>bjramz@gmail.com</td>
-                  <td><button class="btn-table btn-info"><img class="icon-btn" src="./assets/images/icon-info.svg" alt="" />View Info</button></td>
-                  <td><button class="btn-table btn-accept"><img class="icon-btn" src="./assets/images/icon-accept.svg" alt="" />Accept</button></td>
-                  <td><button class="btn-table btn-decline"><img class="icon-btn" src="./assets/images/icon-decline.svg" alt="" />Decline</button></td>
-                  <td><button class="btn-table btn-pending"><img class="icon-btn" src="./assets/images/icon-pending.svg" alt="" />Pending</button></td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-accept">Accept</button></td>
+                  <td><button class="btn-icon btn-decline">Decline</button></td>
+                  <td><button class="btn-icon btn-pending">Pending</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div id="list" class="tab-pane">
-          <h3>Vendor List</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div class="tab-header">
+            <h3 class="tab-title">Vendor List</h3>
+          </div>
+          <div class="tab-body">
+            <table class="table-custom table-list">
+              <thead>
+                <tr>
+                  <th class="table-heading filter-item">#</th>
+                  <th class="table-heading filter-item">Company Name</th>
+                  <th class="table-heading filter-item">Full Name</th>
+                  <th class="table-heading filter-item">Email</th>
+                  <th class="table-heading filter-item">Date Started</th>
+                  <th class="table-heading text-center" colspan="3">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Skyline Greenhouse</td> 
+                  <td>Jeannie Windels</td>
+                  <td>skyline.greenhouse@gmail.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Lucky Me</td> 
+                  <td>Jonash Bundalian</td>
+                  <td>jonashtimothy@yahoo.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>JOOS</td> 
+                  <td>Gabriela Touma</td>
+                  <td>gtouma@shopjoos.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Deserve Sterling Silver </td> 
+                  <td>Katherine Singh</td>
+                  <td>deserveks@hotmail.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Mosquito Authority</td> 
+                  <td>Bernie Mullin</td>
+                  <td>lenny@bugsbite.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Missy J Collection</td> 
+                  <td>Iris Lee</td>
+                  <td>heyheyiris@hotmail.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>enjoy the farm</td> 
+                  <td>Joe Farmer</td>
+                  <td>arleneenriquez121@hotmail.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>The Tree of Life</td> 
+                  <td>Trecia Link</td>
+                  <td>ttldoulaservice@gmail.com</td>
+                  <td>01/01/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Bowen Financial Inc.</td> 
+                  <td>Greg Bowen</td>
+                  <td>g-bowen@shaw.ca</td>
+                  <td>01/02/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Stony Plain Pie Shoppe</td> 
+                  <td>Kevin Waddell</td>
+                  <td>chef@stonyplainpies.com</td>
+                  <td>01/02/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>G&G Designs</td> 
+                  <td>Shirley Zago</td>
+                  <td>sezago560@gmail.com</td>
+                  <td>01/02/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Dukeshire Farms</td> 
+                  <td>Holly Dukeshire</td>
+                  <td>dukeshirefarms@gmail.com</td>
+                  <td>01/02/2018</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-block">Block</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div id="pending" class="tab-pane">
-          <h3>Pending</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div class="tab-header">
+            <h3 class="tab-title">Pending</h3>
+          </div>
+          <div class="tab-body">
+            <table class="table-custom table-list">
+              <thead>
+                <tr>
+                  <th class="table-heading filter-item">#</th>
+                  <th class="table-heading filter-item">Company Name</th>
+                  <th class="table-heading filter-item">Full Name</th>
+                  <th class="table-heading filter-item">Email</th>
+                  <th class="table-heading text-center" colspan="3">Send Notifications</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Zan's Body Works</td> 
+                  <td>Suzy Price</td>
+                  <td>zansbodyworks@gmail.com</td>
+                  <td><button class="btn-table btn-red">Sorry, We're Full</button></td>
+                  <td><button class="btn-table btn-green">We're Avaiable</button></td>
+                  <td><button class="btn-table btn-blue">Similar Products</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Suezahpalooza</td> 
+                  <td>Jewelry Sue Bakus</td>
+                  <td>sjohnson527@gmail.com</td>
+                  <td><button class="btn-table btn-red">Sorry, We're Full</button></td>
+                  <td><button class="btn-table btn-green">We're Avaiable</button></td>
+                  <td><button class="btn-table btn-blue">Similar Products</button></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>The Cookie Bar</td> 
+                  <td>Jeannie Marchant</td>
+                  <td>bjramz@gmail.com</td>
+                  <td><button class="btn-table btn-red">Sorry, We're Full</button></td>
+                  <td><button class="btn-table btn-green">We're Avaiable</button></td>
+                  <td><button class="btn-table btn-blue">Similar Products</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div id="blocked" class="tab-pane">
-          <h3>Blocked Vendors</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div class="tab-header">
+            <h3 class="tab-title">Blocked Vendors</h3>
+          </div>
+          <div class="tab-body">
+            <table class="table-custom table-list">
+              <thead>
+                <tr>
+                  <th class="table-heading filter-item">#</th>
+                  <th class="table-heading filter-item">Company Name</th>
+                  <th class="table-heading filter-item">Full Name</th>
+                  <th class="table-heading filter-item">Email</th>
+                  <th class="table-heading text-center" colspan="2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Pink zebra Miranda</td> 
+                  <td>Rombough</td>
+                  <td>Mandir12@shaw.ca</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-unblock">Unblock</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Canadian Oats Milling</td> 
+                  <td>Juan Valdes</td>
+                  <td>juanvalrui@hotmail.com</td>
+                  <td><button class="btn-icon btn-info">View Info</button></td>
+                  <td><button class="btn-icon btn-unblock">Unblock</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div id="sitemap" class="tab-pane">
           <h3>Site Map</h3>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
-        <div id="categories" class="tab-pane">
-          <h3>Product Categories</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div id="categories" class="tab-pane in active show">
+          <div class="tab-header">
+            <h3 class="tab-title">Product Categories</h3>
+          </div>
+          <div class="tab-body">
+            <table class="table-custom table-list">
+              <thead>
+                <tr>
+                  <th class="table-heading filter-item">#</th>
+                  <th class="table-heading filter-item">Category Name</th>
+                  <th class="table-heading filter-item">Description</th>
+                  <th class="table-heading filter-item">Products Related</th>
+                  <th class="table-heading filter-item">Date Created</th>
+                  <th class="table-heading text-center" colspan="2">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Vegetables</td> 
+                  <td>vegetable products</td>
+                  <td>2</td>
+                  <td>2018-06-22 19:28:24</td>
+                  <td><button class="btn-icon btn-edit">Edit</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Fruits</td> 
+                  <td>fruit products</td>
+                  <td>0</td>
+                  <td>2018-06-22 19:28:24</td>
+                  <td><button class="btn-icon btn-edit">Edit</button></td>
+                  <td><button class="btn-icon btn-delete">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div id="rent" class="tab-pane">
           <h3>Rent Price</h3>
