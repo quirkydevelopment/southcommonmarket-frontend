@@ -126,3 +126,33 @@
     }
   }
 }
+
+.btn-green-rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 42px;
+
+  font: normal 17px $montserrat-regular;
+  color: $white;
+
+  background-color: $apple-green;
+  border: 1px solid $white;
+  border-radius: 6px;
+}
+
+.btn-gray-rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 42px;
+
+  font: normal 17px $montserrat-regular;
+  color: $white;
+
+  background-color: $charcoal-grey;
+  border: 1px solid $white;
+  border-radius: 6px;
+}
