@@ -22,8 +22,13 @@ button:hover {
 
 .table-custom {
   .btn-table {
-    padding: 8px 15px;
-
+    display: flex;
+    justify-content: center;
+    width: 95px;
+    height: 34px;
+    padding: 8px 10px;
+    
+    font-size: 12.5px;
     color: $white;
 
     border-width: 1px;
@@ -43,6 +48,36 @@ button:hover {
     @include on-event() {
       background-color: $curious-blue;
       border-color: $curious-blue;
+    }
+  }
+
+  .btn-accept {
+    background-color: $olivine;
+    border-color: $olivine;
+
+    @include on-event() {
+      background-color: $sushi;
+      border-color: $sushi;
+    }
+  }
+
+  .btn-decline {
+    background-color: $torch-red;
+    border-color: $torch-red;
+
+    @include on-event() {
+      background-color: $monza;
+      border-color: $monza;
+    }
+  }
+
+  .btn-pending {
+    background-color: $sun;
+    border-color: $sun;
+
+    @include on-event() {
+      background-color: $gamboge;
+      border-color: $gamboge;
     }
   }
 }
