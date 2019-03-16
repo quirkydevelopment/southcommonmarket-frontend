@@ -1,0 +1,91 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to all modal component.
+// -----------------------------------------------------------------------------
+
+.holder-modals {
+  position: fixed;
+  bottom: 0;
+  padding: 40px 280px;
+}
+
+.holder-image {
+  text-align: center;
+}
+
+.image-modal {
+  width: 100%;
+  max-width: 200px;
+}
+
+.modal-content {
+  margin: 0px auto; 
+  width: 350px;
+  padding: 2;   
+}
+
+.holder-content {
+  position: relative;
+  margin: 4px;
+  padding: 25px 10px 10px;
+  background-color: $light-gray;
+
+  // &:before {
+  //   content: "\f00d";
+  //   position: absolute;
+  //   top: -3px;
+  //   right: 3px;
+  //   font-family: "Font Awesome\ 5 Free";
+  //   font-weight: 900;
+  // }
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.modal-notification {
+  margin: 3px;
+  background-color: #fefefe;
+}
+
+.modal-notification-info {
+  margin-bottom: 0;
+
+  font-size: 13px;
+  font-family: $montserrat-medium;
+  text-align: center;
+}
+
+.modal-notification-validation {
+  font-size: 26px;
+  font-family: $montserrat-regular;
+  color: $dark-green;
+  text-align: center;
+}
+
+.modal-notification-text {
+  font-size: 14px;
+  font-family: $montserrat-light;
+  text-align: center;
+}
+
+.modal-vendor-name {
+  display: block;
+  color: $dark-green;
+  font-family: $montserrat-semi-bold;
+}
+
+.holder-notification-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .btn {
+    margin: 0 5px;
+  }
+}
