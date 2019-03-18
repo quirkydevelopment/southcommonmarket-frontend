@@ -4,7 +4,20 @@
 // This file contains all styles related to the forms panel component.
 // -----------------------------------------------------------------------------
 
-.table-custom {
+.dashboard-content {
+  .tab-body .holder-button {
+    min-width: 1000px;
+    padding: 0 5px;
+    overflow: auto;
+
+    .btn-table {
+      height: 40px;
+      margin: 0 0 20px auto;
+      
+      font-size: 14px;
+    }
+  }
+
   .btn-icon {
     position: relative;
     

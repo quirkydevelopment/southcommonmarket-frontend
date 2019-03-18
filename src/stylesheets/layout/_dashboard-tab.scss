@@ -135,4 +135,58 @@
       }
     }
   }
+
+  .sidebar-toggler {
+    position: absolute;
+    top: initial;
+    right: -120px;
+    bottom: 10px;
+    left: initial;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 150px;
+    
+    font-size: 35px;
+
+    // use this for background with transition
+    // &:before {
+      
+    // }
+
+    i {
+      width: 35px;
+      text-align: center;
+      height: 35px;
+      border-radius: 50%;
+      background: red;
+      position: relative;
+      left: -20px;
+      font-size: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1px;
+    }
+
+    .text-toggle {
+      // position: absolute;
+      // make this like a tooltip
+      margin-left: 5px;
+
+      font-size: 14px;
+    }
+
+    @include on-event() {
+      right: 0;
+
+      width: 170px;
+
+      text-decoration: none;
+
+      background-color: green;
+    }
+  }
 }

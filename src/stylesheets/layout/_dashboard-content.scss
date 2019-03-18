@@ -106,7 +106,8 @@
 
   .table-custom {
     width: 100%;
-    min-width: 960px;
+    // min-width: 960px;
+    min-width: 1000px;
     overflow: auto;
 
     .table-heading {
@@ -276,6 +277,76 @@
 
       font-size: 12px;
       color: $hippie-green;
+    }
+  }
+
+  .tab-request {
+    .tab-body tbody {
+      td:nth-last-child(4),
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+
+  .tab-list {
+    .tab-body tbody {
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+
+  .tab-pending {
+    .tab-body tbody {
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 150px;
+      }
+    }
+  }
+
+  .tab-blocked {
+    .tab-body tbody {
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+
+  .tab-product {
+    .tab-body tbody {
+      td:nth-child(1) {
+        width: 60px;
+      }
+      
+      td:nth-child(2) {
+        width: 170px;
+      }
+
+      td:nth-child(3) {
+        min-width: 220px;
+      }
+
+      td:nth-child(4) {
+        width: 160px;
+        padding-left: 65px;
+      }
+
+      td:nth-child(5) {
+        width: 160px;
+      }
+
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
     }
   }
 }
