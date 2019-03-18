@@ -156,3 +156,17 @@
   border: 1px solid $white;
   border-radius: 6px;
 }
+
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 55px;
+
+  font-family: $montserrat-regular;
+  color: $white;
+
+  border-radius: 25px;
+  background-color: $apple;
+}

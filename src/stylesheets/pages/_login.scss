@@ -6,5 +6,122 @@
 
 
 .login {
-  background-color: red;
+  background-image: url(../assets/images/bg-hero-home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+
+  .container {
+    display: table;
+    height: 100%;
+  }
+
+  .center-form {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 25px 0;
+  }
+
+  .holder-login-form {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70%;
+
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+
+    // transform: translate(-50%,-50%);
+  }
+
+  .holder-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 170px;
+    margin: 0 auto;
+  }  
+
+  .title {
+    font-size: 32px;
+    font-family: $montserrat-semi-bold;
+    text-align: center;
+  }
+
+  .holder-logo {
+    width: 40%;
+    // background-color: green;
+    border-right: 1px solid black;
+  }
+
+  .holder-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: auto;
+    width: 60%;
+    height: 500px;
+
+    // background-color: red;
+  }
+
+  .field-group {
+    margin: 10px 0;
+    width: 300px;
+  }
+
+  .field-group-remember {
+    display: flex;
+    align-items: center;
+    padding: 25px 10px;
+    width: 100%;
+    max-width: 300px; 
+  }
+
+  .remember-me {
+    padding: 0 8px;
+    margin-bottom: 0;
+
+    font-size: 12px;
+    font-family: $montserrat-regular;
+  }
+
+  .icon {
+    height: 45px;
+    width: auto;
+  }
+
+  @include respond-to(sm-down) {
+    .holder-logo {
+      padding: 40px;
+      width: 100%;
+      border-right: 0;
+      border-bottom: 1px solid $black;
+    }
+
+    .holder-form {
+      width: 100%;
+    }
+
+    .field-group {
+      width: auto;
+    }
+
+    .field-group-remember {
+      justify-content: center;
+    }
+  }
 }
