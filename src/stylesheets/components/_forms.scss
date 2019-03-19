@@ -27,6 +27,7 @@ button:hover {
   max-width: 280px;
 
   input {
+    order: 2;
     padding:  15px 10px; 
     width: 100%;
     // max-width: 280px; 
@@ -43,5 +44,15 @@ button:hover {
     box-sizing:  border-box; 
 
     transition:  all .3s linear; 
+
+    &:focus {
+      border-bottom:  solid 1px $brand-color; 
+      outline: 0; 
+      box-shadow:  0 2px 6px -8px rgba($brand-color, .45);
+    }
+
+    &:valid:not(:placeholder-shown) + .icon {
+      opacity: 1;
+    }
   }
 }
