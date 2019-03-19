@@ -62,7 +62,7 @@
   .holder-logo {
     width: 40%;
     // background-color: green;
-    border-right: 1px solid $brand-color;
+    border-right: 1px solid $green-alcohol;
   }
 
   .holder-form {
@@ -88,7 +88,7 @@
     align-items: center;
     padding: 25px 10px;
     width: 100%;
-    max-width: 300px; 
+    max-width: 280px; 
   }
 
   .remember-me {
@@ -100,8 +100,32 @@
   }
 
   .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 45px;
     width: auto;
+    opacity: .45;
+
+    path {
+      fill: $green-alcohol;
+    }
+
+    &.fas,
+    &.far {
+      width: 35px;
+      color: $green-alcohol;
+    }
+  }
+
+  .holder-register {
+    margin-top: 15px;
+  }
+
+  @include respond-to(md) {
+    .holder-login-form {
+      width: 100%;
+    }
   }
 
   @include respond-to(sm-down) {
@@ -109,7 +133,7 @@
       padding: 40px;
       width: 100%;
       border-right: 0;
-      border-bottom: 1px solid $brand-color;
+      border-bottom: 1px solid $green-alcohol;
     }
 
     .holder-form {
