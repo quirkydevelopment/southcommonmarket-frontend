@@ -1,35 +1,30 @@
 {
-  "name": "parcel-test",
+  "name": "parcel-template",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "concurrently -k \"yarn watch\" \"node browsersync.js\"",
-    "start": "parcel src/*.html",
+    "start": "parcel src/*.html --public-url ./",
     "watch": "parcel watch src/*.html --public-url ./",
     "prebuild": "rm -rf dist",
-    "build": "parcel build src/*.html --public-url ./"
+    "build": "parcel build src/*.html --public-url ./",
+    "deploy": "./deploy.sh"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.8",
-    "browser-sync": "^2.26.3",
     "concurrently": "^4.1.0",
-    "cssnano": "^4.1.10",
+    "htmlnano": "^0.2.2",
     "parcel-bundler": "^1.11.0",
-    "postcss-preset-env": "^6.5.0",
-    "pug": "^2.0.3",
+    "parcel-plugin-static-files-copy": "^2.0.0",
     "sass": "^1.16.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.0",
     "bootstrap": "^4.2.1",
     "browser-sync": "^2.26.3",
-    "bulma": "^0.7.4",
-    "header": "^0.1.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
     "slick-carousel": "^1.8.1",
-    "swiper": "^4.4.6",
-    "tether": "^1.4.5"
+    "swiper": "^4.4.6"
   }
 }
