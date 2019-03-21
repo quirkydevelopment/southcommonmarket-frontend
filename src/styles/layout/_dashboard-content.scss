@@ -1,0 +1,351 @@
+//main: ../main.scss
+
+// ---------------------------------------------------------------------------------------
+// This file contains all styles related to the dashboard-content of the site/application.
+// ---------------------------------------------------------------------------------------
+
+.dashboard-content {
+  width: calc(100% - 20px);
+
+  margin-top: 20px;
+  padding-bottom: 100px;
+  padding-left: 280px;
+
+  font-size: 14px;
+  color: $emperor;
+
+  .tab-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px - 20px - 100px);
+    min-height: 605px;
+    padding: 30px 20px 15px;
+
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px $black-opacity40;
+  }
+  
+  .search {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    bottom: initial;
+    left: initial;
+
+    &-holder {
+      position: relative;
+
+      width: 300px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: 0;
+      left: 12px;
+
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      font-size: 18px;
+      color: $hippie-green;
+    }
+
+    &-input {
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 12px 4px 37px;
+      display: flex;
+      align-items: center;
+      height: 40px;
+
+      font-size: 14px;
+
+      border: 2px solid $olivine;
+      border-radius: 3px;
+
+      transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+      @include placeholder() {
+        color: $olivine;
+      }
+
+      &:focus {
+        box-shadow: 0 2px 20px $black-opacity20;
+      }
+    }
+  }
+
+  .tab-header {
+    padding-bottom: 20px;
+
+    .tab-title {
+      font-size: 28px;
+      color: $hippie-green;
+      text-transform: uppercase;
+    }
+  }
+
+  .tab-body {
+    height: 100%;
+    min-height: 460px;
+    // max-height: calc(100vh - 245px);
+    max-height: calc(100vh - 350px);
+    overflow: auto;
+  }
+
+  td {
+    padding: 5px;
+  }
+
+  .table-custom {
+    width: 100%;
+    // min-width: 960px;
+    min-width: 1000px;
+    overflow: auto;
+
+    .table-heading {
+      padding: 0 5px 8px;
+
+      font-size: 15px;
+      color: $hippie-green;
+
+      &:first-child {
+        width: 50px;
+      }
+    }
+
+    tbody {
+      tr {
+        border-top: 1px solid $desert-storm;
+      }
+    }
+
+    .filter-item {
+      position: relative;
+
+      cursor: pointer;
+
+      &:not(:first-child) {
+        &:after {
+          content: '';
+
+          position: relative;
+          top: -2px;
+          right: -6px;
+          bottom: 0;
+          left: initial;
+
+          display: inline-block;
+          vertical-align: middle;
+          width: 10px;
+          height: 13px;
+
+          background: url('../assets/images/icon-filter.png') no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+
+    .btn-table {
+      margin: auto;
+
+      .icon-btn {
+        margin-top: 1px;
+        margin-right: 3px;
+        width: 14px;
+      }
+    }
+  }
+
+  .pagination {
+    margin-top: auto;
+
+    &-entries {
+      display: flex;
+      align-items: center;
+
+      .entries {
+        margin: 0 10px;
+      }
+
+      .entries-select {
+        display: flex;
+        width: 55px;
+        padding: 0 5px 0 12px;
+        height: 27px;
+
+        color: $emperor;
+        
+        background: url('../assets/images/icon-filter.png') no-repeat 34px 5px;
+        background-size: 8px;
+        border: 1px solid $hippie-green;
+        border-radius: 3px;
+
+        appearance: none;
+        outline: none;
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+      color: $hippie-green;
+    }
+
+    &-pages {
+      margin-left: auto;
+
+      .page-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+
+      .page-link {
+        padding: 10px;
+
+        color: $emperor;
+        text-decoration: none;
+
+        background: transparent;
+        border: none;
+
+        outline: none;
+        box-shadow: none;
+
+        &.active {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          padding: 0;
+
+          color: $white;
+
+          background-color: $pine-glade;
+          border-radius: 50px;
+        }
+      }
+
+      .page-first {
+        margin-right: 20px;
+
+        color: $hippie-green;
+      }
+
+      .page-last {
+        margin-left: 20px;
+        
+        color: $hippie-green;
+      }
+    }
+  }
+
+  .tab-footer {
+    position: absolute;
+    top: initial;
+    right: 0;
+    bottom: -100px;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+
+    pointer-events: none;
+
+    .holder-image {
+      width: 70px;
+    }
+
+    &-image {
+      width: 100%;
+    }
+
+    &-text {
+      margin: 5px 0 10px;
+
+      font-size: 12px;
+      color: $hippie-green;
+    }
+  }
+
+  .tab-request {
+    .tab-body tbody {
+      td:nth-last-child(4),
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+
+  .tab-list {
+    .tab-body tbody {
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+
+  .tab-pending {
+    .tab-body tbody {
+      td:nth-last-child(3),
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 150px;
+      }
+    }
+  }
+
+  .tab-blocked {
+    .tab-body tbody {
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+
+  .tab-product {
+    .tab-body tbody {
+      td:nth-child(1) {
+        width: 60px;
+      }
+      
+      td:nth-child(2) {
+        width: 170px;
+      }
+
+      td:nth-child(3) {
+        min-width: 220px;
+      }
+
+      td:nth-child(4) {
+        width: 160px;
+        padding-left: 65px;
+      }
+
+      td:nth-child(5) {
+        width: 160px;
+      }
+
+      td:nth-last-child(2),
+      td:nth-last-child(1) {
+        width: 105px;
+      }
+    }
+  }
+}

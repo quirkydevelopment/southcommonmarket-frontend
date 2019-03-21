@@ -1,0 +1,14 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the dashboard pages.
+// -----------------------------------------------------------------------------
+
+.dashboard {
+  position: relative;
+
+  display: flex;
+  padding-top: 80px;
+
+  background-color: $willow-brook;
+}

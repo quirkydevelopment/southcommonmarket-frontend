@@ -1,0 +1,89 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$font-opensans: 'Open Sans';
+
+// custom fonts
+$bebas-regular: 'Bebas Regular';
+$lora-bold: 'Lora Bold';
+$lora-regular: 'Lora Regular';
+$montserrat-black: 'Montserrat Black';
+$montserrat-bold: 'Montserrat Bold';
+$montserrat-light: 'Montserrat Light';
+$montserrat-medium: 'Montserrat Medium';
+$montserrat-regular: 'Montserrat Regular';
+$montserrat-semi-bold: 'Montserrat Semi Bold';
+$nexa-bold: 'Nexa Bold';
+
+/// @type List
+$text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #39b54a !default;
+
+/// Light grey
+/// @type Color
+$light-grey: #EDEDED !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: #999 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #444 !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;
+
+// custom colors
+$white: #fff;
+$light-gray: #f4f5f0;
+$willow-brook: #eff5eb;
+$mercury: #e6e6e6;
+$white-opacity: rgba(255, 255, 255, 0.25);
+$desert-storm: #f0f1ee;
+$charcoal-grey: #9e9e9e;
+$boulder: #757575;
+$emperor: #555555;
+$black-opacity20: rgba(0, 0, 0, 0.2);
+$black-opacity40: rgba(0, 0, 0, 0.4);
+$cod-gray: #0C0C0C;
+$black-pearl: #010507;
+$black: #000;
+$yellow: #F3FF00;
+$sun: #fbb117;
+$gamboge: #df9d12;
+$tree-poppy: #ff9b1a;
+$tahiti-gold: #e98709;
+$red-damask: #e06e38;
+$piper: #cd5e29;
+$pine-glade: #bdcf8f;
+$olivine: #9bb65e;
+$apple-green: #93b851;
+$sushi: #85a243;
+$hippie-green: #669048;
+$chateau-green: #39b54a;
+$green-alcohol: #8cc63f;
+$apple: #33A242;
+$dark-green: #4d5b26;
+$picton-blue: #47bced;
+$curious-blue: #33a2d1;
+$torch-red: #ea0027;
+$monza: #ba001f;
