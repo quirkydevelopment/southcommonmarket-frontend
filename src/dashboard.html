@@ -197,7 +197,7 @@
             <span class="tab-text">Site Map</span>
           </a>
         </li>
-        <li class="tab-item active">
+        <li class="tab-item">
           <a href="#product" class="tab-link" data-toggle="tab">
             <div class="tab-icon">
               <svg class="svg-categories" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 433.5 433.5"xml:space="preserve">
@@ -209,7 +209,7 @@
             <span class="tab-text">Product Categories</span>
           </a>
         </li>
-        <li class="tab-item">
+        <li class="tab-item active">
           <a href="#rent" class="tab-link" data-toggle="tab">
             <div class="tab-icon">
               <svg class="svg-price" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
@@ -449,7 +449,7 @@
         </div>
         <div id="pending" class="tab-pane tab-pending">
           <div class="tab-header">
-            <h3 class="tab-title">Pending</h3>
+            <h3 class="tab-title">Pending List</h3>
           </div>
           <div class="tab-body">
             <table class="table-custom table-list">
@@ -534,7 +534,7 @@
           <h3>Site Map</h3>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
-        <div id="product" class="tab-pane tab-product in active show">
+        <div id="product" class="tab-pane tab-product">
           <div class="tab-header">
             <h3 class="tab-title">Product Categories</h3>
           </div>
@@ -666,9 +666,18 @@
             </table>
           </div>
         </div>
-        <div id="rent" class="tab-pane tab-rent">
-          <h3>Rent Price</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div id="rent" class="tab-pane tab-rent in active show">
+          <div class="tab-header">
+            <h3 class="tab-title">RENTING-PRICE PER DAY</h3>
+          </div>
+          <div class="tab-body">
+            <div class="table-custom table-list">
+              <form id="form_renting_price" class="form-renting-price" action="">
+                <div class="form-holder"></div>
+                <div class="form-holder"></div>
+              </form>
+            </div>
+          </div>
         </div>
         <div id="faq" class="tab-pane tab-faq">
           <h3>Vendor FAQ</h3>
