@@ -1,40 +1,35 @@
-# Prerequisites
+## Prerequisites
 * [Install `yarn` package manager](https://yarnpkg.com/lang/en/docs/install/)
 
-# Getting Started
-* `yarn install` - install package dependencies
-* `yarn start` - run only once at the very first instance to test/create initial build
-* `yarn dev` - run development localhost server with browsersync
-* `yarn build` - build prod files
-* `yarn deploy` - deploy to gh-pages
+## Usage
+* Install dependencies with `yarn install`
+* Run localhost environment with `yarn dev`
+* Build production files with `yarn build`
+* Deploy to `gh-pages` with `yarn deploy`
 
-# Troubleshooting
-* **Error: `Cannot GET /`**
-  * run `yarn start` before `yarn dev`
-
-# Generic [Parcel](https://parceljs.org/) Template
-* Uses Sass and the 7-1 Pattern by Hugo Giraudel.
-* Uses the JavaScript Revealing Module Pattern.
-* Disables responsiveness on IE9 and below.
-* Shows unobtrusive bar to the visitors who is visiting your website with an IE <= 9 browser.
-* Prevents auto zoom on iOS when entering an input field.
-* Disables auto-formatting of possible phone numbers in a webpage in Safari on iOS.
-* Removes webkit input fields outline glow on focus.
-* Added breakpoint mixins for more granular control.
-* Added keyframes, animation, transition and transform mixins to boil down to just a few lines of code.
-* Uses Parcel to bundle, minify, and optimize HTML, CSS and JS.
-
-# Changelog
-
+## Changelog
+### 1.2.1
+  * add sample for multi-page bundles, add dependency only as needed
+### 1.2.0
+  * encourage yarn as package manager
+  * optimize bundling of js files, fix their dependency connections
+  * remove image compression from bundling
+  * add prebuild for `dist` cleaning prior build
+  * add `yarn deploy` command for `gh-pages`
+  * add swiper demo, add modal demo
+  * clean console logs
+### 1.1.3
+  * remove package locks from `.gitignore`
 ### 1.1.2
-* Explicit ES6 import on dependencies
-
+  * `process.env.PWD` replaced with `..` in `index.js` path
 ### 1.1.1
-* Remove `tether` from dependencies
-
+  * use `imagemin-pngquant` for pngs
+  * rollback to working versions of `imagemin-pngquant(5.0.1)` and `pngquant-bin(3.1.1)`
 ### 1.1.0
-* Add deploy to `gh-pages` script
-* Windows support with concurrent scripts
-
+  * add `readme.md`
+  * added new plugins for reliable image compression:
+    * `imagemin-mozjpeg`
+    * `imagemin-pngout`
+    * `imagemin-giflossy`
 ### 1.0.0
-* initial commit
+  * initial commit
