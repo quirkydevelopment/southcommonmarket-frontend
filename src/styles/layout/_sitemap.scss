@@ -1,0 +1,90 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sitemap of the site/application.
+// -----------------------------------------------------------------------------
+
+.tab-body {
+  position: relative;
+}
+
+.table-sitemap {
+  position: relative;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: auto;
+
+    background: url('../assets/images/logo-brown.png') no-repeat center;
+    background-size: auto 580px;
+    opacity: .15;
+
+    pointer-events: none;
+  }
+
+  tbody {
+    position: relative;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      min-width: 1140px;
+      // max-width: calc(100% - 50px);
+      max-width: 1500px;
+      margin: auto;
+
+      border: none;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+
+  tr,
+  td {
+    position: relative;
+    z-index: 2;
+  }
+
+  .map-row {
+    &:first-of-type {  
+      td {
+        padding: 5px 10px 10px;
+      }
+    }
+
+    &:last-of-type {  
+      td {
+        padding: 10px 10px 7px;
+      }
+    }
+  }
+  
+
+  .tile {
+    display: block;
+    width: 40px;
+    height: 40px;
+    
+    background-color: $white;
+    border: 2px solid $apple2;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px $black-opacity40;
+  }
+
+  .tile-unavailable {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

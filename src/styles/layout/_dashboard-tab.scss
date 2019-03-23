@@ -67,7 +67,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px 0 17px;
     
     color: $white;
 
@@ -111,7 +111,9 @@
     .tab-text {
       margin-left: 8px;
       
-      font-size: 15px;
+      // font-size: 15px;
+      font: normal 15px $montserrat-semi-bold;
+      line-height: 1.4;
     }
 
     @include on-event() {

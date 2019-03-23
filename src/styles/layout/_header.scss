@@ -362,7 +362,9 @@
     .username {
       margin-left: 5px;
 
-      font-size: 16px;
+      // font-size: 16px;
+      font: normal 16px $bebas-regular;
+      line-height: 1.4;
       color: $white;
       text-transform: uppercase;
     }
