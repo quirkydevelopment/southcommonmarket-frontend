@@ -28,7 +28,7 @@
 .holder-content {
   position: relative;
   margin: 4px;
-  padding: 25px 10px 10px;
+  padding: 30px 15px 12px;
   background-color: $light-gray;
 
   // &:before {
@@ -39,13 +39,105 @@
   //   font-family: "Font Awesome\ 5 Free";
   //   font-weight: 900;
   // }
+
+  .modal-title {
+    margin-bottom: 25px;
+
+    font-size: 26px;
+    font-family: $bebas-regular;
+    color: $hippie-green; 
+    letter-spacing: .5px;
+    text-transform: uppercase;
+  }
+
+  .holder-form {
+    .form-title {
+      font-size: 14px;
+      font-family: $montserrat-medium;
+      color: $hippie-green;
+    }
+
+    .form-input {
+      padding: 4px 5px;
+      width: 100%;
+
+      font-size: 16px;
+      color: $black;
+
+      border-radius: 3px;
+      border: 1px solid $hippie-green;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .holder-input-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-image {
+      padding: 15px 0;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .image-title {
+      font-size: 14px;
+      font-family: $montserrat-light;
+      color: $hippie-green;
+      text-align: center;
+    }
+
+    .custom-file-upload {
+      padding: 4px 5px;
+
+      font-size: 16px;
+      color: $hippie-green;
+
+      border-radius: 3px;
+      border: 1px solid $hippie-green;
+
+      cursor: pointer;
+    }
+  }
 }
 
-.btn-close {
+.holder-close {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  opacity: 0.3;
+
   cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  @include on-event {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 22px;
+    width: 2px;
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
 
 .modal-notification {
