@@ -40,6 +40,7 @@
     box-shadow: none !important;
 
     outline: none;
+    cursor: pointer;
 
     transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
 
@@ -240,6 +241,20 @@
     @include on-event() {
       background-color: $curious-blue;
       border-color: $curious-blue;
+    }
+  }
+
+  .btn-orange {
+    background-color: $flamingo;
+    border-color: $flamingo;
+
+    &:before {
+      display: none;
+    }
+
+    @include on-event() {
+      background-color: $tia-maria;
+      border-color: $tia-maria;
     }
   }
 }

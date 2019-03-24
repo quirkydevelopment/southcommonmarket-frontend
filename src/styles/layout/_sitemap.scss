@@ -44,11 +44,15 @@
       margin: auto;
 
       border: none;
+
+      &:hover {
+        background-color: transparent;
+      }
     }
 
-    td {
-      padding: 10px;
-    }
+    // td {
+    //   padding: 10px;
+    // }
   }
 
   tr,
@@ -60,22 +64,52 @@
   .map-row {
     &:first-of-type {  
       td {
-        padding: 5px 10px 10px;
+        // padding: 5px 10px 10px;
+        height: 55px;
       }
     }
 
     &:last-of-type {  
       td {
-        padding: 10px 10px 7px;
+        // padding: 10px 10px 7px;
+        height: 57px;
       }
     }
   }
-  
 
+  .map-col {
+    display: flex;
+    width: 60px;
+    height: 60px;
+  }
+
+  .map-col-truck {
+    position: relative;
+
+    padding: 0 10px;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: -5px;
+      right: initial;
+      bottom: -5px;
+      left: 14px;
+
+      width: 95px;
+      height: auto;
+
+      background: url('../assets/images/icon-truck.png') no-repeat center;
+      background-size: contain;
+    }
+  }
+  
   .tile {
     display: block;
     width: 40px;
     height: 40px;
+    margin: auto;
     
     background-color: $white;
     border: 2px solid $apple2;
@@ -86,5 +120,65 @@
   .tile-unavailable {
     opacity: 0;
     pointer-events: none;
+  }
+
+  .tile-regular {
+    position: relative;
+
+    padding: 0 10px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    
+    opacity: 1;
+    pointer-events: auto;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: -10px;
+      right: initial;
+      bottom: -7px;
+      left: -5px;
+
+      width: 52px;
+      height: auto;
+
+      background: url('../assets/images/icon-tent-regular.png') no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .tile-expanded {
+    position: relative;
+
+    padding: 0 10px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    
+    opacity: 1;
+    pointer-events: auto;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: -10px;
+      right: initial;
+      bottom: -10px;
+      left: -7px;
+
+      width: 54px;
+      height: auto;
+
+      background: url('../assets/images/icon-tent-expanded.png') no-repeat center;
+      background-size: contain;
+    }
   }
 }

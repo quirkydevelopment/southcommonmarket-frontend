@@ -30,6 +30,20 @@
   .tab-content {
     position: relative;
 
+    // display: flex;
+    // flex-direction: column;
+    // height: calc(100vh - 80px - 20px - 100px);
+    // min-height: 605px;
+    // padding: 30px 20px 15px;
+
+    // background-color: $white;
+    // border-radius: 5px;
+    // box-shadow: 0 10px 40px $black-opacity40;
+  }
+
+  .tab-pane-holder {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     height: calc(100vh - 80px - 20px - 100px);
@@ -39,6 +53,107 @@
     background-color: $white;
     border-radius: 5px;
     box-shadow: 0 10px 40px $black-opacity40;
+
+    & + .tab-pane-holder {
+      margin-top: 25px;
+    }
+  }
+
+  .cards-holder {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    min-width: 1000px;
+    max-width: 1600px;
+    min-height: initial;
+    height: auto;
+    padding: 0;
+
+    background: transparent;
+    box-shadow: none;
+    
+    .card {
+      width: 100%;
+      min-width: 350px;
+      
+      border-radius: 10px;
+      border: none;
+
+      & + .card {
+        margin-left: 25px;
+      }
+
+      &-red {
+        background: #fe393e;
+        background: -moz-linear-gradient(top, #fe393e 0%, #fe393e 7%, #fe594a 33%, #fe7655 74%, #fe905d 100%);
+        background: -webkit-linear-gradient(top, #fe393e 0%,#fe393e 7%,#fe594a 33%,#fe7655 74%,#fe905d 100%);
+        background: linear-gradient(to bottom, #fe393e 0%,#fe393e 7%,#fe594a 33%,#fe7655 74%,#fe905d 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe393e', endColorstr='#fe905d',GradientType=0 );
+      }
+
+      &-purple {
+        background: #825afb;
+        background: -moz-linear-gradient(top, #825afb 0%, #875dfb 7%, #9363fb 37%, #a970fc 64%, #c983fc 100%);
+        background: -webkit-linear-gradient(top, #825afb 0%,#875dfb 7%,#9363fb 37%,#a970fc 64%,#c983fc 100%);
+        background: linear-gradient(to bottom, #825afb 0%,#875dfb 7%,#9363fb 37%,#a970fc 64%,#c983fc 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#825afb', endColorstr='#c983fc',GradientType=0 );
+      }
+
+      &-blue {
+        background: #03c9b8;
+        background: -moz-linear-gradient(top, #03c9b8 0%, #08ccbb 20%, #1ed9c9 51%, #2de2d2 80%, #4cf4e5 100%);
+        background: -webkit-linear-gradient(top, #03c9b8 0%,#08ccbb 20%,#1ed9c9 51%,#2de2d2 80%,#4cf4e5 100%);
+        background: linear-gradient(to bottom, #03c9b8 0%,#08ccbb 20%,#1ed9c9 51%,#2de2d2 80%,#4cf4e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03c9b8', endColorstr='#4cf4e5',GradientType=0 );
+      }
+    }
+
+    .card-content {
+      padding: 10px 25px 5px;
+    }
+
+    .number {
+      margin: 0;
+
+      font: normal 100px $montserrat-extra-bold;
+      line-height: 90px;
+      color: $white;
+    }
+
+    .text-label {
+      margin: 0;
+
+      font: normal 20px $montserrat-medium;
+      line-height: 1.4;
+      color: $white;
+    }
+
+    .card-update {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 25px 15px;
+
+      border-top: 1px solid $white;
+    }
+
+    i {
+      font-size: 20px;
+      color: $black-pearl;
+    }
+
+    .text-update,
+    .time {
+      margin: 0;
+      
+      font: normal 14px $montserrat-medium;
+      line-height: 1.4;
+      color: $white;
+    }
+
+    .text-update {
+      margin: 0 5px;
+    }
   }
   
   .search {
@@ -106,7 +221,6 @@
       align-items: center;
       height: 40px;
 
-      // font-size: 14px;
       font: normal 15px $montserrat-medium;
       color: $trout;
 
@@ -129,31 +243,29 @@
     padding-bottom: 20px;
 
     .tab-title {
-      // font-size: 28px;
       font: normal 28px $bebas-regular;
       line-height: 1.4;
       color: $hippie-green;
       text-transform: uppercase;
     }
-
-    // .tab-title-icon {
-    //   width: 100%;
-    //   max-width: 50px;
-    //   margin-right: 10px;
-    // }
   }
 
   .tab-body {
     height: 100%;
     min-height: 460px;
-    // max-height: calc(100vh - 245px);
-    max-height: calc(100vh - 350px);
+    max-height: calc(100vh - 355px);
     overflow: auto;
   }
 
   tbody {
     tr {
       border-top: 1px solid $desert-storm;
+
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        background-color: $light-gray;
+      }
     }
   }
 
@@ -165,14 +277,12 @@
 
   .table-custom {
     width: 100%;
-    // min-width: 960px;
     min-width: 1000px;
     overflow: auto;
 
     .table-heading {
       padding: 0 5px 8px;
 
-      // font-size: 15px;
       font: normal 15.5px $montserrat-bold;
       color: $hippie-green;
 
@@ -249,7 +359,6 @@
     }
 
     &-text {
-      // font-size: 14px;
       font: normal 14px $montserrat-semi-bold;
       line-height: 1.4;
       color: $hippie-green;
@@ -334,9 +443,14 @@
     &-text {
       margin: 5px 0 10px;
 
-      // font-size: 12px;
       font: normal 12px $montserrat-semi-bold;
       color: $hippie-green;
+    }
+  }
+
+  .tab-dashboard {
+    .tab-body {
+      max-height: calc(100vh - 270px);
     }
   }
 
@@ -353,6 +467,15 @@
 
   .tab-list {
     .tab-body tbody {
+      td:nth-child(2) {
+        word-break: break-word;
+      }
+      td:nth-child(4) {
+        word-break: break-all;
+      }
+      td:nth-last-child(4) {
+        width: 130px;
+      }
       td:nth-last-child(3),
       td:nth-last-child(2),
       td:nth-last-child(1) {
@@ -380,9 +503,9 @@
     }
   }
 
-  .tab-sitemap {
-    height: auto;
-  }
+  // .tab-sitemap {
+  //   height: auto;
+  // }
 
   .tab-product {
     .tab-body tbody {
@@ -456,10 +579,9 @@
   
     .form-column {
       width: 50%;
-      // max-width: 320px;
-      margin: auto;
       max-width: 27vw;
       min-width: 320px;
+      margin: auto;
     }
 
     .form-group {
@@ -488,4 +610,56 @@
       max-width: 120px;
     }
   }
+
+  @media (max-width: 1400px) {
+    .cards-holder {
+      min-width: initial;
+
+      .card {
+        min-width: 200px;
+      }
+
+      .card-content {
+        padding: 10px 20px 5px;
+      }
+
+      .number {
+        font-size: 70px;
+        line-height: 70px;
+      }
+
+      .text-label {
+        font-size: 18px;
+      }
+
+      .card-update {
+        padding: 10px 20px 15px;
+      }
+    }
+  }
+
+  @include respond-to(lg-down) {
+    .cards-holder {
+      .card-content {
+        padding: 10px 15px 5px;
+      }
+
+      .card-update {
+        padding: 10px 15px 15px;
+      }
+
+      .number {
+        font-size: 60px;
+        line-height: 60px;
+      }
+
+      .text-label {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // @include respond-to() {
+
+  // }
 }
