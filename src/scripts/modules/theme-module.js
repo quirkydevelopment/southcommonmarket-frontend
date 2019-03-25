@@ -161,6 +161,24 @@ AppName.Modules.ThemeModule = (function() {
     });
   }
 
+  var fileUploader = function() {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('.uploaded-file').attr('src', e.target.result);
+    }
+    
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+    $(".file-uploader").change(function() {
+      readURL(this);
+    });
+  }
+
   /////////////////////
   // Public Methods //
   ///////////////////
@@ -175,6 +193,7 @@ AppName.Modules.ThemeModule = (function() {
       homeCarousel();
       tabActive();
       uploadImage();
+      fileUploader();
     });
   
     $(window).scroll(function (event) {
