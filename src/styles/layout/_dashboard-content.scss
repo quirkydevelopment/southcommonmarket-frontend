@@ -29,16 +29,6 @@
 
   .tab-content {
     position: relative;
-
-    // display: flex;
-    // flex-direction: column;
-    // height: calc(100vh - 80px - 20px - 100px);
-    // min-height: 605px;
-    // padding: 30px 20px 15px;
-
-    // background-color: $white;
-    // border-radius: 5px;
-    // box-shadow: 0 10px 40px $black-opacity40;
   }
 
   .tab-pane-holder {
@@ -56,6 +46,52 @@
 
     & + .tab-pane-holder {
       margin-top: 25px;
+    }
+  }
+
+  .tab-pane-holder-form {
+    height: auto;
+    min-height: initial;
+    padding: 0;
+    
+    background-color: transparent;
+    box-shadow: none;
+
+    .tab-body {
+      height: auto;
+      min-height: initial;
+      max-height: initial;
+      overflow: initial;
+    }
+
+    .form-column {
+      padding: 30px 20px 15px;
+
+      background-color: $white;
+      box-shadow: 0 2px 20px $black-opacity20;
+    }
+
+    .form-group {
+      &:not(:last-child) {
+        margin: 15px 0 0; 
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .uploaded-image {
+      width: auto;
+      max-width: 90%;
+      max-height: 500px;
+    }
+
+    .holder-upload {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
     }
   }
 
@@ -503,10 +539,6 @@
     }
   }
 
-  // .tab-sitemap {
-  //   height: auto;
-  // }
-
   .tab-product {
     .tab-body tbody {
       td:nth-child(1) {
@@ -608,6 +640,15 @@
 
     .btn-table {
       max-width: 120px;
+    }
+  }
+
+  .tab-profile {
+    .form-column {
+      &:nth-child(1) {
+        width: 100%;
+        max-width: 35%;
+      }
     }
   }
 
