@@ -5,9 +5,19 @@
 // -----------------------------------------------------------------------------
 
 .holder-modals {
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // bottom: 0;
   padding: 40px 280px;
+}
+
+.modal-sample-buttons {
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
 }
 
 .holder-image {
@@ -181,3 +191,69 @@
     margin: 0 5px;
   }
 }
+
+.vendor-image {
+  margin: 0 auto 8px;
+  width: 120px;
+  height: 120px;
+
+  background-color: $white;
+  border: 1px solid $hippie-green;
+  border-radius: 5px;
+}
+
+.modal-vendor-logo {
+  width: 100%;
+}
+
+.modal-vendor-title {
+  font-size: 15px;
+  font-family: $montserrat-bold;
+  color: $hippie-green;
+}
+
+.holder-info-list {
+  .info-list {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .inner-list {
+    padding-bottom: 4px;
+  }
+  
+  .list-text {
+    margin: 0;
+    font-size: 14px;
+    color: $trout;
+    font-family: $montserrat-semi-bold;
+  }
+  
+  .list-text-span {
+    font-family: $montserrat-light;
+  }
+  
+  .link-blue {
+    color: $powder-blue;
+  }
+}
+
+.holder-socials {
+  .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  .list {
+    padding: 0 15px;
+  }
+
+  .fab {
+    font-size: 20px;
+  }
+}
+
