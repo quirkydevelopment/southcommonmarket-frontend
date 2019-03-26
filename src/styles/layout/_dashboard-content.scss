@@ -644,10 +644,22 @@
   }
 
   .tab-profile {
+    .form-column-holder {
+      display: flex;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
     .form-column {
-      &:nth-child(1) {
-        width: 100%;
-        max-width: 35%;
+      &:first-child {
+        z-index: 2;
+
+        width: 350px;
+      }
+
+      &:last-child {
+        width: calc(100% - 325px);
+        margin-left: 25px;
       }
     }
   }
