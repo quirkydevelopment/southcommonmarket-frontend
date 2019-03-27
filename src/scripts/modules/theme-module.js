@@ -1,17 +1,18 @@
-import $ from 'jquery'
-// import Swiper from 'swiper'
-
 AppName.Modules.ThemeModule = (function() {
   //Dependencies
-  // var core = AppName.Core;
-  // var modules = AppName.Modules;
+  var core = AppName.Core;
 
   //////////////////////
   // Private Methods //
   ////////////////////
   var _privateMethod = function() {
     // private stuff
-    // console.log('init of theme-module.js')
+
+    // var swiper = new Swiper('.swiper-container', {
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //   },
+    // });
   };
 
   var headerScroll = function() {
@@ -58,7 +59,7 @@ AppName.Modules.ThemeModule = (function() {
     });
   }
 
-  var homeSwipers = function() {
+  var homeCarousel = function() {
     if ($('.section-awesome-vendors .slick-container').length) {
       $('.section-awesome-vendors .slick-container').slick({
         dots: false,
@@ -128,6 +129,56 @@ AppName.Modules.ThemeModule = (function() {
     }    
   }
 
+  var tabActive = function() {
+    if ($('.dashboard-tab').length) {
+      var tabItem =  $('.dashboard-tab .tab-item');
+      
+      tabItem.each(function() {
+        $(this).find('.tab-link').click(function() {
+          tabItem.removeClass('active');
+          setTimeout(() => {
+            $(this).parent().addClass('active');
+          }, 100);
+        })
+      });
+    }
+  }
+
+  var uploadImage = function() {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $('#category-image').attr('src', e.target.result);
+    }
+    
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+          reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+    $("#image-upload").change(function(){
+        readURL(this);
+    });
+  }
+
+  var fileUploader = function() {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('.uploaded-file').attr('src', e.target.result);
+    }
+    
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+    
+    $(".file-uploader").change(function() {
+      readURL(this);
+    });
+  }
+
   /////////////////////
   // Public Methods //
   ///////////////////
@@ -139,12 +190,15 @@ AppName.Modules.ThemeModule = (function() {
       headerHamburger();
       scrollNextSection();
       scrollTop();
-      homeSwipers();
+      homeCarousel();
+      tabActive();
+      uploadImage();
+      fileUploader();
     });
   
     $(window).scroll(function (event) {
       headerScroll();
-      homeSwipers();
+      homeCarousel();
     });
   };
 

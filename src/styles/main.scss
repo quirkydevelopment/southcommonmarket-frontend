@@ -25,7 +25,8 @@
   'layout/header',
   'layout/footer',
   'layout/dashboard-tab',
-  'layout/dashboard-content';
+  'layout/dashboard-content',
+  'layout/sitemap';
 
 // 5. Components
 @import
@@ -39,13 +40,10 @@
 @import
   'pages/home',
   'pages/dashboard',
-  'pages/login';
+  'pages/login',
+  'pages/registration';
 
 // 7. Themes
 @import
   'themes/default';
-
-
-body {
-  background: lightblue
-}
+  

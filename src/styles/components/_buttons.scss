@@ -127,34 +127,37 @@
   }
 }
 
-.btn-green-rounded {
+.btn-rounded {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
+  width: 130px;
   height: 42px;
-
-  font: normal 17px $montserrat-regular;
+  
   color: $white;
-
-  background-color: $apple-green;
-  border: 1px solid $white;
-  border-radius: 6px;
-}
-
-.btn-gray-rounded {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 42px;
-
   font: normal 17px $montserrat-regular;
-  color: $white;
-
-  background-color: $charcoal-grey;
-  border: 1px solid $white;
   border-radius: 6px;
+  border: 1px solid $white;
+  
+  &-green {
+    background-color: $apple-green;
+  }
+  
+  &-gray {
+    background-color: $charcoal-grey;
+  }
+
+  &-orange {
+    background-color: $tahiti-gold;
+  }
+
+  &-red {
+    background-color: $torch-red;
+  }
+
+  &-yellow {
+    background-color: $yellow;
+  }
 }
 
 .btn-submit {

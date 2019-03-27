@@ -14,7 +14,7 @@
   <link rel="icon" href="./assets/images/favicon.ico">
   
   <!-- <script src="stylesheets/pages/imports/modals.js"></script> -->
-  <script src="./styles/entrypoints/styles-modals.js"></script>
+  <link rel="stylesheet" href="styles/main.min.css">
 
   <!--[if lte IE 9]>
     <style>.navbar-header,.navbar-nav>li{float:left}.container,.container-fluid{width:970px;max-width:none!important;margin:0 auto}.section,footer{min-width:970px}body>div[style="min-height: 768px;"]{display:none}.navbar-collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;visibility:visible!important;border-top:0}.navbar-toggle{display:none}.navbar-nav{float:left;margin:0}.navbar-nav>li>a{padding:15px}.hidden-xs{display:block!important}.visible-xs{display:none!important}#browser-notification{background-color:red;color:#fff;margin-bottom:0}#browser-notification a{color:#fff;text-decoration:underline}</style>
@@ -376,18 +376,42 @@
   </main>
 
   <div class="holder-modals">
-    <div class="modal-notification modal-accept">
-      <!-- Button trigger modal -->
+    <div class="modal-notification modal-sample-buttons">
+      
+      <!-- Accept Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAccept">Accept modal</button>
+
+      <!-- Block Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBlock">Block modal</button>
+    
+      <!-- Decline Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDecline">Decline modal</button>
+    
+      <!-- Delete Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDelete">Delete modal</button>
+    
+      <!-- Pending Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPending">Pending modal</button>
+    
+      <!-- Unblock Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalUnblock">Unblock modal</button>
+
+      <!-- Add Category Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddCategory">Category modal</button>
+    
+      <!-- Info Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalInfo">Info modal</button>
+    
+
     </div>
   </div>
   
-  <!-- Modal -->
+  <!-- Accept Modal -->
   <div class="modal fade" id="modalAccept" tabindex="-1" role="dialog" aria-labelledby="modalAccept" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="holder-content">
-          <span class="fa fa-times btn-close" data-dismiss="modal" aria-hidden="true"></span>
+          <div class="holder-close" data-dismiss="modal"></div>
           <h4 class="modal-notification-info">"Please review vendor details before approval."</h4>
           <div class="holder-image">
             <img class="image-modal" src="./assets/images/accept.png" alt="">
@@ -395,17 +419,227 @@
           <h2 class="modal-notification-validation">Are you sure?</h2>
           <p class="modal-notification-text">Are you sure you want to accept vendor <span class="modal-vendor-name">Zan's Body Works?</span></p>
           <div class="holder-notification-buttons">
-            <button type="button" class="btn btn-gray-rounded" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-green-rounded">Accept</button>
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-green">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Block Modal -->
+  <div class="modal fade" id="modalBlock" tabindex="-1" role="dialog" aria-labelledby="modalBlock" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <div class="holder-image">
+            <img class="image-modal" src="./assets/images/cherry.png" alt="">
+          </div>
+          <h2 class="modal-notification-validation">Are you sure?</h2>
+          <p class="modal-notification-text">Do you really want to block this vendor?</p>
+          <div class="holder-notification-buttons">
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-orange">Block</button>
           </div>
         </div>
       </div>
     </div>
   </div>
   
+  <!-- Decline Modal -->
+  <div class="modal fade" id="modalDecline" tabindex="-1" role="dialog" aria-labelledby="modalDecline" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <h4 class="modal-notification-info">"Please review vendor details before declining."</h4>
+          <div class="holder-image">
+            <img class="image-modal" src="./assets/images/decline.png" alt="">
+          </div>
+          <h2 class="modal-notification-validation">Are you sure?</h2>
+          <p class="modal-notification-text">Are you sure you want to delete vendor <span class="modal-vendor-name">Zan's Body Works?</span></p>
+          <div class="holder-notification-buttons">
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-red">Decline</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Modal -->
+  <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDelete" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <div class="holder-image">
+            <img class="image-modal" src="./assets/images/delete.png" alt="">
+          </div>
+          <h2 class="modal-notification-validation">Are you sure?</h2>
+          <p class="modal-notification-text">Do you really want to delete this records? <br> This Process cannot be undone.</p>
+          <div class="holder-notification-buttons">
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-red">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pending Modal -->
+  <div class="modal fade" id="modalPending" tabindex="-1" role="dialog" aria-labelledby="modalPending" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <div class="holder-image">
+            <img class="image-modal" src="./assets/images/delete.png" alt="">
+          </div>
+          <h2 class="modal-notification-validation">Are you sure?</h2>
+          <p class="modal-notification-text">Do you really want to put this vendor into pending list <span class="modal-vendor-name">Zan's Body Works?</span></p>
+          <div class="holder-notification-buttons">
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-yellow">Pending</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unblock Modal -->
+  <div class="modal fade" id="modalUnblock" tabindex="-1" role="dialog" aria-labelledby="modalUnblock" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <div class="holder-image">
+            <img class="image-modal" src="./assets/images/unblock.png" alt="">
+          </div>
+          <h2 class="modal-notification-validation">Are you sure?</h2>
+          <p class="modal-notification-text">Do you really want to Unblock vendor <span class="modal-vendor-name">Canadian Oats Milling?</span></p>
+          <div class="holder-notification-buttons">
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-orange">Unblock</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Category Modal -->
+  <div class="modal fade" id="modalAddCategory" tabindex="-1" role="dialog" aria-labelledby="modalAddCategory" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <!-- <div class="holder-close" data-dismiss="modal"></div> -->
+          <h4 class="modal-title">Add Category</h4>
+          <div class="holder-form">
+            <form action="#">
+              <div class="form-group">
+                <label class="form-title">Product Name</label>
+                <input class="form-input" type="text" placeholder="Vegetables">
+              </div>
+              <div class="form-group">
+                <label class="form-title">Description</label>
+                <input class="form-input" type="text" placeholder="Vegetables product only">
+              </div>
+              <div class="form-group">     
+                <div class="holder-input-image">
+                  <img class="form-image" id="category-image" src="./assets/images/accept.png" alt="image">
+                  <p class="image-title">Category image***</p>
+                </div>
+                <div class="holder-upload">
+                  <label for="image-upload" class="custom-file-upload"> Choose File</label>
+                  <div class="holder-input-file">
+                    <input class="file-input" type='file' id="image-upload">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="holder-notification-buttons">
+            <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-rounded btn-rounded-green">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unblock Modal -->
+  <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modalInfo" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <div class="holder-image vendor-image">
+            <img class="modal-vendor-logo" src="./assets/images/accept.png" alt="">
+          </div>
+          <p class="modal-vendor-title text-center">Mosquito Authority</p>
+          <div class="holder-info-list">
+            <ul class="info-list">
+              <li class="inner-list">
+                <p class="list-text">Owner Full Name: <span class="list-text-span"></span></p>
+              </li>
+              <li class="inner-list">
+                <p class="list-text">Website: <span class="list-text-span">Mosquitoauthority.com</span></p>
+              </li>
+              <li class="inner-list">
+                <p class="list-text">Phone: 
+                  <span class="list-text-span">
+                    <a class="link" href="tel:587-315-1385">587-315-1385</a>
+                  </span>
+                </p>
+              </li>
+              <li class="inner-list">
+                <p class="list-text">Marketing Address: <span class="list-text-span">4507-46 ave Leduc AB Canada T9E 5V5</span></p>
+              </li>
+              <li class="inner-list">
+                <p class="list-text">Food permits: 
+                  <span class="list-text-span">
+                    <a href="#" class="link link-blue">foodpermits.pdf</a>
+                  </span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="holder-socials">
+            <ul class="social-list">
+              <li class="list">
+                <a href="#" target="_blank">
+                  <img class="icon-image" src="./assets/images/icon-facebook.png" alt="">
+                </a>
+              </li>
+              <li class="list">
+                <a href="#" target="_blank">
+                  <img class="icon-image" src="./assets/images/icon-insta.png" alt="">
+                </a>
+              </li>
+              <li class="list">
+                <a href="#" target="_blank">
+                  <img class="icon-image" src="./assets/images/icon-twitter.png" alt="">
+                </a>
+              </li>
+              <li class="list">
+                <a href="#" target="_blank">
+                  <img class="icon-image" src="./assets/images/icon-youtube.png" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- <script src="javascripts/vendors.js"></script>
   <script src="javascripts/custom/modals.js"></script> -->
-  <script src="./scripts/vendors/dependencies.js"></script>
+  <script src="./scripts/vendors/jquery.min.js"></script>
+  <script src="./scripts/vendors/tether.min.js"></script>
+  <script src="./scripts/vendors/bootstrap.min.js"></script>
+  <script src="./scripts/vendors/slick.min.js"></script>
   <script src="./scripts/core/base.js"></script>
   <script src="./scripts/modules/theme-module.js"></script>
   <script src="./scripts/bootstrapper.js"></script>
