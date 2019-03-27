@@ -401,6 +401,9 @@
     
       <!-- Info Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalInfo">Info modal</button>
+      
+      <!-- Warning Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalWarning">Warning modal</button>
     
 
     </div>
@@ -633,6 +636,24 @@
       </div>
     </div>
   </div>
+
+  <!-- Unblock Modal -->
+  <div class="modal fade" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="modalWarning" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="holder-content">
+          <div class="holder-close" data-dismiss="modal"></div>
+          <div class="holder-image">
+            <img class="modal-warning-logo" src="./assets/images/WARNING.png" alt="">
+            <p class="text-center text-warning">WARNING</p>
+          </div>
+          <p class="modal-notification-text">Please relocate vendor first before making it unavailable</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 
   <!-- <script src="javascripts/vendors.js"></script>
   <script src="javascripts/custom/modals.js"></script> -->
