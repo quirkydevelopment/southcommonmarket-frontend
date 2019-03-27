@@ -121,7 +121,7 @@
             <div class="tab-body">
               <form id="form_profile_vendor" class="form-profile-vendor" action="">
                 <div class="form-column-holder">
-                  <div class="form-column">
+                  <div class="form-column form-logo">
                     <div class="holder">
                       <div class="form-group">
                         <div class="holder-image">
@@ -134,7 +134,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-column">
+                  <div class="form-column form-details">
                     <div class="holder">
                       <div class="form-group-holder">
                         <div class="form-group">
@@ -191,13 +191,13 @@
                           <label class="form-label" for="country_vendor">Country</label>
                           <input id="country_vendor" class="form-input" type="text" placeholder="Enter Country..">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group text-border">
                           <label class="form-label" for="company_description_vendor">Company Description</label>
-                          <textarea id="company_description_vendor" class="form-input" placeholder="Enter Company Description.."></textarea>
+                          <textarea id="company_description_vendor" class="form-input" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter Company Description.."></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group text-border">
                           <label class="form-label" for="product_sell_vendor">Products to Sell</label>
-                          <textarea id="product_sell_vendor" class="form-input" placeholder="Enter Products to Sell.."></textarea>
+                          <textarea id="product_sell_vendor" class="form-input" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter Products to Sell.."></textarea>
                         </div>
                         <div class="form-group">
                           <label class="form-label" for="permit_vendor">Do you have food permits? license? certificates and ect?</label>
@@ -214,7 +214,7 @@
                         </div>
                         <div class="form-group">
                           <div class="holder-button">
-                            <button class="btn-update" type="submit">Update Profile</button>
+                            <button class="btn-form btn-scooter" type="submit">Update Profile</button>
                           </div>
                         </div>
                       </div>
@@ -226,64 +226,189 @@
           </div>
         </div>
         <div id="products" class="tab-pane fade tab-products">
-          <div class="tab-pane-holder">
+          <div class="tab-pane-holder tab-pane-holder-form">
             <div class="tab-body">
               <form id="form_profile_vendor" class="form-profile-vendor" action="">
-                <div class="form-column">
-                  <div class="holder">
-                    <div class="form-group-holder">
-                      <div class="form-group">
-                        <label class="form-label" for="product_name_vendor">Product Name</label>
-                        <input id="product_name_vendor" class="form-input" type="text" placeholder="Enter Product Name..">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label" for="category_vendor">Category</label>
-                        <select id="category_vendor" class="form-input">
-                          <option value="" disabled="disabled" selected="selected">Choose Category</option>
-                          <option value="vegetables">Vegetables</option>
-                          <option value="fruits">Fruits</option>
-                          <option value="meats">Meats</option>
-                          <option value="cuisine">Cuisine</option>
-                          <option value="beverages">Beverages</option>
-                          <option value="arts_crafts">Arts and Crafts</option>
-                          <option value="sashion">Fashion</option>
-                          <option value="shoes">Shoes</option>
-                          <option value="bread">Bread, Cookies, pies, loaf's, etc.</option>
-                          <option value="food_supplements">Food Supplements</option>
-                          <option value="bath_products">Bath products and Soaps</option>
-                          <option value="treats">Treats, goodies, specialty drinks etc.</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label" for="price_vendor">Price</label>
-                        <input id="price_vendor" class="form-input" type="text" placeholder="Enter Price..">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label" for="product_description_vendor">Product Description</label>
-                        <input id="product_description_vendor" class="form-input" type="text" placeholder="Enter Product Descrition..">
-                      </div>
-                      <div class="form-group">
-                        <div class="holder-image">
-                          <img id="uploaded_file" class="uploaded-file" src="./assets/images/logo-brown-small.png" alt="vendor logo">
+                <div class="form-column-holder">
+                  <div class="form-column form-product-input">
+                    <div class="holder">
+                      <div class="form-group-holder">
+                        <div class="form-group">
+                          <label class="form-label" for="product_name_vendor">Product Name</label>
+                          <input id="product_name_vendor" class="form-input" type="text" placeholder="Enter Product Name..">
                         </div>
-                        <div class="holder-upload">
-                          <label class="label-upload" for="new_logo_uploader"><i class="fas fa-cloud-upload-alt"></i> Upload New Logo</label>
-                          <input id="new_logo_uploader" class="file-uploader" type="file">
+                        <div class="form-group">
+                          <label class="form-label" for="category_vendor">Category</label>
+                          <select id="category_vendor" class="form-input">
+                            <option value="" disabled="disabled" selected="selected">Choose Category</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="meats">Meats</option>
+                            <option value="cuisine">Cuisine</option>
+                            <option value="beverages">Beverages</option>
+                            <option value="arts_crafts">Arts and Crafts</option>
+                            <option value="sashion">Fashion</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="bread">Bread, Cookies, pies, loaf's, etc.</option>
+                            <option value="food_supplements">Food Supplements</option>
+                            <option value="bath_products">Bath products and Soaps</option>
+                            <option value="treats">Treats, goodies, specialty drinks etc.</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="price_vendor">Price</label>
+                          <input id="price_vendor" class="form-input" type="text" placeholder="Enter Price..">
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="product_description_vendor">Product Description</label>
+                          <input id="product_description_vendor" class="form-input" type="text" placeholder="Enter Product Descrition..">
+                        </div>
+                        <div class="form-group">
+                          <div class="holder-image">
+                            <img id="uploaded_file" class="uploaded-file" src="./assets/images/logo-brown-small.png" alt="vendor logo">
+                          </div>
+                          <div class="holder-upload">
+                            <label class="label-upload" for="new_logo_uploader"><i class="fas fa-cloud-upload-alt"></i> Upload New Logo</label>
+                            <input id="new_logo_uploader" class="file-uploader" type="file">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="form-column form-column-categories">
-                  <h3 class="form-title-categories">Avaialable Categories</h3>
-                  <div class="holder-categories">
-                    <div class="item">
-                      <div class="item-holder">
-                        <div class="holder-image"></div>
-                        <h4 class="item-number">12</h4>
-                        <p class="item-related">Products Related</p>
+                  <div class="form-column form-categories-list">
+                    <h3 class="form-title-categories">Available Categories</h3>
+                    <div class="items">
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/image-category-vegetables.jpg');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">12</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Vegetables</h5>
                       </div>
-                      <h5 class="item-title">Vegetables</h5>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/image-category-fruits.jpg');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">13</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Fruits</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/image-category-meat.jpg');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">12</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Meat</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/image-category-cuisine.jpg');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">12</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Cuisine</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/image-category-beverages.jpg');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">12</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Beverages</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/image-category-arts.jpg');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">12</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Art and Crafts</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/logo-brown.png');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">1</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Category</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/logo-brown.png');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">2</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Category</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/logo-brown.png');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">3</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Category</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/logo-brown.png');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">4</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Category</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/logo-brown.png');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">5</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Category</h5>
+                      </div>
+
+                      <div class="item">
+                        <div class="item-holder">
+                          <div class="holder-image" style="background-image: url('./assets/images/logo-brown.png');"></div>
+                          <div class="text-holder">  
+                            <h4 class="item-number">6</h4>
+                            <p class="item-related">Products Related</p>
+                          </div>
+                        </div>
+                        <h5 class="item-title">Category</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
