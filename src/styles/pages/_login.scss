@@ -61,6 +61,9 @@
   }
 
   .holder-logo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 40%;
     // background-color: green;
     background-color: #8cc63f;
@@ -101,7 +104,10 @@
     margin-bottom: 0;
 
     font-size: 12px;
+    color: $boulder;
     font-family: $montserrat-regular;
+
+    cursor: pointer;
   }
 
   .icon {
