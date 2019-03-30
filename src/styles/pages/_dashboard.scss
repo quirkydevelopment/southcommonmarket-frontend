@@ -20,3 +20,58 @@
     }
   }
 }
+
+.notifications {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  bottom: initial;
+  left: initial;
+  z-index: 1050;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 35px 14px 20px;
+  
+  background-color: $concrete;
+  border-radius: 5px;
+  box-shadow: 3px 4px 10px $black-opacity40; 
+
+  opacity: 0;
+
+  transition: all .5s ease-in-out;
+
+  .text {
+    font: normal 14px $montserrat-medium;
+    color: $cod-gray;
+  }
+
+  .vendor {
+    color: $brand-color;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 14px;
+
+    transition: all .2s ease-in-out;
+  }
+
+  .action {
+    display: none;
+
+    &.active {
+      display: inline;
+    }
+  }
+
+  &.active {
+    top: 25px;
+
+    opacity: 1;
+  }
+}
