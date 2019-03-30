@@ -52,6 +52,19 @@
     & + .tab-pane-holder {
       margin-top: 25px;
     }
+    
+    .holder-button {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+
+      .btn-table {
+        height: 40px;
+        margin: 0 0 20px auto;
+        
+        font-size: 14px;
+      }
+    }
   }
 
   .tab-pane-holder-form {
@@ -273,6 +286,10 @@
     left: initial;
     z-index: 10;
 
+    &.hide {
+      display: none;
+    }
+
     &-holder {
       position: relative;
 
@@ -356,6 +373,7 @@
       line-height: 1.4;
       color: $hippie-green;
       text-transform: uppercase;
+      word-spacing: 5px;
     }
   }
 
@@ -435,10 +453,36 @@
         width: 14px;
       }
     }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .table-empty {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    margin: -50px auto auto;
+
+    &.show {
+      display: flex;
+    }
+
+    .image-empty {
+      width: 100%;
+    }
   }
 
   .pagination {
     margin-top: auto;
+
+    &.hide {
+      display: none;
+    }
 
     &-entries {
       display: flex;
@@ -575,20 +619,71 @@
   }
 
   .tab-list {
-    .tab-body tbody {
-      td:nth-child(2) {
-        word-break: break-word;
+    .tab-body {
+      .table-custom {
+        min-width: 1200px;
       }
-      td:nth-child(4) {
-        word-break: break-all;
-      }
-      td:nth-last-child(4) {
-        width: 130px;
-      }
-      td:nth-last-child(3),
-      td:nth-last-child(2),
-      td:nth-last-child(1) {
-        width: 105px;
+
+      tbody {
+        td:nth-child(2) {
+          word-break: break-word;
+        }
+        td:nth-child(4) {
+          word-break: break-all;
+        }
+        td:nth-last-child(4) {
+          width: 130px;
+          padding-left: 15px
+        }
+        td:nth-last-child(3),
+        td:nth-last-child(2),
+        td:nth-last-child(1) {
+          width: 105px;
+        }
+  
+        .payment-status {
+          padding: 5px 20px 5px 5px;
+
+          color: $emperor;
+
+          background: url('../assets/images/icon-dropdown.png') no-repeat 67px;
+          background-size: 8px;
+          border-radius: 3px;
+          border-color: $olivine;
+
+          appearance: none;
+          cursor: pointer;
+
+          transition: all .2s ease-in-out;
+
+          @include on-event() {
+            outline: none;
+            box-shadow: none;
+          }
+
+          .status-option {
+            cursor: pointer;
+          }
+
+          &.paid {
+            color: $white;
+
+            background-color: $olivine;
+          }
+
+          &.unpaid {
+            color: $white;
+
+            background-color: $torch-red;
+            border-color: $torch-red;
+          }
+
+          .status-option {
+            color: $emperor;
+
+            background-color: $white;
+          }
+        }
       }
     }
   }
@@ -614,32 +709,10 @@
 
   .tab-product {
     .holder-button {
-      position: absolute;
-      top: 30px;
-      right: 330px;
-
-      .btn-table {
-        height: 40px;
-        margin: 0 0 20px auto;
-        
-        font-size: 14px;
-      }
+      right: 335px;
     }
 
-    .tab-body {
-      // .holder-button {
-      //   min-width: 1000px;
-      //   padding: 0 5px;
-      //   overflow: auto;
-
-      //   .btn-table {
-      //     height: 40px;
-      //     margin: 0 0 20px auto;
-          
-      //     font-size: 14px;
-      //   }
-      // }
-    
+    .tab-body {    
       tbody {
         td:nth-child(1) {
           width: 60px;
@@ -688,7 +761,7 @@
     }
 
     .table-custom {
-      min-width: 840px;
+      min-width: initial;
       padding: 0 20px;
     }
 
@@ -962,6 +1035,34 @@
         color: $apple;
         text-align: center;
       }
+    }
+  }
+
+  .tab-faq {
+    .faq-item {
+      border: 0;
+
+      &:not(:last-child) {
+        border-bottom: 3px solid $hippie-green;
+      }
+
+      td {
+        padding: 10px 5px;
+      }
+    }
+
+    .faq-inner {
+      width: 100%;
+
+      tr:last-of-type {
+        border-bottom: 1px solid $desert-storm;
+      }
+    }
+
+    .label {
+      width: 100px;
+
+      font-family: $montserrat-semi-bold;
     }
   }
 

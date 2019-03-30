@@ -381,7 +381,7 @@
                     <td class="map-col map-col-3"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-4 map-col-truck"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-5"><a href="#" class="tile tile-unavailable"></a></td>
-                    <td class="map-col map-col-6"><a href="#" class="tile tile-expanded"></a></td>
+                    <td class="map-col map-col-6"><a href="#" class="tile tile-regular"></a></td>
                     <td class="map-col map-col-7"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-8"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-9"><a href="#" class="tile"></a></td>
@@ -443,7 +443,7 @@
                     <td class="map-col map-col-2"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-3"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-4"><a href="#" class="tile tile-regular"></a></td>
-                    <td class="map-col map-col-5"><a href="#" class="tile tile-expanded"></a></td>
+                    <td class="map-col map-col-5"><a href="#" class="tile tile-regular"></a></td>
                     <td class="map-col map-col-6"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-7"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-8"><a href="#" class="tile"></a></td>
@@ -582,6 +582,22 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="table-empty">
+                <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
+              </div>
+              <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div>
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -638,6 +654,7 @@
                     <th class="table-heading filter-item">Company Name</th>
                     <th class="table-heading filter-item">Full Name</th>
                     <th class="table-heading filter-item">Email</th>
+                    <th class="table-heading filter-item">Status</th>
                     <th class="table-heading filter-item">Date Started</th>
                     <th class="table-heading text-center" colspan="3">Actions</th>
                   </tr>
@@ -648,6 +665,12 @@
                     <td>Skyline Greenhouse</td> 
                     <td>Jeannie Windels</td>
                     <td>skyline.greenhouse@gmail.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -658,6 +681,12 @@
                     <td>Lucky Me</td> 
                     <td>Jonash Bundalian</td>
                     <td>jonashtimothy@yahoo.com</td>
+                    <td>
+                      <select id="" class="payment-status paid" name="payment-status">
+                        <option class="status-option" value="unpaid">Unpaid</option>
+                        <option class="status-option" value="paid" selected>Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -668,6 +697,12 @@
                     <td>JOOS</td> 
                     <td>Gabriela Touma</td>
                     <td>gtouma@shopjoos.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -678,6 +713,12 @@
                     <td>Deserve Sterling Silver </td> 
                     <td>Katherine Singh</td>
                     <td>deserveks@hotmail.com</td>
+                    <td>
+                      <select id="" class="payment-status paid" name="payment-status">
+                        <option class="status-option" value="unpaid">Unpaid</option>
+                        <option class="status-option" value="paid" selected>Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -688,6 +729,12 @@
                     <td>Mosquito Authority</td> 
                     <td>Bernie Mullin</td>
                     <td>lenny@bugsbite.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -698,6 +745,12 @@
                     <td>Missy J Collection</td> 
                     <td>Iris Lee</td>
                     <td>heyheyiris@hotmail.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -708,6 +761,12 @@
                     <td>enjoy the farm</td> 
                     <td>Joe Farmer</td>
                     <td>arleneenriquez121@hotmail.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -718,6 +777,12 @@
                     <td>The Tree of Life</td> 
                     <td>Trecia Link</td>
                     <td>ttldoulaservice@gmail.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/01/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -728,6 +793,12 @@
                     <td>Bowen Financial Inc.</td> 
                     <td>Greg Bowen</td>
                     <td>g-bowen@shaw.ca</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/02/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -738,6 +809,12 @@
                     <td>Stony Plain Pie Shoppe</td> 
                     <td>Kevin Waddell</td>
                     <td>chef@stonyplainpies.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/02/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -748,6 +825,12 @@
                     <td>G&G Designs</td> 
                     <td>Shirley Zago</td>
                     <td>sezago560@gmail.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/02/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -758,6 +841,12 @@
                     <td>Dukeshire Farms</td> 
                     <td>Holly Dukeshire</td>
                     <td>dukeshirefarms@gmail.com</td>
+                    <td>
+                      <select id="" class="payment-status unpaid" name="payment-status">
+                        <option class="status-option" value="unpaid" selected>Unpaid</option>
+                        <option class="status-option" value="paid">Paid</option>
+                      </select>
+                    </td>
                     <td>01/02/2018</td>
                     <td><button class="btn-icon btn-info">View Info</button></td>
                     <td><button class="btn-icon btn-block">Block</button></td>
@@ -765,6 +854,22 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="table-empty">
+                <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
+              </div>
+              <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div>
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -854,6 +959,22 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="table-empty">
+                <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
+              </div>
+              <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div>
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -932,6 +1053,22 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="table-empty">
+                <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
+              </div>
+              <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div>
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -1067,7 +1204,7 @@
                     <td class="map-col map-col-3"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-4 map-col-truck"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-5"><a href="#" class="tile tile-unavailable"></a></td>
-                    <td class="map-col map-col-6"><a href="#" class="tile tile-expanded"></a></td>
+                    <td class="map-col map-col-6"><a href="#" class="tile tile-regular"></a></td>
                     <td class="map-col map-col-7"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-8"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-9"><a href="#" class="tile"></a></td>
@@ -1129,7 +1266,7 @@
                     <td class="map-col map-col-2"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-3"><a href="#" class="tile tile-unavailable"></a></td>
                     <td class="map-col map-col-4"><a href="#" class="tile tile-regular"></a></td>
-                    <td class="map-col map-col-5"><a href="#" class="tile tile-expanded"></a></td>
+                    <td class="map-col map-col-5"><a href="#" class="tile tile-regular"></a></td>
                     <td class="map-col map-col-6"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-7"><a href="#" class="tile"></a></td>
                     <td class="map-col map-col-8"><a href="#" class="tile"></a></td>
@@ -1424,6 +1561,22 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="table-empty">
+                <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
+              </div>
+              <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div>
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -1474,11 +1627,11 @@
                       <h4 class="form-title">Regular</h4>
                       <div class="form-group">
                         <label for="sat_or_sun_regular" class="form-label">Saturday or Sunday</label>
-                        <input id="sat_or_sun_regular" class="form-control form-price" type="number" name="sat_or_sun_regular" placeholder="i.e. 35.00" />
+                        <input id="sat_or_sun_regular" class="form-control form-price" type="number" name="sat_or_sun_regular" value="42.00" placeholder="i.e. 42.00" />
                       </div>
                       <div class="form-group">
                         <label for="sat_and_sun_regular" class="form-label">Saturday and Sunday</label>
-                        <input id="sat_and_sun_regular" class="form-control form-price" type="number" name="sat_and_sun_regular" placeholder="i.e. 50.00" />
+                        <input id="sat_and_sun_regular" class="form-control form-price" type="number" name="sat_and_sun_regular" value="73.50" placeholder="i.e. 73.50" />
                       </div>
                       <div class="form-group">
                         <label for="monthly_regular" class="form-label">Monthly</label>
@@ -1489,7 +1642,7 @@
                         <input id="quarterly_regular" class="form-control form-price" type="number" name="quarterly_regular" placeholder="i.e. 1,680.00" />
                       </div>
                     </div>
-                    <div class="form-column">
+                    <!-- <div class="form-column">
                       <h4 class="form-title">Expandable</h4>
                       <div class="form-group">
                         <label for="sat_or_sun_expandable" class="form-label">Saturday or Sunday</label>
@@ -1507,7 +1660,7 @@
                         <label for="quarterly_expandable" class="form-label">Quarterly</label>
                         <input id="quarterly_expandable" class="form-control form-price" type="number" name="quarterly_expandable" placeholder="i.e. 3,360.00" />
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="form-button">
                     <button class="btn-table btn-green btn-submit" type="submit">Save</button>
@@ -1518,8 +1671,145 @@
           </div>
         </div>
         <div id="faq" class="tab-pane fade tab-faq">
-          <h3>Vendor FAQ</h3>
-          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+          <div class="tab-pane-holder">
+            <div class="holder-button">
+              <button class="btn-table btn-green">Add FAQ</button>
+            </div>
+            <div class="tab-header">
+              <h3 class="tab-title">Frequently Asked Questions</h3>
+            </div>
+            <div class="tab-body">
+              <table class="table-custom">
+                <tbody>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">How much is a stall per week?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input">$40.00/day (includes GST) or 35/day if you do two days per weekend for a total of 73.50</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">How big are the stalls?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input">10 Ft by 18 Ft close to a regular car parking spot.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">What types of goods does the market offer?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input">Everything from soup to nuts. Come down to see what the Market has to offer you won’t go home empty handed.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">Can I sell food?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input">You will have to contact the department of Environmental Health at 780 735 1800 or the local inspector at 780-735-1797 ask for the Food Inspection where you will be given a certificate if approved. We are a public market, and not a Alberta aproved market, where they are protected from Alberta health and we are not. That being said we also require insurance for anything going on or in the body, it is only about 265/yr, thru the market.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">Why can't I bring my well behaved dog?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input">As much as we love animals the Health Department will not let our vendors sell their food products in the same area as animals.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">How can I get more information regarding the Market?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input">Brian Dahl would be happy to answer any and all questions regarding the Market 780-686-5882 (between 8a.m – 9pm)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr class="faq-item">
+                    <td>
+                      <table class="faq-inner">
+                        <tbody>
+                          <tr>
+                            <td class="question label">Question:</td>
+                            <td class="question input">Do I have to register?</td>
+                          </tr>
+                          <tr>
+                            <td class="answer label">Answer:</td>
+                            <td class="answer input"><strong>Yes you do.</strong> Please call in advanced to insure there is space available.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="tab-footer">
           <div class="holder-image">
