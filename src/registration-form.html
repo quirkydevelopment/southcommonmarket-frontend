@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <meta name="format-detection" content="telephone=no">
 
-  <title>South Common Market | Reset Password</title> 
+  <title>South Common Market | Registration Form</title> 
 
   <link rel="icon" href="./assets/images/favicon.ico">
   
@@ -47,7 +47,7 @@
             <form action="#" method="post">
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">First Name: </p>
+                  <p class="text">First Name: <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
                   <input class="input" type="text" placeholder="Enter Your First Name. . ." required> 
@@ -55,7 +55,7 @@
               </div>
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">Last Name: </p>
+                  <p class="text">Last Name: <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
                   <input class="input" type="text" placeholder="Enter Your Last Name. . ." required>
@@ -63,7 +63,7 @@
               </div>
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">Organization: </p>
+                  <p class="text">Organization: <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
                   <input class="input" type="text" placeholder="Enter Your Organization Name" required>
@@ -71,15 +71,15 @@
               </div>
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">My Phone Number: </p>
+                  <p class="text">Phone Number: <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
-                  <input class="input" type="number" required>
+                  <input class="input" type="number" placeholder="Enter your Phone number" required>
                 </div>
               </div>
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">Organization Address: </p>
+                  <p class="text">Organization Address: <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
                   <div class="holder-field-address">
@@ -106,7 +106,7 @@
               </div>
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">My Website: </p>
+                  <p class="text">Website: <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
                   <input class="input" type="text" placeholder="Enter your website / Facebook Page Url" required>
@@ -114,7 +114,15 @@
               </div>
               <div class="form-field-group">
                 <div class="text-field">
-                  <p class="text">Want your own website? <br> We can Create you one.</p>
+                  <p class="text">Products: <span class="text-required">&#42;</span></p>
+                </div>
+                <div class="input-field">
+                  <input class="input" type="text" placeholder="Enter Products you sell" required>
+                </div>
+              </div>
+              <div class="form-field-group">
+                <div class="text-field">
+                  <p class="text">Want your own <br> website? We can Create <br> you one. <span class="text-required">&#42;</span></p>
                 </div>
                 <div class="input-field">
                   <select class="input input-select" required>
@@ -123,10 +131,22 @@
                   </select>
                 </div>
               </div>
-              <h4 class="form-details details-title">Upload Your Logo</h4>
-              <div class="form-field-group">
-                <div class="input input-upload-field">
-                  <input type="file" name="myFile">
+              <div class="form-field-group form-field-upload">
+                <div class="holder-upload">
+                  <h4 class="form-details details-title">Upload Your Logo</h4>
+                  <div class="form-field-group">
+                    <div class="input input-upload-field">
+                      <input type="file" name="logo-upload" accept="image/*">
+                    </div>
+                  </div>
+                </div>
+                <div class="holder-upload">
+                  <h4 class="form-details details-title">Upload Your Permit</h4>
+                  <div class="form-field-group">
+                    <div class="input input-upload-field" accept="application/pdf">
+                      <input type="file" name="permit-upload">
+                    </div>
+                  </div>
                 </div>
               </div>
               <h4 class="form-details details-title">Membership Rules</h4>
