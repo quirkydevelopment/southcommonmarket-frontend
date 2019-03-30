@@ -613,19 +613,32 @@
   }
 
   .tab-product {
-    .tab-body {
-      .holder-button {
-        min-width: 1000px;
-        padding: 0 5px;
-        overflow: auto;
+    .holder-button {
+      position: absolute;
+      top: 30px;
+      right: 330px;
 
-        .btn-table {
-          height: 40px;
-          margin: 0 0 20px auto;
-          
-          font-size: 14px;
-        }
+      .btn-table {
+        height: 40px;
+        margin: 0 0 20px auto;
+        
+        font-size: 14px;
       }
+    }
+
+    .tab-body {
+      // .holder-button {
+      //   min-width: 1000px;
+      //   padding: 0 5px;
+      //   overflow: auto;
+
+      //   .btn-table {
+      //     height: 40px;
+      //     margin: 0 0 20px auto;
+          
+      //     font-size: 14px;
+      //   }
+      // }
     
       tbody {
         td:nth-child(1) {
@@ -1026,6 +1039,16 @@
 
       .text-label {
         font-size: 16px;
+      }
+    }
+
+    .search-holder {
+      width: 200px;
+    }
+
+    .tab-product {
+      .holder-button {
+        right: 230px;
       }
     }
   }
