@@ -10,19 +10,20 @@
   right: initial;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 50;
   
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 260px;
+  width: 260px;
   height: 100%;
-  max-height: calc(100% - 80px);
+  max-height: calc(100% - 70px);
   padding: 10px 0;
   overflow: hidden;
 
   background: url('../assets/images/bg-dashboard-admin2.jpg') no-repeat center;
   background-size: cover;
+
+  transition: all .3s ease-in-out;
 
   &:before {
     content: '';
@@ -47,14 +48,19 @@
 
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: scroll;
     padding-right: 17px;
     box-sizing: content-box;
     min-height: initial;
+
+    -webkit-overflow-scrolling: touch;
   }
 
   .tab-item {
     display: flex;
+    // width: 100%;
+    width: 300px;
     margin-top: 15px;
 
     &:last-of-type {
@@ -87,12 +93,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    // width: 100%;
+    width: 300px;
     padding: 0 10px 0 17px;
     
     color: $white;
 
-    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+    transition: all .3s ease-in-out;
 
     .tab-icon {
       display: flex;
@@ -131,10 +138,11 @@
 
     .tab-text {
       margin-left: 8px;
-      
-      // font-size: 15px;
+
       font: normal 15px $montserrat-semi-bold;
       line-height: 1.4;
+
+      // transition: all .3s ease-in-out;
     }
 
     @include on-event() {
@@ -162,8 +170,8 @@
   .sidebar-toggler {
     position: absolute;
     top: initial;
-    right: -120px;
-    bottom: 10px;
+    right: -135px;
+    bottom: -90px;
     left: initial;
 
     display: flex;
@@ -171,45 +179,62 @@
     align-items: center;
     flex-wrap: wrap;
     width: 150px;
+    padding: 11px 0;
     
     font-size: 35px;
 
-    // use this for background with transition
-    // &:before {
-      
-    // }
+    background-color: $chateau-green;
+
+    transition: all .3s ease-in-out;
+    cursor: pointer;
 
     i {
-      width: 35px;
-      text-align: center;
-      height: 35px;
-      border-radius: 50%;
-      background: red;
-      position: relative;
-      left: -20px;
-      font-size: 26px;
+      position: absolute;
+      top: 0;
+      right: initial;
+      bottom: initial;
+      left: -15px;
+      
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 40px;
+      height: 40px;
+      
+      text-align: center;
+      font-size: 27px;
       line-height: 1px;
+      color: $white;
+      
+      background-color: $chateau-green;
+      border-radius: 50%;
+
+      transition: all .3s ease-in-out;
     }
 
     .text-toggle {
-      // position: absolute;
-      // make this like a tooltip
-      margin-left: 5px;
+      margin-left: 15px;
 
-      font-size: 14px;
+      font: normal 14px $montserrat-regular;
+      color: $white;
+    }
+
+    .label-show {
+      display: none;
     }
 
     @include on-event() {
       right: 0;
 
-      width: 170px;
-
       text-decoration: none;
 
-      background-color: green;
+      background-color: $chateau-green;
+    }
+  }
+
+  @include respond-to(md-down) {
+    .dashboard-tab {
+      left: 0;
     }
   }
 }
@@ -219,5 +244,75 @@
 
   .tabs {
     height: auto;
+  }
+}
+
+@include respond-to(md-up) {
+  .sidebar-collapsed {
+    .dashboard-tab {
+      width: 90px;
+  
+      .tab-link {
+        width: 100px;
+  
+        .tab-text {
+          font-size: 0;
+        }
+      }
+
+      .sidebar-toggler {
+        right: -139px;
+        bottom: -60px;
+
+        background: transparent;
+
+        i {
+          left: -30px;
+
+          transform: rotate(180deg);
+        }
+
+        .text-toggle {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .dashboard-tab {
+    opacity: 1;
+
+    .sidebar-toggler {
+      display: none;
+    }
+  }
+
+  .sidebar-collapsed {
+    .dashboard-tab {
+      left: -260px;
+
+      opacity: 0;
+
+      transition: all .5s ease-in-out;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .dashboard-tab {
+    top: 55px;
+
+    max-height: calc(100% - 55px);
+    padding: 5px 0 0;
+
+    .tab-item {
+      margin-top: 10px;
+
+      &:last-of-type {
+        margin-bottom: 15px;
+      }
+    }
   }
 }

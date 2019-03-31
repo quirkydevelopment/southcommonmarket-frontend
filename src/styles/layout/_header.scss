@@ -322,6 +322,10 @@
     box-shadow: 0 10px 20px $black-opacity20;
   }
 
+  .container-fluid {
+    position: relative;
+  }
+
   .logo-link {
     height: 80px;
     padding: 10px 15px;
@@ -347,6 +351,15 @@
       background-color: $text-color;
     }
 
+    &:hover {
+      .avatar-dropdown {
+        top: 80px;
+      
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
     .avatar-holder {
       max-width: 50px;
     }
@@ -367,6 +380,102 @@
       line-height: 1.4;
       color: $white;
       text-transform: uppercase;
+    }
+
+    .avatar-dropdown {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      bottom: initial;
+      left: initial;
+      z-index: 10;
+
+      width: 191.5px;
+      
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all .5s ease-in-out;
+
+      &-item {
+        padding: 0;
+
+        text-align: center;
+      }
+
+      &-link {
+        display: block;
+        padding: 12px 0;
+
+        font: normal 16px $montserrat-regular;
+        color: $white;
+
+        background-color: $apple;
+        box-shadow: 0 3px 5px $boulder;
+
+        transition: all .2s ease-in-out;
+
+        @include on-event() {
+          text-decoration: none;
+
+          background-color: $chateau-green;
+          // box-shadow: 0 5px 10px $boulder;
+        }
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    .navbar {
+      padding: 0;
+    }
+
+    .logo-link {
+      margin-left: 40px;
+    }
+
+    .avatar-link {
+      .username {
+        display: none;
+      }
+    }
+
+    .avatar-dropdown {
+      width: 120px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .logo-link {
+      height: 55px;
+      margin-left: 20px;
+    }
+
+    .avatar-link {
+      height: 55px;
+      padding: 0 10px;
+
+      &:hover {
+        .avatar-dropdown {
+          top: 55px;
+        }
+      }
+
+      .avatar-holder {
+        max-width: 40px;
+      }
+
+      .avatar-dropdown {
+        right: 0;
+  
+        width: 100px;
+  
+        &-link {
+          padding: 10px 0;
+  
+          font-size: 14px;
+        }
+      }
     }
   }
 }

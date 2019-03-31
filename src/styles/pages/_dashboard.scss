@@ -11,9 +11,20 @@
   padding-top: 80px;
 
   background-color: $willow-brook;
+
+  @include respond-to(sm-down) {
+    padding-top: 55px;
+  }
 }
 
 .dashboard-vendor {
+  .tab-profile {
+    .tab-pane-holder .holder-button {
+      position: relative;
+      top: initial;
+      right: initial;
+    }
+  }
   .tab-sitemap {
     .tab-body {
       min-height: 480px;
@@ -39,6 +50,7 @@
   box-shadow: 3px 4px 10px $black-opacity40; 
 
   opacity: 0;
+  pointer-events: none;
 
   transition: all .5s ease-in-out;
 
@@ -73,5 +85,10 @@
     top: 25px;
 
     opacity: 1;
+    pointer-events: auto;
   }
 }
+
+// .sidebar-collapsed {
+  
+// }

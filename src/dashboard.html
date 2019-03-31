@@ -35,7 +35,7 @@
     <div class="dashboard-header">
       <nav class="navbar navbar-expand-md fixed-top">
         <div class="container-fluid">
-          <span class="d-md-none navbar-toggler-custom-dashboard js-navbar-dashboard-open">
+          <span class="d-lg-none navbar-toggler-custom-dashboard js-navbar-dashboard-open">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -43,23 +43,28 @@
           <a href="#" class="logo-link">
             <img class="logo" src="./assets/images/logo-scm-white.png" alt="South Common" />
           </a>
-          <a href="#" class="avatar-link">
+          <!-- <a href="#" class="avatar-link">
             <div class="avatar-holder">
               <img class="avatar" src="./assets/images/icon-avatar.png" alt="Admin/User" />
             </div>
             <span class="username">Administrator</span>
-            <ul class="avatar-dropdown list-unstyled d-none">
-              <li class="avatar-item">
-                <a href="#" class="avatar-link">Lorem</a>
-              </li>
-              <li class="avatar-item">
-                <a href="#" class="avatar-link">Ipsum</a>
-              </li>
-              <li class="avatar-item">
-                <a href="#" class="avatar-link">Logout</a>
+          </a>
+          <ul class="avatar-dropdown list-unstyled">
+            <li class="avatar-dropdown-item">
+              <a href="#" class="avatar-dropdown-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+          </ul> -->
+          <div class="avatar-link">
+            <div class="avatar-holder">
+              <img class="avatar" src="./assets/images/icon-avatar.png" alt="Admin/User" />
+            </div>
+            <span class="username">Administrator</span>
+            <ul class="avatar-dropdown list-unstyled">
+              <li class="avatar-dropdown-item">
+                <a href="#" class="avatar-dropdown-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
               </li>
             </ul>
-          </a>
+          </div>
         </div>
       </nav>
     </div>
@@ -233,11 +238,10 @@
             <span class="tab-text">Vendor FAQ</span>
           </a>
         </li>
-        <!-- <a href="#" class="sidebar-toggler js-sidebar-toggler">
+        <div class="sidebar-toggler js-sidebar-toggler">
           <i class="fas fa-chevron-left"></i>
-          <span class="text-toggle text-show">Show Side Panel</span>
-          <span class="text-toggle text-hide">Hide Side Panel</span>
-        </a> -->
+          <span class="text-toggle">Hide Side Panel</span>
+        </div>
       </ul>
     </div>
   </header>
@@ -584,19 +588,6 @@
               <div class="table-empty">
                 <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
               </div>
-              <div class="table-loader">
-                <div class="sk-cube-grid">
-                  <div class="sk-cube sk-cube1"></div>
-                  <div class="sk-cube sk-cube2"></div>
-                  <div class="sk-cube sk-cube3"></div>
-                  <div class="sk-cube sk-cube4"></div>
-                  <div class="sk-cube sk-cube5"></div>
-                  <div class="sk-cube sk-cube6"></div>
-                  <div class="sk-cube sk-cube7"></div>
-                  <div class="sk-cube sk-cube8"></div>
-                  <div class="sk-cube sk-cube9"></div>
-                </div>
-              </div>
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -856,7 +847,7 @@
               <div class="table-empty">
                 <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
               </div>
-              <div class="table-loader">
+              <!-- <div class="table-loader">
                 <div class="sk-cube-grid">
                   <div class="sk-cube sk-cube1"></div>
                   <div class="sk-cube sk-cube2"></div>
@@ -868,7 +859,7 @@
                   <div class="sk-cube sk-cube8"></div>
                   <div class="sk-cube sk-cube9"></div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -961,7 +952,7 @@
               <div class="table-empty">
                 <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
               </div>
-              <div class="table-loader">
+              <!-- <div class="table-loader">
                 <div class="sk-cube-grid">
                   <div class="sk-cube sk-cube1"></div>
                   <div class="sk-cube sk-cube2"></div>
@@ -973,7 +964,7 @@
                   <div class="sk-cube sk-cube8"></div>
                   <div class="sk-cube sk-cube9"></div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -1055,7 +1046,7 @@
               <div class="table-empty">
                 <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
               </div>
-              <div class="table-loader">
+              <!-- <div class="table-loader">
                 <div class="sk-cube-grid">
                   <div class="sk-cube sk-cube1"></div>
                   <div class="sk-cube sk-cube2"></div>
@@ -1067,7 +1058,7 @@
                   <div class="sk-cube sk-cube8"></div>
                   <div class="sk-cube sk-cube9"></div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -1428,16 +1419,13 @@
                 <input class="search-input" type="text" placeholder="Search">
               </form>
             </div>
-            <div class="holder-button">
-              <button class="btn-table btn-green">Add Category</button>
-            </div>
             <div class="tab-header">
               <h3 class="tab-title">Product Categories</h3>
             </div>
+            <div class="holder-button">
+              <button class="btn-table btn-green">Add Category</button>
+            </div>
             <div class="tab-body">
-              <!-- <div class="holder-button">
-                <button class="btn-table btn-green">Add Category</button>
-              </div> -->
               <table class="table-custom">
                 <thead>
                   <tr>
@@ -1563,7 +1551,7 @@
               <div class="table-empty">
                 <img class="image-empty" src="./assets/images/image-empty-list.png" alt="" />
               </div>
-              <div class="table-loader">
+              <!-- <div class="table-loader">
                 <div class="sk-cube-grid">
                   <div class="sk-cube sk-cube1"></div>
                   <div class="sk-cube sk-cube2"></div>
@@ -1575,7 +1563,7 @@
                   <div class="sk-cube sk-cube8"></div>
                   <div class="sk-cube sk-cube9"></div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="pagination">
               <div class="pagination-entries">
@@ -1652,11 +1640,11 @@
         </div>
         <div id="faq" class="tab-pane fade tab-faq">
           <div class="tab-pane-holder">
-            <div class="holder-button">
-              <button class="btn-table btn-green">Add FAQ</button>
-            </div>
             <div class="tab-header">
               <h3 class="tab-title">Frequently Asked Questions</h3>
+            </div>
+            <div class="holder-button">
+              <button class="btn-table btn-green">Add FAQ</button>
             </div>
             <div class="tab-body">
               <form id="form_faq" class="form-faq" action="">
@@ -1801,6 +1789,34 @@
                   </tbody>
                 </table>
               </form>
+              <!-- <div class="table-loader">
+                <div class="sk-cube-grid">
+                  <div class="sk-cube sk-cube1"></div>
+                  <div class="sk-cube sk-cube2"></div>
+                  <div class="sk-cube sk-cube3"></div>
+                  <div class="sk-cube sk-cube4"></div>
+                  <div class="sk-cube sk-cube5"></div>
+                  <div class="sk-cube sk-cube6"></div>
+                  <div class="sk-cube sk-cube7"></div>
+                  <div class="sk-cube sk-cube8"></div>
+                  <div class="sk-cube sk-cube9"></div>
+                </div>
+              </div> -->
+            </div>
+            <div class="holder-button holder-button-bottom">
+              <button class="btn-table btn-green" type="submit">Save</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-footer">
+          <div class="holder-image">
+            <img class="tab-footer-image" src="./assets/images/logo-brown-small.png" alt="logo" />
+          </div>
+          <p class="tab-footer-text">&copy; 2018-2019 South Common Market.</p>
+        </div>
+        <div class="tab-loader">
+          <div class="tab-pane-holder">
+            <div class="tab-body">
               <div class="table-loader">
                 <div class="sk-cube-grid">
                   <div class="sk-cube sk-cube1"></div>
@@ -1815,16 +1831,7 @@
                 </div>
               </div>
             </div>
-            <div class="holder-button holder-button-bottom">
-              <button class="btn-table btn-green" type="submit">Save</button>
-            </div>
           </div>
-        </div>
-        <div class="tab-footer">
-          <div class="holder-image">
-            <img class="tab-footer-image" src="./assets/images/logo-brown-small.png" alt="logo" />
-          </div>
-          <p class="tab-footer-text">&copy; 2018-2019 South Common Market.</p>
         </div>
       </div>
     </div>

@@ -14,6 +14,8 @@
   font-size: 14px;
   color: $emperor;
 
+  transition: all .3s ease-in-out;
+
   input[type=number]::-webkit-inner-spin-button, 
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none; 
@@ -87,6 +89,8 @@
       min-height: initial;
       max-height: initial;
       overflow: initial;
+
+      -webkit-overflow-scrolling: touch;
     }
 
     .form-column {
@@ -382,6 +386,8 @@
     min-height: 460px;
     max-height: calc(100vh - 355px);
     overflow: auto;
+
+    -webkit-overflow-scrolling: touch;
   }
 
   tbody {
@@ -407,6 +413,8 @@
     // min-width: 1000px;
     min-width: 1020px;
     overflow: auto;
+
+    -webkit-overflow-scrolling: touch;
 
     .table-heading {
       padding: 0 5px 8px;
@@ -829,6 +837,8 @@
 
       width: 350px;
       max-height: 350px;
+      
+      transition: all .3s ease-in-out;
 
       .holder {
         display: flex;
@@ -845,6 +855,8 @@
     .form-details {
       width: calc(100% - 325px);
       margin-left: 25px;
+
+      transition: all .3s ease-in-out;
 
       .holder {
         display: flex;
@@ -879,6 +891,8 @@
           bottom: 0;
           left: 0;
           z-index: 5;
+
+          width: 100%;
 
           opacity: 0;
         }
@@ -933,6 +947,8 @@
       overflow: auto;
 
       background-color: $concrete;
+
+      -webkit-overflow-scrolling: touch;
 
       .form-title-categories {
         font: normal 16px $montserrat-medium;
@@ -1077,8 +1093,8 @@
 
       width: 100%;
 
-      tr:nth-child(2) {
-        border-bottom: 1px solid $desert-storm;
+      tr:first-child {
+        border: 0;
       }
     }
 
@@ -1131,6 +1147,18 @@
     }
   }
 
+  .tab-loader {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .tab-body {
+      max-height: 100%;
+    }
+  }
+
   @media (max-width: 1400px) {
     .cards-holder {
       min-width: initial;
@@ -1157,23 +1185,24 @@
       }
     }
 
-    .tab-profile {
-      .form-column-holder {
-        flex-direction: column;
+    .tab-pane-holder-form {
+      .form-column,
+      .form-details {
+        .uploaded-file {
+          max-height: 150px;
+        }
       }
+    }
 
+    .tab-profile {
       .form-logo {
         width: 100%;
-        max-width: 350px;
-        height: 350px;
-        margin-right: auto;
-        margin-left: 0;
+        max-width: 250px;
+        max-height: 250px;
       }
 
       .form-details {
-        margin: 25px auto 0 0;
         width: 100%;
-        max-width: 100%;
       }
     }
 
@@ -1210,6 +1239,28 @@
       width: 200px;
     }
 
+    @media (max-width: 1100px) {
+      .tab-profile {
+        .form-column-holder {
+          flex-direction: column;
+        }
+
+        .form-logo {
+          width: 100%;
+          max-width: 350px;
+          height: 350px;
+          margin-right: auto;
+          margin-left: 0;
+        }
+
+        .form-details {
+          margin: 25px auto 0 0;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
     .tab-product {
       .holder-button {
         right: 230px;
@@ -1217,7 +1268,227 @@
     }
   }
 
-  // @include respond-to() {
+  @include respond-to(md-down) {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 
-  // }
+  @include respond-to(sm-down) {
+    .cards-holder {
+      flex-wrap: wrap;
+
+      .card {
+        width: 100%;
+        min-width: initial;
+        max-width: calc(50% - 10px);
+        margin-bottom: 20px;
+
+        & + .card {
+          margin-left: initial;
+        }
+      }
+    }
+
+    .tab-pane-holder {
+      .search {
+        width: calc(100% - 40px);
+      }
+    }
+
+    .search-holder {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .tab-header {
+      .tab-title {
+        font-size: 24px;
+      }
+
+      & + .holder-button {
+        position: relative;
+        top: 0;
+        right: initial;
+        left: 0;
+
+        width: 100%;
+        margin-right: auto;
+
+        .btn-table {
+          width: 100%;
+          max-width: 400px;
+          margin: -5px 0 10px;
+        }
+      }
+    }
+
+    .tab-body {
+      min-height: 360px;
+      max-height: calc(100vh - 400px);
+    }
+
+    .pagination {
+      flex-direction: column;
+
+      &-pages {
+        margin-top: 10px;
+        margin-left: 0;
+
+        .page-first {
+          padding-left: 0;
+        }
+
+        .page-last {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .tab-pane-holder {
+      .search {
+        top: 75px;
+        right: initial;
+        left: 20px;
+
+        & + .tab-header {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .tab-dashboard {
+      .tab-pane-holder + .tab-pane-holder {
+        margin-top: 5px;
+      }
+
+      .tab-body {
+        max-height: calc(100% - 65px);
+      }
+    }
+
+    .tab-sitemap {
+      .tab-pane-holder:first-child {
+        .tab-body {
+          min-height: 460px;
+          max-height: calc(100% - 65px);
+        }
+      }
+    }
+
+    .tab-product {
+      .tab-body {
+        min-height: 320px;
+        max-height: calc(100vh - 250px);
+      }
+    }
+
+    .tab-faq {
+      .tab-header + .holder-button {
+        .btn-table {
+          margin: -15px 0 10px;
+        }
+      }
+
+      .tab-body {
+        min-height: 360px;
+      }
+      
+      .faq-inner {
+        tr:not(.actions) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .faq-item {
+        td {
+          padding: 10px 0;
+
+          &:first-child {
+            padding-bottom: 0;
+          }
+
+          &:last-child {
+            padding-top: 5px;
+          }
+        }
+
+        .action {
+          padding: 5px 0;
+        }
+      }
+    }
+
+    .tab-profile {
+      .form-details {
+        .holder {
+          flex-direction: column;
+        }
+
+        .form-group-holder {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .tab-products {
+      .form-column-holder {
+        flex-direction: column;
+      }
+
+      .form-product-input {
+        width: 100%;
+      }
+
+      .form-categories-list {
+        width: 100%;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .cards-holder {
+      .card {
+        max-width: 100%;
+      }
+    }
+
+    .tab-rent {
+      .tab-title-icon {
+        top: 9px;
+      }
+      
+      .tab-body {
+        max-height: initial;
+      }
+
+      .table-custom {
+        padding: 0;
+      }
+
+      .form-column {
+        width: 100%;
+        min-width: initial;
+        max-width: 100%;
+      }
+    }
+
+    .tab-products {
+      .items {
+        .item {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(lg-up) {
+  .sidebar-collapsed {
+    .dashboard-content {
+      padding-left: 110px;
+    }
+  }
 }

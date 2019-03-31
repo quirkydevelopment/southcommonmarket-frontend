@@ -45,7 +45,7 @@ input[type="text"] {
   }
 }
 
-// styles for navbar toggler
+// styles for navbar toggler on marketing pages
 .navbar-toggler-custom {
   position: relative;
 
@@ -114,6 +114,94 @@ input[type="text"] {
     display: flex;
   }
 }
+
+// styles for navbar toggler on dashboard panel
+.navbar-toggler-custom-dashboard {
+  position: relative;
+
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+
+  border: 0;
+  border-radius: 0;
+
+  cursor: pointer;
+  
+  &:before {
+    position: absolute;
+    top: 0;
+    right: initial;
+    bottom: 0;
+    left: -60px;
+  
+    display: flex;
+    align-items: center;
+
+    font: normal 14px $montserrat-medium;
+    color: $white;
+  }
+
+  .icon-bar {
+    display: block;
+    height: 3px;
+    width: 30px;
+
+    background: $white;
+
+    @include transition(0.5s cubic-bezier(0.65, 0.05, 0.36, 1));
+
+    @include boxshadow(none);
+
+    &+.icon-bar {
+      margin-top: 5px;
+    }
+    
+    &:first-child {
+      @include transform(rotate(225deg) translate(-6px, -5px));
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      @include transform(rotate(-225deg) translate(-6px, 6px));
+    }
+  }
+
+  @include on-event() {
+    outline: 0;
+  }
+
+  @include respond-to(md-down) {
+    display: flex;
+    margin-left: 10px;
+  }
+}
+
+.sidebar-collapsed {
+  .navbar-toggler-custom-dashboard {  
+    .icon-bar {
+      &+.icon-bar {
+        margin-top: 7px;
+      }
+      
+      &:first-child {
+        @include transform(none);
+      }
+
+      &:nth-child(2) {
+        opacity: 1;
+      }
+
+      &:last-child {
+        @include transform(none);
+      }
+    }
+  }
+}
+
 
 // styles for scroll to next section
 .scroll-next-section {
