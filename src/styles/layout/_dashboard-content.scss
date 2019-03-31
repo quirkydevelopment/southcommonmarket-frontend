@@ -64,6 +64,13 @@
         
         font-size: 14px;
       }
+
+      &-bottom {
+        top: initial;
+        right: initial;
+        bottom: 0;
+        left: 20px;
+      }
     }
   }
 
@@ -127,13 +134,11 @@
       line-height: 24px;
 
       border: 0;
-      // border-bottom: 1px solid $concrete;
       border-bottom: 1px solid $mercury;
 
       transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
 
       &:focus {
-        // border-bottom-color: $boulder;
         outline: none;
       }
     }
@@ -157,12 +162,6 @@
 
         transition: all .5s cubic-bezier(0.65, 0.05, 0.36, 1);
       }
-
-      // &.active {
-      //   &:after {
-      //     background-color: $boulder;
-      //   }
-      // }
     }
 
     textarea.form-input {
@@ -185,7 +184,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    min-width: 1000px;
+    // min-width: 1000px;
+    min-width: 1020px;
     max-width: 1600px;
     min-height: initial;
     height: auto;
@@ -404,7 +404,8 @@
 
   .table-custom {
     width: 100%;
-    min-width: 1000px;
+    // min-width: 1000px;
+    min-width: 1020px;
     overflow: auto;
 
     .table-heading {
@@ -1000,7 +1001,6 @@
 
         background-repeat: no-repeat;
         background-position: center;
-        // background-size: cover;
         background-size: 100%;
         border: 2px solid $apple;
         border-radius: 2px;
@@ -1019,7 +1019,6 @@
           width: 100%;
           height: 100%;
 
-          // background-color: $apple;
           background: #adc089;
           background: -moz-linear-gradient(top, #adc089 0%, #98b481 58%, #81a67c 99%);
           background: -webkit-linear-gradient(top, #adc089 0%,#98b481 58%,#81a67c 99%);
@@ -1039,6 +1038,14 @@
   }
 
   .tab-faq {
+    .tab-body {
+      min-height: 440px;
+    }
+    
+    .table-custom {
+      min-width: initial;
+    }
+
     .faq-item {
       border: 0;
 
@@ -1046,16 +1053,74 @@
         border-bottom: 3px solid $hippie-green;
       }
 
+      &:hover {
+        .actions {
+          top: -10px;
+
+          pointer-events: all;
+
+          opacity: 1;
+        }
+      }
+
       td {
         padding: 10px 5px;
+      }
+
+      .action {
+        padding: 0;
       }
     }
 
     .faq-inner {
+      position: relative;
+
       width: 100%;
 
-      tr:last-of-type {
+      tr:nth-child(2) {
         border-bottom: 1px solid $desert-storm;
+      }
+    }
+
+    .actions {
+      position: absolute;
+      top: -40px;
+      right: 0;
+
+      display: flex;
+
+      opacity: 0;
+
+      transition: all .35s ease-in-out;
+
+      pointer-events: none;
+
+      .btn-action {
+        position: relative;
+
+        width: 30px;
+        height: 30px;
+
+        color: $white;
+
+        background-color: $olivine;
+        border: 0;
+        border-radius: 0;
+
+        cursor: pointer;
+
+        transition: all .2s ease-in-out;
+
+        @include on-event() {
+          outline: none;
+        }
+
+        &:hover {
+          z-index: 2;
+
+          box-shadow: 0 1px 5px $black-opacity40;
+          border-radius: 2px;
+        }
       }
     }
 
@@ -1099,7 +1164,6 @@
 
       .form-logo {
         width: 100%;
-        // max-width: calc(100% - 50px);
         max-width: 350px;
         height: 350px;
         margin-right: auto;
@@ -1109,7 +1173,6 @@
       .form-details {
         margin: 25px auto 0 0;
         width: 100%;
-        // max-width: calc(100% - 50px);
         max-width: 100%;
       }
     }
