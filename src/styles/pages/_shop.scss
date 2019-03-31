@@ -1,0 +1,16 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the shop page.
+// -----------------------------------------------------------------------------
+
+
+.shop {
+
+  .section-hero {
+    position: relative;
+    background: url(../assets/images/shop-banner.jpg) center no-repeat;
+    background-size: cover;
+    height: 700px;
+  }
+}
