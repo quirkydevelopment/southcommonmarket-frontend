@@ -16,8 +16,11 @@
 
   .section-products {
     .slide {
-      padding: 20px 15px;
+      margin: 20px 15px;
+      overflow: hidden;
+
       outline: none;
+
     }
 
     .holder-image {
@@ -25,12 +28,37 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
 
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       height: 300px;
+
+      transition: all .3s ease-in-out;
+    }
+
+    .slick-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .slide {
+      position: relative;
+      width: calc(25% - 30px);
+
+      cursor: pointer;
+
+      @include on-event() {
+        
+        .holder-image {
+          transform: scale(1.1);
+        }
+        
+        .link-text {
+          text-decoration: underline;
+        }
+      }
     }
 
     .slick-image {
@@ -40,7 +68,70 @@
     .product-link {
       font-size: 30px;
       color: $white;
+
+      text-align: center;
+      text-shadow: 1px 1px 2px black;
       text-transform: uppercase;
+    }
+
+    .link-text {
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .section-best-seller {
+    .slick-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .slide {
+      border-left: 1px solid $hippie-green;
+
+      &:first-child,
+      &:last-child {
+        border: none;
+      }
+    }
+
+    .best-seller-link {
+      text-decoration: none;
+    }
+
+    .holder-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+      margin-bottom: 12px;
+    }
+
+    .best-seller-image {
+      max-width: 100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .best-seller-text {
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .best-seller-category {
+      color: $emperor;
+    }
+
+    .best-seller-product {
+      color: $black;
+    }
+
+    .best-seller-price {
+      color: $monza;
     }
   }
 }

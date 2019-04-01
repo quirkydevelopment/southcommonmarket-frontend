@@ -187,6 +187,48 @@ AppName.Modules.ThemeModule = (function() {
         dots: false,
         // infinite: true,
         speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        prevArrow: $('.section-awesome-vendors .slick-prev'),
+        nextArrow: $('.section-awesome-vendors .slick-next'),
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick"
+          },
+          {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+          }
+      ]
+      });
+    }
+
+    if ($('.section-best-seller .slick-container').length) {
+      $('.section-best-seller .slick-container').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
         slidesToShow: 4,
         slidesToScroll: 1,
         // autoplay: true,
@@ -215,6 +257,10 @@ AppName.Modules.ThemeModule = (function() {
       shopCarousel();
     });
   
+    $(window).on('resize', function (event) {
+      shopCarousel();
+    });
+
     $(window).scroll(function (event) {
       headerScroll();
       homeCarousel();
