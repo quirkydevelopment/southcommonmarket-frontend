@@ -114,6 +114,30 @@
       cursor: pointer;
     }
   }
+
+  .uploaded-image {
+    width: auto;
+    max-width: 90%;
+    max-height: 500px;
+  }
+
+  .label-upload {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  .holder-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .uploaded-file {
+    max-height: 150px;
+    max-width: 100%;
+  }  
 }
 
 .holder-close {

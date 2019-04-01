@@ -404,7 +404,10 @@
       
       <!-- Warning Button trigger modal -->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalWarning">Warning modal</button>
-    
+      
+      <!-- Product Category Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalProductCategory">Product modal</button>
+
 
     </div>
   </div>
@@ -653,7 +656,66 @@
     </div>
   </div>
 
-  
+  <!-- Add Category Modal -->
+  <div class="modal fade" id="modalProductCategory" tabindex="-1" role="dialog" aria-labelledby="modalProductCategory" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="holder-content">
+            <!-- <div class="holder-close" data-dismiss="modal"></div> -->
+            <h4 class="modal-title">Add Category</h4>
+            <div class="holder-form">
+              <form action="#">
+                <div class="form-group-holder">
+                  <div class="form-group">
+                    <label class="form-label" for="product_name_vendor">Product Name</label>
+                    <input id="product_name_vendor" class="form-input" type="text" placeholder="Enter Product Name..">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="category_vendor">Category</label>
+                    <select id="category_vendor" class="form-input">
+                      <option value="" disabled="disabled" selected="selected">Choose Category</option>
+                      <option value="vegetables">Vegetables</option>
+                      <option value="fruits">Fruits</option>
+                      <option value="meats">Meats</option>
+                      <option value="cuisine">Cuisine</option>
+                      <option value="beverages">Beverages</option>
+                      <option value="arts_crafts">Arts and Crafts</option>
+                      <option value="sashion">Fashion</option>
+                      <option value="shoes">Shoes</option>
+                      <option value="bread">Bread, Cookies, pies, loaf's, etc.</option>
+                      <option value="food_supplements">Food Supplements</option>
+                      <option value="bath_products">Bath products and Soaps</option>
+                      <option value="treats">Treats, goodies, specialty drinks etc.</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="price_vendor">Price</label>
+                    <input id="price_vendor" class="form-input" type="text" placeholder="Enter Price..">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="product_description_vendor">Product Description</label>
+                    <input id="product_description_vendor" class="form-input" type="text" placeholder="Enter Product Descrition..">
+                  </div>
+                  <div class="form-group">
+                    <div class="holder-image">
+                      <img id="uploaded_file" class="uploaded-file" src="./assets/images/logo-brown-small.png" alt="vendor logo">
+                    </div>
+                    <div class="holder-upload">
+                      <label class="label-upload" for="new_logo_uploader"><i class="fas fa-cloud-upload-alt"></i> Upload New Logo</label>
+                      <input id="new_logo_uploader" class="file-uploader d-none" type="file">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="holder-notification-buttons">
+              <button type="button" class="btn btn-rounded btn-rounded-gray" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-rounded btn-rounded-green">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- <script src="javascripts/vendors.js"></script>
   <script src="javascripts/custom/modals.js"></script> -->
