@@ -1,0 +1,59 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the shop page.
+// ----------------------------------------------------------------------------
+
+
+.header-shop {
+  .header-top {
+    background-color: $chateau-green;
+
+    .holder-info {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .social-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
+    .text-tagline {
+      color: $white;
+    }
+
+    .holder-right {
+      margin-left: auto;
+    }
+
+    .list {
+      padding: 0 8px;
+
+      border-right: 1px solid $white;
+    }
+
+    .list-link {
+      color: $white;
+    }
+  }
+
+  .holder-logo-cta {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    .holder-contact {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .holder-logo {
+      margin: 0 auto;
+    }
+  }
+}

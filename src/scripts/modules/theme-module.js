@@ -179,6 +179,24 @@ AppName.Modules.ThemeModule = (function() {
     });
   }
 
+
+  var shopCarousel = function() {
+
+    if ($('.section-products .slick-container').length) {
+      $('.section-products .slick-container').slick({
+        dots: false,
+        // infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        prevArrow: $('.section-awesome-vendors .slick-prev'),
+        nextArrow: $('.section-awesome-vendors .slick-next'),
+      });
+    }
+  } 
+
   /////////////////////
   // Public Methods //
   ///////////////////
@@ -194,6 +212,7 @@ AppName.Modules.ThemeModule = (function() {
       tabActive();
       uploadImage();
       fileUploader();
+      shopCarousel();
     });
   
     $(window).scroll(function (event) {

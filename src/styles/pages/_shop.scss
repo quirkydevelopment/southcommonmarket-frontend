@@ -1,0 +1,46 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the shop page.
+// -----------------------------------------------------------------------------
+
+
+.shop {
+
+  .section-hero {
+    position: relative;
+    background: url(../assets/images/shop-banner.jpg) center no-repeat;
+    background-size: cover;
+    height: 700px;
+  }
+
+  .section-products {
+    .slide {
+      padding: 20px 15px;
+      outline: none;
+    }
+
+    .holder-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+
+    .slick-image {
+      width: 100%;
+    }
+
+    .product-link {
+      font-size: 30px;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+}
