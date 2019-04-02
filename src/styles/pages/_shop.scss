@@ -7,6 +7,23 @@
 
 .shop {
 
+  .best-seller-text {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .best-seller-category {
+    color: $emperor;
+  }
+
+  .best-seller-product {
+    color: $black;
+  }
+
+  .best-seller-price {
+    color: $monza;
+  }
+
   .section-hero {
     position: relative;
     background: url(../assets/images/shop-banner.jpg) center no-repeat;
@@ -84,18 +101,15 @@
   }
 
   .section-best-seller {
-    .slick-container {
+
+    .slick {
+      position: relative;
       max-width: 600px;
       margin: 0 auto;
     }
 
     .slide {
       border-left: 1px solid $hippie-green;
-
-      &:first-child,
-      &:last-child {
-        border: none;
-      }
     }
 
     .best-seller-link {
@@ -117,21 +131,256 @@
       width: 100%;
     }
 
-    .best-seller-text {
-      font-size: 12px;
-      line-height: 1.25;
+    .slick-dots {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      li {
+        padding: 0 5px;
+      }
+
+      button {
+        padding: 3px;
+        
+        font-size: 0;
+        
+        background-color: $white;
+        border-radius: 100%;
+        border: 1px solid $hippie-green;
+
+        outline: none;
+        cursor: pointer;
+      }
+
+      .slick-active {
+        button {
+          background-color: $hippie-green;
+        }
+      }
     }
 
-    .best-seller-category {
-      color: $emperor;
+    .slick-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
-    .best-seller-product {
-      color: $black;
+    .slick-prev {
+      left: -45px;
     }
 
-    .best-seller-price {
-      color: $monza;
+    .slick-next {
+      right: -45px;
+    }
+
+    .fas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+
+      color: $hippie-green;
+      border: 1px solid $hippie-green;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .section-small-banner {
+    position: relative;
+    background-image: url(../assets/images/market-background.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    z-index: 0;
+
+    .container {
+      height: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(100,100,100,.8);
+      z-index: 1;
+    }
+
+    .holder-text {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      z-index: 2;
+
+      color: $white;
+      text-align: center;
+    }
+
+    .text-desc {
+      font-size: 14px;
+    }
+
+    .text-thank-you {
+      font-size: 30px;
+    }
+  }
+
+  .section-shop-now {
+    margin: 30px 0;
+
+    .holder-shop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .holder-background {
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 250px;
+      z-index: 0;
+    }
+
+    .holder-small {
+      width: 30%;
+      background-image: url(../assets/images/cuisine-background.jpeg);
+    }
+
+    .holder-big {
+      width: calc(70% - 60px);
+      background-image: url(../assets/images/bread-background.jpeg);
+    }
+
+    .holder-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .shop-desc {
+      margin: 0;
+      font-size: 20px;
+      color: $white;
+    }
+
+    .shop-name {
+      margin: 0;
+      font-size: 34px;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    .shop-link {
+      position: relative;
+      font-size: 18px;
+      color: $yellow;
+      text-transform: uppercase;
+
+      @include on-event() {
+        .fas {
+          right: -15px;
+        }
+      }
+    }
+
+    .fas {
+      position: absolute;
+      top: 50%;
+      right: -8px;
+      
+      font-size: 8px;
+      
+      transform: translateY(-50%);
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .section-product-market {
+
+    .holder-whats-new {
+      .holder-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+  
+      .product {
+        width: 25%;
+      }
+  
+      .product-image {
+        width: 100%;
+        max-width: 175px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .section-vendors {
+    margin: 15px 0;
+
+    .slick {
+      position: relative;
+      padding: 15px 10px;
+      border: 1px solid $hippie-green;
+    }
+
+    .holder-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 110px;
+    }
+
+    .image {
+      max-width: 80px;
+      max-height: 100px;
+      margin: 0 auto;
+    }
+
+    .slick-nav {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background-color: green;
+      padding: 0 15px;
+      cursor: pointer;
+
+      .fas {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .fa-chevron-left {
+        left: 8px;
+      }
+
+      .fa-chevron-right {
+        right: 8px;
+      }
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
     }
   }
 }

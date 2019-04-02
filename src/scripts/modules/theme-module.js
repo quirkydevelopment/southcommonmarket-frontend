@@ -226,15 +226,31 @@ AppName.Modules.ThemeModule = (function() {
 
     if ($('.section-best-seller .slick-container').length) {
       $('.section-best-seller .slick-container').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        loop: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        prevArrow: $('.section-best-seller .slick-prev'),
+        nextArrow: $('.section-best-seller .slick-next'),
+      });
+    }
+
+    if ($('.section-vendors .slick-container').length) {
+      $('.section-vendors .slick-container').slick({
         dots: false,
         infinite: true,
         speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        loop: true,
+        slidesToShow: 6,
+        slidesToScroll: 2,
         // autoplay: true,
         // autoplaySpeed: 3000,
-        prevArrow: $('.section-awesome-vendors .slick-prev'),
-        nextArrow: $('.section-awesome-vendors .slick-next'),
+        prevArrow: $('.section-vendors .slick-prev'),
+        nextArrow: $('.section-vendors .slick-next'),
       });
     }
   } 
