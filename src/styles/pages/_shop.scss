@@ -24,11 +24,39 @@
     color: $monza;
   }
 
+  .link-button {
+    padding: 8px 15px;
+    background-color: green;
+    color: $white;
+  }
+
   .section-hero {
     position: relative;
     background: url(../assets/images/shop-banner.jpg) center no-repeat;
     background-size: cover;
     height: 700px;
+
+    .container {
+      height: 100%;
+    }
+
+    .holder-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .banner-text {
+      color: $white;
+      font-family: $montserrat-regular;
+    }
+
+    .banner-title {
+      font-size: 45px;
+      color: $white;
+    }
   }
 
   .section-products {
@@ -97,6 +125,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+
+      width: 100%;
+      padding: 0 15px;
+
+      font-size: 24px;
+      font-family: $bebas-regular;
     }
   }
 
