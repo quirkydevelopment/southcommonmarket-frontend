@@ -1,0 +1,86 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the shop page.
+// ----------------------------------------------------------------------------
+
+.footer-shop {
+
+  .footer-links {
+    padding: 30px 0;
+
+    .holder-footer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .holder-cta {
+      width: 30%;
+    }
+
+    .holder-links {
+      width: 70%;
+    }
+
+    .holder-logo-image {
+      margin-bottom: 20px;
+    }
+
+    .holder-social {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .social-list {
+      width: auto;
+      padding: 0 8px;
+      cursor: pointer;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .scm-title {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: .5px;
+      color: $green-apple;
+      font-family: $montserrat-medium;
+      text-transform: uppercase;
+    }
+
+    .scm-contact {
+      font-size: 28px;
+      color: $blacked;
+      font-family: $montserrat-medium;
+    }
+
+    .scm-contact-link {
+      color: $blacked;
+    }
+
+    .social-image {
+      width: 100%;
+      max-width: 37.5px;
+      height: 40px;
+    }
+  }
+
+  .footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    background: linear-gradient(to bottom, #93b84f 20%,#58923e 71%,#58923e 79%);
+
+    .text-copyright {
+      margin: 0;
+      font-size: 12px;
+      color: $white;
+      font-family: $montserrat-regular;
+      text-align: center;
+    }
+  }
+}
