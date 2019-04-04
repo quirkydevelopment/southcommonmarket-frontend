@@ -7,33 +7,44 @@
 
 .header-shop {
   .header-top {
-    background-color: $chateau-green;
+    background: $gradient-green;
 
     .holder-info {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+      height: 38px;
+
+      font-size: 14px;
+      font-family: $montserrat-regular;
     }
 
     .social-list {
       display: flex;
       flex-wrap: wrap;
       padding: 0;
+      margin-bottom: 0;
+      height: 100%;
 
       list-style-type: none;
     }
 
     .text-tagline {
+      margin-bottom: 0;
       color: $white;
     }
 
     .holder-right {
       margin-left: auto;
+      height: 100%;
     }
 
     .list {
-      padding: 0 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
 
-      border-right: 1px solid $white;
+      border-left: 1px solid $white;
     }
 
     .list-link {
@@ -47,13 +58,84 @@
     flex-wrap: wrap;
 
     .holder-contact {
+      display: flex;
       position: absolute;
-      top: 0;
+      top: 50%;
       left: 0;
+      transform: translateY(-50%);
     }
 
     .holder-logo {
       margin: 0 auto;
+    }
+
+    .text-call {
+      font-size: 12px;
+      font-family: $montserrat-medium;
+    }
+
+    .call-span {
+      color: $torch-red;
+    }
+
+    .holder-icon {
+      .fas {
+        padding: 8px;
+        margin-right: 2px;
+
+        color: $hippie-green;
+        border-radius: 100%;
+        border: 1px solid $hippie-green;
+        
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .header-nav {
+    .navbar-nav {
+      font-family: $montserrat-medium;
+    }
+
+    .nav-item {
+      font-size: 18px;
+      color: $blacked;
+
+      &.active {
+        color: $hippie-green;
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    .header-top {
+      .holder-info {
+        padding: 5px;
+        height: auto;
+      }
+
+      .holder-left {
+        margin-bottom: 5px;
+        width: 100%;
+
+        text-align: center;
+      }
+
+      .holder-right {
+        margin-left: auto;
+        height: 100%;
+        width: 100%;
+      }
+
+      .social-list {
+        justify-content: center;
+      }
+
+      .list {
+        &:nth-of-type(1) {
+          border-left: none;
+        }
+      }
     }
   }
 }

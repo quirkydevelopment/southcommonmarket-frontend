@@ -7,6 +7,10 @@
 .footer-shop {
 
   .footer-links {
+    background-image: url(../assets/images/bg-contact.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 30px 0;
 
     .holder-footer {
@@ -19,6 +23,9 @@
     }
 
     .holder-links {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
       width: 70%;
     }
 
@@ -66,6 +73,29 @@
       max-width: 37.5px;
       height: 40px;
     }
+
+    .item {
+      width: 275px;
+    }
+
+    .item-title {
+      color: $blacked;
+      font-size: 20px;
+      font-family: $montserrat-semi-bold;
+      text-transform: uppercase;
+    }
+
+    .list,
+    .link {
+      color: $text-color;
+      font-family: $montserrat-regular;
+    }
+
+    .inner-list {
+      padding: 0;
+      list-style-type: none;
+    }
+
   }
 
   .footer-text {
@@ -73,7 +103,7 @@
     align-items: center;
     justify-content: center;
     padding: 25px 0;
-    background: linear-gradient(to bottom, #93b84f 20%,#58923e 71%,#58923e 79%);
+    background: $gradient-green;
 
     .text-copyright {
       margin: 0;
@@ -81,6 +111,22 @@
       color: $white;
       font-family: $montserrat-regular;
       text-align: center;
+    }
+  }
+
+  @include respond-to(md) {
+    .footer-links {
+      .scm-title {
+        font-size: 12px;
+      }
+
+      .scm-contact {
+        font-size: 18px;
+      }
+
+      .holder-links {
+        padding-left: 25px;
+      }
     }
   }
 }

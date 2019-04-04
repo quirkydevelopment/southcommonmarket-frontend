@@ -19,6 +19,7 @@ $montserrat-medium: 'Montserrat Medium';
 $montserrat-regular: 'Montserrat Regular';
 $montserrat-semi-bold: 'Montserrat Semi Bold';
 $nexa-bold: 'Nexa Bold';
+$bukhari-script-regular: 'Bukhari Script Regular';
 
 /// @type List
 $text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -90,6 +91,8 @@ $apple: #33A242;
 $apple2: #58923d;
 $green-apple: #518e3c;
 $dark-green: #4d5b26;
+$milo-green: #5c963e;
+$leaf-green: #d2e1b6;
 $java: #1aafc1;
 $picton-blue: #47bced;
 $curious-blue: #33a2d1;
@@ -98,3 +101,4 @@ $powder-blue: #0060ff;
 $torch-red: #ea0027;
 $monza: #ba001f;
 $blacked: #060604;
+$gradient-green: linear-gradient(to bottom, #93b84f 20%,#58923e 71%,#58923e 79%);

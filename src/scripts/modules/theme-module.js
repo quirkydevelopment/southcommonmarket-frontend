@@ -220,7 +220,7 @@ AppName.Modules.ThemeModule = (function() {
                 slidesToScroll: 1,
             }
           }
-      ]
+        ]
       });
     }
 
@@ -251,6 +251,16 @@ AppName.Modules.ThemeModule = (function() {
         // autoplaySpeed: 3000,
         prevArrow: $('.section-vendors .slick-prev'),
         nextArrow: $('.section-vendors .slick-next'),
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+          }
+        ]
       });
     }
   } 

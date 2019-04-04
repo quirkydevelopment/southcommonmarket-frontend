@@ -58,14 +58,25 @@
     color: $hippie-green; 
     letter-spacing: .5px;
     text-transform: uppercase;
+
+    &-tent {
+      font-family: $montserrat-medium;
+      text-transform: capitalize;
+    }
   }
 
   .holder-form {
     .form-title {
       font-size: 14px;
-      font-family: $montserrat-medium;
+      font-family: $montserrat-regular;
       color: $hippie-green;
+
+      &-month {
+        padding-left: 10px;
+        font-family: $montserrat-medium;
+      }
     }
+
 
     .form-input {
       padding: 4px 5px;
@@ -76,6 +87,11 @@
 
       border-radius: 3px;
       border: 1px solid $hippie-green;
+
+      &-select {
+        padding: 10px 5px;
+        border-radius: 5px;
+      }
     }
 
     .file-input {
@@ -309,4 +325,107 @@
   margin-top: -50px;
   font-size: 40px;
   font-family: $bebas-regular;
+}
+
+.modal-content-map {
+  width: 300px;
+}
+
+.map-option-title {
+  margin-bottom: 12px;
+
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.map-option {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+
+  &-add {
+    justify-content: center;
+  }
+
+  .option-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    
+    font-size: 14px;
+    font-family: $montserrat-regular;
+  }
+
+  .btn {
+    &-list {
+      padding: 5px;
+      margin-bottom: 6px;
+      width: 35px;
+      height: 35px;
+  
+      font-size: 12px;
+      color: $white;
+  
+      border: 0;
+      border-radius: 100%;
+      cursor: pointer;
+
+      opacity: .8;
+      outline: none;
+
+      transition: all .3s ease-in-out;
+
+      @include on-event() {
+        opacity: 1;
+      }
+    }
+
+    &-add {
+      background-color: $hippie-green;
+    }
+
+    &-del {
+      background-color: $torch-red;
+    }
+
+    &-move {
+      background-color: $gamboge;
+    }
+
+    &-na {
+      background-color: $flamingo;
+    }
+  }
+}
+
+.holder-reserved {
+  display: none;
+
+  text-align: center;
+
+  .reserved-text {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $hippie-green;
+    font-family: $montserrat-light;
+  }
+
+  .reserved-image {
+    max-width: 120px;
+    margin: -18px auto 0;
+    transform: rotate(18.2deg);
+  }
+}
+
+.modal-content-vendor {
+  width: 450px;
+}
+
+.reserved {
+  .holder-reserved {
+    display: block;
+  }
 }
