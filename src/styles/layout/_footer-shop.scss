@@ -113,4 +113,20 @@
       text-align: center;
     }
   }
+
+  @include respond-to(md) {
+    .footer-links {
+      .scm-title {
+        font-size: 12px;
+      }
+
+      .scm-contact {
+        font-size: 18px;
+      }
+
+      .holder-links {
+        padding-left: 25px;
+      }
+    }
+  }
 }
