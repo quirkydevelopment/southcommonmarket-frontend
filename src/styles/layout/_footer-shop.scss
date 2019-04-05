@@ -129,4 +129,23 @@
       }
     }
   }
+
+  @include respond-to(sm-down) {
+    .footer-links {
+      .holder-cta {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+      }
+
+      .holder-links {
+        width: 100%;
+      }
+
+      .item {
+        width: 50%;
+      }
+    }
+  }
 }
