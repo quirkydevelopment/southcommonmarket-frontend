@@ -74,8 +74,14 @@
       font-family: $montserrat-medium;
     }
 
+    .call-link {
+      text-decoration: none;
+    }
+
     .call-span {
+      position: relative;
       color: $torch-red;
+      pointer-events: none;
     }
 
     .holder-icon {
@@ -89,6 +95,10 @@
         
         transform: rotate(90deg);
       }
+    }
+
+    .logo-brand {
+      width: 150px;
     }
   }
 
@@ -135,6 +145,56 @@
         &:nth-of-type(1) {
           border-left: none;
         }
+      }
+    }
+
+    .header-nav {
+      position: relative;
+
+      .navbar {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .navbar-toggler {
+        margin-top: -95px;
+        margin-left: auto;
+      }
+    }
+
+    .holder-logo-cta {
+      padding: 10px 0;
+
+      .holder-text {
+        display: flex;
+        align-items: center;
+      }
+
+      .text-call {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .header-top {
+      display: none;
+    }
+  }
+
+  @include respond-to(xs) {
+    .holder-logo-cta {
+      .holder-contact {
+        display: none;
+      }
+
+      .holder-logo {
+        margin: 0;
       }
     }
   }
