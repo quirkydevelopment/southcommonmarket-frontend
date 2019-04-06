@@ -108,11 +108,29 @@
     }
 
     .nav-item {
-      font-size: 18px;
+      position: relative;
+      font-size: 14px;
       color: $blacked;
 
       &.active {
         color: $hippie-green;
+      }
+
+      &:nth-of-type(3) {
+        &:after {
+          content: 'HOT';
+          position: absolute;
+          left: 90px;
+          top: -5px;
+          padding: 2px 8px 0;
+          
+          font-size: 10px;
+          color: $white;
+          line-height: 1;
+          
+          border-radius: 10px;
+          background-color: $torch-red;
+        }
       }
     }
   }

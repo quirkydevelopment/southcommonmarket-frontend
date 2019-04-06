@@ -180,8 +180,7 @@ AppName.Modules.ThemeModule = (function() {
   }
 
 
-  var shopCarousel = function() {
-
+  var carouselProduct = function() {
     if ($('.section-products .slick-container').length) {
       $('.section-products .slick-container').slick({
         dots: false,
@@ -189,8 +188,8 @@ AppName.Modules.ThemeModule = (function() {
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         prevArrow: $('.section-awesome-vendors .slick-prev'),
         nextArrow: $('.section-awesome-vendors .slick-next'),
         responsive: [
@@ -223,7 +222,9 @@ AppName.Modules.ThemeModule = (function() {
         ]
       });
     }
+  }
 
+  var carouselBestSeller = function() {
     if ($('.section-best-seller .slick-container').length) {
       $('.section-best-seller .slick-container').slick({
         dots: true,
@@ -232,31 +233,38 @@ AppName.Modules.ThemeModule = (function() {
         loop: true,
         slidesToShow: 4,
         slidesToScroll: 2,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         prevArrow: $('.section-best-seller .slick-prev'),
         nextArrow: $('.section-best-seller .slick-next'),
         responsive: [
           {
             breakpoint: 991,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                infinite: true,
+              slidesToShow: 3,
+              slidesToScroll: 2
             }
           },
           {
-            breakpoint: 991,
+            breakpoint: 767,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
             }
           }
         ]
       });
     }
+  }
 
+  var carouselVendors = function() {
     if ($('.section-vendors .slick-container').length) {
       $('.section-vendors .slick-container').slick({
         dots: false,
@@ -265,8 +273,8 @@ AppName.Modules.ThemeModule = (function() {
         loop: true,
         slidesToShow: 6,
         slidesToScroll: 2,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         prevArrow: $('.section-vendors .slick-prev'),
         nextArrow: $('.section-vendors .slick-next'),
         responsive: [
@@ -297,7 +305,9 @@ AppName.Modules.ThemeModule = (function() {
         ]
       });
     }
+  }
 
+  var carouselProductNew = function() {
     if ($('.section-product-market .holder-whats-new .slick-container').length) {
       $('.section-product-market .holder-whats-new .slick-container').slick({
         dots: false,
@@ -306,8 +316,8 @@ AppName.Modules.ThemeModule = (function() {
         loop: true,
         slidesToShow: 4,
         slidesToScroll: 2,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         // prevArrow: $('.section-product-market .slick-prev'),
         // nextArrow: $('.section-product-market .slick-next'),
         responsive: [
@@ -338,7 +348,9 @@ AppName.Modules.ThemeModule = (function() {
         ]
       });
     }
+  }
 
+  var carouselProductFeatured = function() {
     if ($('.section-product-market .holder-featured .slick-container').length) {
       $('.section-product-market .holder-featured .slick-container').slick({
         dots: false,
@@ -347,8 +359,8 @@ AppName.Modules.ThemeModule = (function() {
         loop: true,
         slidesToShow: 4,
         slidesToScroll: 2,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         // prevArrow: $('.section-product-market .slick-prev'),
         // nextArrow: $('.section-product-market .slick-next'),
         responsive: [
@@ -379,7 +391,8 @@ AppName.Modules.ThemeModule = (function() {
         ]
       });
     }
-  } 
+  }
+   
 
   /////////////////////
   // Public Methods //
@@ -396,11 +409,14 @@ AppName.Modules.ThemeModule = (function() {
       tabActive();
       uploadImage();
       fileUploader();
-      shopCarousel();
     });
   
-    $(window).on('resize', function (event) {
-      shopCarousel();
+    $(window).on('resize load', function (event) {
+      carouselProduct();
+      carouselBestSeller();
+      carouselVendors();
+      carouselProductNew();
+      carouselProductFeatured();
     });
 
     $(window).scroll(function (event) {

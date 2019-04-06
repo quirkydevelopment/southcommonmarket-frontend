@@ -551,7 +551,12 @@
         display: none !important;
       }
 
-      .product {
+      .slick-list {
+        width: 100%;
+      }
+
+      .product,
+      .slide {
         width: 25%;
         outline: none;
       }
