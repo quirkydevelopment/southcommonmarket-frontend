@@ -739,6 +739,17 @@
 
     .section-market {
 
+      .item-image {
+        max-height: unset;
+      }
+
+      .item-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+      }
+
       .fruit-basket {
         width: 200px;
       }

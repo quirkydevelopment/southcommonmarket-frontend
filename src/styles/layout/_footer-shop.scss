@@ -7,11 +7,26 @@
 .footer-shop {
 
   .footer-links {
+    position: relative;
     background-image: url(../assets/images/bg-contact.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 30px 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(200,200,200,.75);
+    }
+
+    .container {
+      position: relative;
+    }
 
     .holder-footer {
       display: flex;
