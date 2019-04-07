@@ -1,0 +1,111 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the vendor shop page.
+// ----------------------------------------------------------------------------
+
+.vendor-shop {
+
+  .holder-vendor {
+    margin-top: 30px;
+  }
+
+  .holder-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .holder-input {
+    display: flex;
+    width: 50%;
+    height: 35px;
+    padding: 0 15px;
+  }
+
+  .btn-select {
+    margin-left: auto;
+  }
+
+  .btn-box {
+    width: 100%;
+    max-width: 150px;
+    
+    color: $blacked;
+    border: 1px solid $black;
+  }
+
+  .btn-search {
+    padding: 3px 5px;
+    font-family: $montserrat-light, 'Font Awesome\ 5 Free';
+    font-weight: 900;
+  }
+
+  .vendor-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 850px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+  }
+
+  .vendor-name {
+    text-align: center;
+  }
+
+  .page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+
+    color: $blacked;
+    font-family: $montserrat-medium;
+    font-size: 24px;
+
+    border: none;
+    border-radius: 50%;
+
+    &.active {
+      position: relative;
+      
+      background-color: #e9ecef;
+    }
+  }
+
+  .page-list-item {
+    width: auto;
+    padding: 0 8px;
+  }
+
+  @include respond-to(sm) {
+    .list {
+      width: 33.33%;
+    }
+  }
+
+  @include respond-to(xs) {
+    .list {
+      width: 50%;
+      padding: 8px;
+    }
+  }
+}
