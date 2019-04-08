@@ -392,6 +392,12 @@ AppName.Modules.ThemeModule = (function() {
       });
     }
   }
+
+  var toggleFilter = function() {
+    $('.js-toggle-filter').on('click', function() {
+      $('.product-shop .holder-products .holder-left').toggleClass('holder-left-close');
+    });
+  }
    
 
   /////////////////////
@@ -409,6 +415,7 @@ AppName.Modules.ThemeModule = (function() {
       tabActive();
       uploadImage();
       fileUploader();
+      toggleFilter();
     });
   
     $(window).on('resize load', function (event) {
