@@ -324,3 +324,59 @@ input[type="text"] {
     bottom: 15px;
   }
 }
+
+.best-seller-text,
+.product-text {
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.best-seller-category,
+.product-category {
+  color: $emperor;
+}
+
+.best-seller-product,
+.product-item {
+  color: $black;
+}
+
+.best-seller-price,
+.product-price {
+  color: $monza;
+}
+
+.pagination-vendor-shop {
+  .page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+
+    color: $blacked;
+    font-family: $montserrat-medium;
+    font-size: 24px;
+
+    border: none;
+    border-radius: 50%;
+
+    &.active {
+      position: relative;
+      
+      background-color: #e9ecef;
+    }
+  }
+
+  .page-list-item {
+    width: auto;
+    padding: 0 8px;
+  }
+}

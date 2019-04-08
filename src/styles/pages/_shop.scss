@@ -30,27 +30,17 @@
     margin-left: 0;
   }
 
-  .best-seller-text {
-    font-size: 12px;
-    line-height: 1.25;
-  }
-
-  .best-seller-category {
-    color: $emperor;
-  }
-
-  .best-seller-product {
-    color: $black;
-  }
-
-  .best-seller-price {
-    color: $monza;
-  }
-
   .link-button {
-    padding: 8px 15px;
-    background-color: green;
+    margin-top: 15px;
+    padding: 12px 25px;
+
+    font-size: 12px;
+    font-family: $montserrat-medium;
     color: $white;
+    text-transform: uppercase;
+    background: $gradient-green;
+
+    transition: all .3s ease-in-out;
   }
 
   .section-hero {
@@ -737,6 +727,17 @@
     }
 
     .section-market {
+
+      .item-image {
+        max-height: unset;
+      }
+
+      .item-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+      }
 
       .fruit-basket {
         width: 200px;

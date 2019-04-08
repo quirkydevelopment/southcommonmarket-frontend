@@ -135,6 +135,12 @@
     }
   }
 
+  @include respond-to(lg-up) {
+    .header-logo-cta {
+      padding: 15px 0 5px;
+    }
+  }
+
   @include respond-to(md-down) {
     .header-top {
       .holder-info {
@@ -180,7 +186,7 @@
       }
 
       .navbar-toggler {
-        margin-top: -95px;
+        margin-top: -60px;
         margin-left: auto;
       }
     }
